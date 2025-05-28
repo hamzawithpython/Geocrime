@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GeoCrime – Route Planner</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+    <div class="max-w-2xl mx-auto mt-10 p-6 bg-white shadow-md rounded-xl">
+        <h1 class="text-2xl font-bold mb-6 text-center">🚗 Safe Route Planner</h1>
+
+        <form method="post" class="space-y-4">
+            {% csrf_token %}
+            <div>
+                <label class="block font-medium">Start Latitude:</label>
+                <input type="text" name="start_lat" required class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label class="block font-medium">Start Longitude:</label>
+                <input type="text" name="start_lon" required class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label class="block font-medium">End Latitude:</label>
+                <input type="text" name="end_lat" required class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label class="block font-medium">End Longitude:</label>
+                <input type="text" name="end_lon" required class="w-full p-2 border rounded">
+            </div>
+            <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+                Plan Route
+            </button>
+        </form>
+    </div>
+
+    <div class="max-w-4xl mx-auto mt-10">
+        <h3 class="text-xl font-semibold mb-2 text-center">Route Map</h3>
+
+        {% if map_generated %}
+            <iframe src="{% static 'route_map.html' %}" class="w-full h-[600px] rounded shadow" frameborder="0"></iframe>
+        {% else %}
+            <div class="text-center text-gray-500 italic">
+                No route planned yet. Enter coordinates and click "Plan Route" above.
+            </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>

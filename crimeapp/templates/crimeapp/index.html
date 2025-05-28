@@ -1,10 +1,23 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>GeoCrime</title>
+    <meta charset="UTF-8">
+    <title>GeoCrime – Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <h2>GeoCrime: Crime Awareness System</h2>
-    <p>Total crime records loaded: {{ total_crimes }}</p>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+    <div class="max-w-xl mx-auto mt-20 p-6 bg-white shadow-md rounded-xl text-center">
+        <h1 class="text-3xl font-bold mb-4">Welcome to GeoCrime</h1>
+        <p class="text-lg">Total crime records loaded: <span class="font-semibold">{{ total_crimes }}</span></p>
+
+        <div class="mt-6">
+            <a href="/map-input/" class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                🔍 Try the Crime Map
+            </a>
+        </div>
+    </div>
+
 </body>
 </html>

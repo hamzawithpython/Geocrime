@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GeoCrime – Map</title>
+
+    <!-- Tailwind CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+    <div class="max-w-2xl mx-auto mt-10 p-6 bg-white shadow-md rounded-xl">
+        <h1 class="text-2xl font-bold mb-6 text-center">GeoCrime – Safety Map</h1>
+
+        <form method="post" class="space-y-4">
+            {% csrf_token %}
+
+            <div>
+                <label for="lat" class="block font-medium">Latitude:</label>
+                <input type="text" id="lat" name="lat" class="w-full p-2 border rounded" required>
+            </div>
+
+            <div>
+                <label for="lon" class="block font-medium">Longitude:</label>
+                <input type="text" id="lon" name="lon" class="w-full p-2 border rounded" required>
+            </div>
+
+            <div>
+                <label for="crime_type" class="block font-medium">Crime Type:</label>
+                <select name="crime_type" id="crime_type" class="w-full p-2 border rounded">
+                    <option value="">-- All Types --</option>
+                    <option value="THEFT" {% if selected_type == "THEFT" %}selected{% endif %}>Theft</option>
+                    <option value="BATTERY" {% if selected_type == "BATTERY" %}selected{% endif %}>Battery</option>
+                    <option value="ASSAULT" {% if selected_type == "ASSAULT" %}selected{% endif %}>Assault</option>
+                    <option value="BURGLARY" {% if selected_type == "BURGLARY" %}selected{% endif %}>Burglary</option>
+                    <option value="ROBBERY" {% if selected_type == "ROBBERY" %}selected{% endif %}>Robbery</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="map_view" class="block font-medium">Map View:</label>
+                <select name="map_view" id="map_view" class="w-full p-2 border rounded">
+                    <option value="heatmap" {% if map_view == "heatmap" %}selected{% endif %}>Heatmap</option>
+                    <option value="markers" {% if map_view == "markers" %}selected{% endif %}>Marker Clusters</option>
+                </select>
+            </div>
+
+            <div class="flex space-x-4">
+                <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Show on Map</button>
+                <button type="button" onclick="getLocation()" class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700">📍 Use My Location</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="max-w-4xl mx-auto mt-10">
+        <h3 class="text-xl font-semibold mb-2 text-center">Crime Map Preview</h3>
+        <iframe src="{% static 'map.html' %}" class="w-full h-[600px] rounded shadow" frameborder="0"></iframe>
+    </div>
+
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function(position) {
+                        const lat = position.coords.latitude.toFixed(6);
+                        const lon = position.coords.longitude.toFixed(6);
+
+                        document.getElementById('lat').value = lat;
+                        document.getElementById('lon').value = lon;
+
+                        setTimeout(() => {
+                            document.querySelector('form').submit();
+                        }, 500);
+                    },
+                    function(error) {
+                        alert("Geolocation failed: " + error.message);
+                    },
+                    {
+                        enableHighAccuracy: true,
+                        timeout: 5000,
+                        maximumAge: 0
+                    }
+                );
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+    </script>
+</body>
+</html>
