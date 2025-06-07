@@ -11,41 +11,103 @@
     <div class="max-w-2xl mx-auto mt-10 p-6 bg-white shadow-md rounded-xl">
         <h1 class="text-2xl font-bold mb-6 text-center">🚗 Safe Route Planner</h1>
 
-        <form method="post" class="space-y-4">
+        <form method="post" class="bg-white p-6 rounded shadow-md space-y-4">
             {% csrf_token %}
-            <div>
-                <label class="block font-medium">Start Latitude:</label>
-                <input type="text" name="start_lat" required class="w-full p-2 border rounded">
-            </div>
-            <div>
-                <label class="block font-medium">Start Longitude:</label>
-                <input type="text" name="start_lon" required class="w-full p-2 border rounded">
-            </div>
-            <div>
-                <label class="block font-medium">End Latitude:</label>
-                <input type="text" name="end_lat" required class="w-full p-2 border rounded">
-            </div>
-            <div>
-                <label class="block font-medium">End Longitude:</label>
-                <input type="text" name="end_lon" required class="w-full p-2 border rounded">
-            </div>
-            <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
-                Plan Route
+
+            <!-- Start/End coords -->
+            <input type="text" id="start_lat" name="start_lat" placeholder="Start Latitude" required class="w-full p-2 border rounded">
+            <input type="text" id="start_lon" name="start_lon" placeholder="Start Longitude" required class="w-full p-2 border rounded">
+            <input type="text" id="end_lat" name="end_lat" placeholder="End Latitude" required class="w-full p-2 border rounded">
+            <input type="text" id="end_lon" name="end_lon" placeholder="End Longitude" required class="w-full p-2 border rounded">
+
+            <!-- Load Saved Route -->
+            <label for="saved_route">Load Saved Route:</label>
+            <select name="saved_route" id="saved_route" class="w-full p-2 border rounded">
+                <option value="">-- Select a Saved Route --</option>
+                {% for route in saved_routes %}
+                    <option value="{{ route.id }}">{{ route.name }}</option>
+                {% endfor %}
+            </select>
+
+
+            <!-- New Dropdown: Crime Type -->
+            <label for="crime_type">Crime Type:</label>
+            <select name="crime_type" id="crime_type" class="w-full p-2 border rounded">
+                <option value="" {% if not selected_crime_type %}selected{% endif %}>All</option>
+                <option value="THEFT" {% if selected_crime_type == "THEFT" %}selected{% endif %}>Theft</option>
+                <option value="ASSAULT" {% if selected_crime_type == "ASSAULT" %}selected{% endif %}>Assault</option>
+                <option value="BATTERY" {% if selected_crime_type == "BATTERY" %}selected{% endif %}>Battery</option>
+                <option value="ROBBERY" {% if selected_crime_type == "ROBBERY" %}selected{% endif %}>Robbery</option>
+                <option value="BURGLARY" {% if selected_crime_type == "BURGLARY" %}selected{% endif %}>Burglary</option>
+            </select>
+
+            <label for="save_name">Save This Route As (optional):</label>
+            <input type="text" name="save_name" id="save_name" placeholder="e.g. Home to Office"
+                   class="w-full p-2 border rounded">
+
+
+            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded w-full">
+                🧭 Plan Route
             </button>
         </form>
+
+
     </div>
 
     <div class="max-w-4xl mx-auto mt-10">
         <h3 class="text-xl font-semibold mb-2 text-center">Route Map</h3>
 
         {% if map_generated %}
-            <iframe src="{% static 'route_map.html' %}" class="w-full h-[600px] rounded shadow" frameborder="0"></iframe>
+            <div class="text-center font-semibold mb-4">
+                <span class="inline-block px-4 py-2 rounded text-white
+                    {% if safety_score.1 == 'green' %}bg-green-600
+                    {% elif safety_score.1 == 'yellow' %}bg-yellow-500 text-black
+                    {% elif safety_score.1 == 'red' %}bg-red-600{% endif %}
+                ">
+                    🛡️ Safety Score: {{ safety_score.0 }}
+                </span>
+            </div>
+        {% endif %}
+
+        {% if danger_count %}
+        <div class="text-center text-red-600 font-semibold mb-4">
+            ⚠️ {{ danger_count }} crimes detected within 200 meters of your route
+        </div>
+        {% endif %}
+
+
+        {% if map_generated %}
+            <iframe src="{% static 'route_map.html' %}?v={{ danger_count }}" class="w-full h-[600px] rounded shadow" frameborder="0"></iframe>
         {% else %}
             <div class="text-center text-gray-500 italic">
                 No route planned yet. Enter coordinates and click "Plan Route" above.
             </div>
         {% endif %}
     </div>
+
+    <script>
+        const savedRoutes = {
+            {% for route in saved_routes %}
+                "{{ route.id }}": {
+                    start_lat: "{{ route.start_lat }}",
+                    start_lon: "{{ route.start_lon }}",
+                    end_lat: "{{ route.end_lat }}",
+                    end_lon: "{{ route.end_lon }}"
+                },
+            {% endfor %}
+        };
+
+        document.getElementById("saved_route").addEventListener("change", function () {
+            const selectedId = this.value;
+            if (savedRoutes[selectedId]) {
+                document.getElementById("start_lat").value = savedRoutes[selectedId].start_lat;
+                document.getElementById("start_lon").value = savedRoutes[selectedId].start_lon;
+                document.getElementById("end_lat").value = savedRoutes[selectedId].end_lat;
+                document.getElementById("end_lon").value = savedRoutes[selectedId].end_lon;
+            }
+        });
+    </script>
+
 
 </body>
 </html>

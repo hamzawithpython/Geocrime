@@ -7,6 +7,9 @@ from folium.plugins import HeatMap, MarkerCluster
 from django.views.decorators.csrf import csrf_exempt
 import openrouteservice
 from openrouteservice import convert
+from geopy.distance import geodesic
+
+API_KEY = "5b3ce3597851110001cf62481f0092ec302e4859b7961fa03b5a6575"
 
 def index(request):
     csv_path = os.path.join(settings.BASE_DIR, 'data', 'cleaned_dataset.csv')
@@ -46,6 +49,7 @@ def map_with_input(request):
         selected_type = request.POST.get('crime_type')
         map_view = request.POST.get('map_view')
 
+
     csv_path = os.path.join(settings.BASE_DIR, 'data', 'cleaned_dataset.csv')
     df = pd.read_csv(csv_path)
 
@@ -83,36 +87,125 @@ def map_with_input(request):
 
 @csrf_exempt
 def route_view(request):
-    map_generated = False  # new flag
+    map_generated = False
+    from .models import SavedRoute
+    saved_routes = SavedRoute.objects.all()
+
+    danger_count = 0
+    danger_points = []
+    selected_crime_type = ""
+    safety_score = ("", "")  # Default for GET
 
     if request.method == 'POST':
-        start_lat = float(request.POST['start_lat'])
-        start_lon = float(request.POST['start_lon'])
-        end_lat = float(request.POST['end_lat'])
-        end_lon = float(request.POST['end_lon'])
+        saved_id = request.POST.get('saved_route')
 
-        client = openrouteservice.Client(key='5b3ce3597851110001cf62481f0092ec302e4859b7961fa03b5a6575')
+        # Load saved route or get input
+        if saved_id:
+            try:
+                saved = SavedRoute.objects.get(id=saved_id)
+                start_lat = saved.start_lat
+                start_lon = saved.start_lon
+                end_lat = saved.end_lat
+                end_lon = saved.end_lon
+            except SavedRoute.DoesNotExist:
+                start_lat = float(request.POST['start_lat'])
+                start_lon = float(request.POST['start_lon'])
+                end_lat = float(request.POST['end_lat'])
+                end_lon = float(request.POST['end_lon'])
+        else:
+            start_lat = float(request.POST['start_lat'])
+            start_lon = float(request.POST['start_lon'])
+            end_lat = float(request.POST['end_lat'])
+            end_lon = float(request.POST['end_lon'])
+
+        # Save route if user entered a name
+        route_name = request.POST.get('save_name', '').strip()
+        if route_name and not SavedRoute.objects.filter(name=route_name).exists():
+            SavedRoute.objects.create(
+                name=route_name,
+                start_lat=start_lat,
+                start_lon=start_lon,
+                end_lat=end_lat,
+                end_lon=end_lon
+            )
+
+        # OpenRouteService directions
+        client = openrouteservice.Client(key=API_KEY)
         coords = ((start_lon, start_lat), (end_lon, end_lat))
         route = client.directions(coords)
         geometry = route['routes'][0]['geometry']
         decoded = convert.decode_polyline(geometry)
+        route_points = [(pt[1], pt[0]) for pt in decoded['coordinates']]
 
+        # Load crimes
+        csv_path = os.path.join(settings.BASE_DIR, 'data', 'cleaned_dataset.csv')
+        df = pd.read_csv(csv_path).dropna(subset=['Latitude', 'Longitude'])
+        selected_crime_type = request.POST.get('crime_type', '').strip().upper()
+        if selected_crime_type:
+            df = df[df['Primary Type'] == selected_crime_type]
+
+        # Analyze danger points
+        max_distance_m = 200
+        for _, crime in df.iterrows():
+            crime_point = (crime['Latitude'], crime['Longitude'])
+
+            for route_point in route_points:
+                distance = geodesic(crime_point, route_point).meters
+                if distance <= max_distance_m:
+                    danger_count += 1
+                    danger_points.append((crime_point, crime['Primary Type']))
+                    break
+
+        # Safety score logic
+        if danger_count <= 2:
+            safety_score = ("Safe", "green")
+        elif danger_count <= 6:
+            safety_score = ("Moderate Risk", "yellow")
+        else:
+            safety_score = ("Risky", "red")
+
+        # Generate map
         mid_lat = (start_lat + end_lat) / 2
         mid_lon = (start_lon + end_lon) / 2
         folium_map = folium.Map(location=[mid_lat, mid_lon], zoom_start=13)
 
-        route_coords = [(pt[1], pt[0]) for pt in decoded['coordinates']]
-        folium.PolyLine(route_coords, color="blue", weight=5, opacity=0.8).add_to(folium_map)
-
+        folium.PolyLine(route_points, color="blue", weight=5, opacity=0.8).add_to(folium_map)
         folium.Marker([start_lat, start_lon], tooltip='Start', icon=folium.Icon(color='green')).add_to(folium_map)
         folium.Marker([end_lat, end_lon], tooltip='End', icon=folium.Icon(color='red')).add_to(folium_map)
 
+        for (lat, lon), crime_type in danger_points:
+            try:
+                if crime_type in ['ASSAULT', 'ROBBERY']:
+                    marker_color = 'red'
+                elif crime_type in ['BATTERY', 'BURGLARY']:
+                    marker_color = 'orange'
+                else:
+                    marker_color = 'green'
+
+                folium.Marker(
+                    location=[float(lat), float(lon)],
+                    icon=folium.Icon(color=marker_color, icon='info-sign'),
+                    popup=folium.Popup(f"⚠️ {crime_type}", max_width=250)
+                ).add_to(folium_map)
+            except Exception as e:
+                print(f"Error adding marker at ({lat}, {lon}): {e}")
+
         map_path = os.path.join(settings.BASE_DIR, 'crimeapp', 'static', 'route_map.html')
         folium_map.save(map_path)
+        map_generated = True
 
-        map_generated = True  # set flag
+    return render(request, 'crimeapp/route_map.html', {
+        'map_generated': map_generated,
+        'danger_count': danger_count,
+        'selected_crime_type': selected_crime_type,
+        'safety_score': safety_score,
+        'saved_routes': saved_routes
+    })
 
-    return render(request, 'crimeapp/route_map.html', {'map_generated': map_generated})
+
+
+
+
 
 
 
