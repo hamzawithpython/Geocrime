@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Route Map with Mapbox</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <!-- Mapbox CSS -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <!-- Mapbox JS -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.css"
+      type="text/css"
+    />
+
+    <script>
+        mapboxgl.accessToken = '{{ mapbox_token }}';
+
+        const start = [{{ start_lon }}, {{ start_lat }}];
+        const end = [{{ end_lon }}, {{ end_lat }}];
+
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v12',
+            center: [{{ mid_lon }}, {{ mid_lat }}],
+            zoom: 13
+        });
+
+        // Add markers
+        new mapboxgl.Marker({ color: 'green' }).setLngLat(start).setPopup(new mapboxgl.Popup().setText("Start")).addTo(map);
+        new mapboxgl.Marker({ color: 'red' }).setLngLat(end).setPopup(new mapboxgl.Popup().setText("End")).addTo(map);
+
+        // Once map is loaded, fetch real route
+        map.on('load', () => {
+            const url = `https://api.mapbox.com/directions/v5/mapbox/driving/${start[0]},${start[1]};${end[0]},${end[1]}?geometries=geojson&access_token=${mapboxgl.accessToken}`;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    const route = data.routes[0].geometry;
+
+                    map.addSource('route', {
+                        type: 'geojson',
+                        data: {
+                            type: 'Feature',
+                            properties: {},
+                            geometry: route
+                        }
+                    });
+
+                    map.addLayer({
+                        id: 'route',
+                        type: 'line',
+                        source: 'route',
+                        layout: {
+                            'line-join': 'round',
+                            'line-cap': 'round'
+                        },
+                        paint: {
+                            'line-color': '#3887be',
+                            'line-width': 5,
+                            'line-opacity': 0.75
+                        }
+                    });
+                })
+                .catch(err => console.error('Error fetching route:', err));
+        });
+    </script>
+
+
+</body>
+</html>

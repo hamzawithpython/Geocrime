@@ -202,6 +202,22 @@ def route_view(request):
         'saved_routes': saved_routes
     })
 
+def mapbox_test(request):
+    return render(request, 'crimeapp/mapbox_test.html', {
+        'mapbox_token': 'pk.eyJ1IjoiaGFtamFhamVlIiwiYSI6ImNtYnBrMnVhMTA0cXIyaXNjeXdxaDByNnQifQ.AYava7Fo3R3bWWBbzbiQkg'
+    })
+
+def mapbox_route(request):
+    return render(request, 'crimeapp/mapbox_route.html', {
+        'mapbox_token': 'pk.eyJ1IjoiaGFtamFhamVlIiwiYSI6ImNtYnBrMnVhMTA0cXIyaXNjeXdxaDByNnQifQ.AYava7Fo3R3bWWBbzbiQkg',
+        'start_lat': 41.8781,
+        'start_lon': -87.6298,
+        'end_lat': 41.8858,
+        'end_lon': -87.6205,
+        'mid_lat': (41.8781 + 41.8858) / 2,
+        'mid_lon': (-87.6298 + -87.6205) / 2
+    })
+
 
 
 
