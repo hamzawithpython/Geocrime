@@ -1,0 +1,7082 @@
+[
+  {
+    "Latitude": 41.830481843,
+    "Longitude": -87.621751752,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.836310224,
+    "Longitude": -87.639624112,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.747609555,
+    "Longitude": -87.549179329,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.77487752,
+    "Longitude": -87.671374872,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.781002663,
+    "Longitude": -87.652107119,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.746220584,
+    "Longitude": -87.658477307,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.893002363,
+    "Longitude": -87.754811709,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.817138145,
+    "Longitude": -87.644537728,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.779492755,
+    "Longitude": -87.605912536,
+    "Primary Type": "INTERFERENCE WITH PUBLIC OFFICER"
+  },
+  {
+    "Latitude": 41.896470682,
+    "Longitude": -87.712687444,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.90966592,
+    "Longitude": -87.676354472,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.844252757,
+    "Longitude": -87.724943845,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.925681769,
+    "Longitude": -87.701883719,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.769449202,
+    "Longitude": -87.659088027,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.880823946,
+    "Longitude": -87.758747941,
+    "Primary Type": "NARCOTICS"
+  },
+  {
+    "Latitude": 41.766897557,
+    "Longitude": -87.575098672,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.877134658,
+    "Longitude": -87.721881801,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.746595831,
+    "Longitude": -87.613590958,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.775900146,
+    "Longitude": -87.598529213,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.846801978,
+    "Longitude": -87.623527134,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.772236394,
+    "Longitude": -87.705396225,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.903561493,
+    "Longitude": -87.653509519,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.749351783,
+    "Longitude": -87.656135797,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.883937205,
+    "Longitude": -87.683327432,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.705902269,
+    "Longitude": -87.537707456,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.708440181,
+    "Longitude": -87.613796977,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.893408918,
+    "Longitude": -87.765338129,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.779451037,
+    "Longitude": -87.664530441,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.726831283,
+    "Longitude": -87.569378932,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.735857166,
+    "Longitude": -87.624152861,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.90597895,
+    "Longitude": -87.747053523,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.777967289,
+    "Longitude": -87.615568353,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.790614044,
+    "Longitude": -87.622361533,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.873760261,
+    "Longitude": -87.699795456,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.905777306,
+    "Longitude": -87.631812009,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.88173688,
+    "Longitude": -87.751483513,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.947311989,
+    "Longitude": -87.648321298,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.809518699,
+    "Longitude": -87.607333603,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.739545702,
+    "Longitude": -87.616223543,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.920168413,
+    "Longitude": -87.724197537,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.802924631,
+    "Longitude": -87.687367104,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.936880447,
+    "Longitude": -87.648190373,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.905528298,
+    "Longitude": -87.710454372,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.876938298,
+    "Longitude": -87.702323392,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 42.014496646,
+    "Longitude": -87.80660569,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.76587359,
+    "Longitude": -87.576294705,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.977837548,
+    "Longitude": -87.68017045,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.937919992,
+    "Longitude": -87.649024588,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.773297415,
+    "Longitude": -87.665316571,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.764885191,
+    "Longitude": -87.629756746,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.963007697,
+    "Longitude": -87.70874031,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.97093409,
+    "Longitude": -87.839696517,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.711815615,
+    "Longitude": -87.615099806,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.744779647,
+    "Longitude": -87.606267858,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.766416791,
+    "Longitude": -87.645667032,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.953283248,
+    "Longitude": -87.758314501,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.775891618,
+    "Longitude": -87.75556842,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.811538648,
+    "Longitude": -87.663833607,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.783887007,
+    "Longitude": -87.7229079,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.970705035,
+    "Longitude": -87.752079265,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.969209738,
+    "Longitude": -87.679199562,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.910212826,
+    "Longitude": -87.69745862,
+    "Primary Type": "OFFENSE INVOLVING CHILDREN"
+  },
+  {
+    "Latitude": 41.96658406,
+    "Longitude": -87.783441609,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.681929492,
+    "Longitude": -87.672676154,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.705717816,
+    "Longitude": -87.702546548,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.919132008,
+    "Longitude": -87.786531453,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.781365201,
+    "Longitude": -87.705629817,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.783818566,
+    "Longitude": -87.588480364,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.864544223,
+    "Longitude": -87.661500368,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.885740288,
+    "Longitude": -87.631590568,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.836069707,
+    "Longitude": -87.613033345,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.90086502,
+    "Longitude": -87.724112886,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.869047845,
+    "Longitude": -87.624125523,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.873219626,
+    "Longitude": -87.675868666,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.688183975,
+    "Longitude": -87.618141533,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.823320055,
+    "Longitude": -87.623203203,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.879170269,
+    "Longitude": -87.75350806,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.824852184,
+    "Longitude": -87.611449374,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.854260957,
+    "Longitude": -87.647479816,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.92928153,
+    "Longitude": -87.712836209,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.770128858,
+    "Longitude": -87.685152162,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.921281655,
+    "Longitude": -87.749915493,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.993289236,
+    "Longitude": -87.687288743,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.870972237,
+    "Longitude": -87.704313319,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.932169842,
+    "Longitude": -87.688192539,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.777005986,
+    "Longitude": -87.670231127,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.954401174,
+    "Longitude": -87.835474975,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.675180065,
+    "Longitude": -87.632191427,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.75810458,
+    "Longitude": -87.565145103,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.801150088,
+    "Longitude": -87.619384368,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.719754527,
+    "Longitude": -87.634619144,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.751181266,
+    "Longitude": -87.663460692,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.792869991,
+    "Longitude": -87.668204752,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.728100626,
+    "Longitude": -87.563022528,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.744925849,
+    "Longitude": -87.603789093,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.867652634,
+    "Longitude": -87.704485374,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.911036489,
+    "Longitude": -87.694562787,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.681109736,
+    "Longitude": -87.642018411,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.80931735,
+    "Longitude": -87.620757235,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.901412663,
+    "Longitude": -87.750853101,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.910557078,
+    "Longitude": -87.672880906,
+    "Primary Type": "CRIMINAL TRESPASS"
+  },
+  {
+    "Latitude": 41.906309742,
+    "Longitude": -87.671102583,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.752283021,
+    "Longitude": -87.59429461,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.903933718,
+    "Longitude": -87.629209346,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.793060906,
+    "Longitude": -87.703539139,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.852589811,
+    "Longitude": -87.713647735,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.933294113,
+    "Longitude": -87.797994579,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.776092657,
+    "Longitude": -87.615523266,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.764133465,
+    "Longitude": -87.624878892,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.931798084,
+    "Longitude": -87.651405312,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.851463959,
+    "Longitude": -87.73053169,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 42.01498577,
+    "Longitude": -87.666822718,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.903775756,
+    "Longitude": -87.639324074,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.776500412,
+    "Longitude": -87.683570213,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.884848934,
+    "Longitude": -87.639808046,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.956969456,
+    "Longitude": -87.784248543,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.78143775,
+    "Longitude": -87.608405738,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.97551745,
+    "Longitude": -87.729569215,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.718965185,
+    "Longitude": -87.666190905,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.783310759,
+    "Longitude": -87.716240215,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.756259091,
+    "Longitude": -87.624719943,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.673308356,
+    "Longitude": -87.652724115,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.911604188,
+    "Longitude": -87.772792848,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.974346203,
+    "Longitude": -87.656361214,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.805850942,
+    "Longitude": -87.645454564,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 42.000208379,
+    "Longitude": -87.806767692,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.873567157,
+    "Longitude": -87.764614265,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.682265223,
+    "Longitude": -87.627589748,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.772681233,
+    "Longitude": -87.631918784,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.894513082,
+    "Longitude": -87.708967365,
+    "Primary Type": "NARCOTICS"
+  },
+  {
+    "Latitude": 41.676106425,
+    "Longitude": -87.631540791,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.883173078,
+    "Longitude": -87.741467212,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.800509767,
+    "Longitude": -87.685436557,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.89200307,
+    "Longitude": -87.628076963,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.797607683,
+    "Longitude": -87.598138262,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.993111976,
+    "Longitude": -87.695832203,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.749385386,
+    "Longitude": -87.556490622,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.774222681,
+    "Longitude": -87.607049903,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.910316566,
+    "Longitude": -87.687527244,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 42.007828724,
+    "Longitude": -87.670576862,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.766274325,
+    "Longitude": -87.66382789,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.884886395,
+    "Longitude": -87.763346076,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.892517133,
+    "Longitude": -87.745722214,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.937124223,
+    "Longitude": -87.772525318,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.882365135,
+    "Longitude": -87.720840435,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.813124242,
+    "Longitude": -87.698034654,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.906511566,
+    "Longitude": -87.638838917,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.879428698,
+    "Longitude": -87.629823603,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.791770601,
+    "Longitude": -87.645091743,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.900424796,
+    "Longitude": -87.642467932,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.761411202,
+    "Longitude": -87.654436595,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.891536035,
+    "Longitude": -87.677539275,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.717345593,
+    "Longitude": -87.629766379,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.742099153,
+    "Longitude": -87.605510292,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.880478172,
+    "Longitude": -87.746805637,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.886118287,
+    "Longitude": -87.769963886,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.751594515,
+    "Longitude": -87.661854897,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.865853297,
+    "Longitude": -87.705652118,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.894038684,
+    "Longitude": -87.680411585,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.852163701,
+    "Longitude": -87.676477082,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.870735611,
+    "Longitude": -87.724050264,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.901221584,
+    "Longitude": -87.70673844,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.858548,
+    "Longitude": -87.695672747,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.677213003,
+    "Longitude": -87.629844926,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.888656822,
+    "Longitude": -87.749114337,
+    "Primary Type": "NARCOTICS"
+  },
+  {
+    "Latitude": 41.898067287,
+    "Longitude": -87.721278114,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.939786265,
+    "Longitude": -87.662545222,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.844227884,
+    "Longitude": -87.726467148,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.893646656,
+    "Longitude": -87.631177143,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.915363918,
+    "Longitude": -87.724838432,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.944563237,
+    "Longitude": -87.726538437,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.750224946,
+    "Longitude": -87.664650661,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.880263054,
+    "Longitude": -87.706098653,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.657906503,
+    "Longitude": -87.599981843,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.675353708,
+    "Longitude": -87.641827441,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.802668918,
+    "Longitude": -87.656304541,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.817156358,
+    "Longitude": -87.631228252,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.801123936,
+    "Longitude": -87.717261299,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.878829595,
+    "Longitude": -87.728948975,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.69017546,
+    "Longitude": -87.608362209,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.89588505,
+    "Longitude": -87.731032399,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.761727593,
+    "Longitude": -87.564815996,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.885901992,
+    "Longitude": -87.632455489,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.859921099,
+    "Longitude": -87.716451303,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.968421671,
+    "Longitude": -87.711710053,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.779283381,
+    "Longitude": -87.765437094,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.871788907,
+    "Longitude": -87.736498067,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.713434725,
+    "Longitude": -87.636940082,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.751838068,
+    "Longitude": -87.734191308,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.833506372,
+    "Longitude": -87.679041998,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.673207966,
+    "Longitude": -87.617674109,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.725181145,
+    "Longitude": -87.59486171,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.862832503,
+    "Longitude": -87.716915247,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.779598042,
+    "Longitude": -87.70315393,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.777420456,
+    "Longitude": -87.75562069,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.68432823,
+    "Longitude": -87.650638409,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.936540264,
+    "Longitude": -87.642710429,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.788109403,
+    "Longitude": -87.660791953,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.796216157,
+    "Longitude": -87.723245665,
+    "Primary Type": "CRIMINAL TRESPASS"
+  },
+  {
+    "Latitude": 41.983649153,
+    "Longitude": -87.658712242,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.870355187,
+    "Longitude": -87.630550934,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.938352864,
+    "Longitude": -87.834820627,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.70303513,
+    "Longitude": -87.62816831,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.871834768,
+    "Longitude": -87.62615082,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.768901522,
+    "Longitude": -87.572703345,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.954341216,
+    "Longitude": -87.665307966,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.862422995,
+    "Longitude": -87.626313277,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.790366109,
+    "Longitude": -87.61911168,
+    "Primary Type": "OFFENSE INVOLVING CHILDREN"
+  },
+  {
+    "Latitude": 41.954323081,
+    "Longitude": -87.666436795,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.86821682,
+    "Longitude": -87.6304532,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.756024579,
+    "Longitude": -87.649420997,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.808407604,
+    "Longitude": -87.616563802,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.882024507,
+    "Longitude": -87.726462162,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.805096267,
+    "Longitude": -87.618045825,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.875254899,
+    "Longitude": -87.72654824,
+    "Primary Type": "NARCOTICS"
+  },
+  {
+    "Latitude": 41.817593665,
+    "Longitude": -87.624682516,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.779125969,
+    "Longitude": -87.692724188,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.895618464,
+    "Longitude": -87.759353621,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.895942945,
+    "Longitude": -87.746991055,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.855190551,
+    "Longitude": -87.623871195,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.881742581,
+    "Longitude": -87.750984043,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.753199675,
+    "Longitude": -87.65017296,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.978040669,
+    "Longitude": -87.66681092,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.895682989,
+    "Longitude": -87.652616066,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.896715933,
+    "Longitude": -87.625119738,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.956252211,
+    "Longitude": -87.706865105,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.914659653,
+    "Longitude": -87.680550487,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.945729306,
+    "Longitude": -87.683376487,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.972758461,
+    "Longitude": -87.725726634,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.869710651,
+    "Longitude": -87.627477612,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.74960262,
+    "Longitude": -87.654927494,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.695410927,
+    "Longitude": -87.684456603,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.736675238,
+    "Longitude": -87.545820662,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.743125083,
+    "Longitude": -87.605007694,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.93657396,
+    "Longitude": -87.640559999,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.922834609,
+    "Longitude": -87.758565927,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.9267445,
+    "Longitude": -87.642893262,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.888787538,
+    "Longitude": -87.721003117,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.699927519,
+    "Longitude": -87.535280094,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.713551137,
+    "Longitude": -87.622782912,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.867487947,
+    "Longitude": -87.704479646,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.954822019,
+    "Longitude": -87.730878528,
+    "Primary Type": "CRIMINAL TRESPASS"
+  },
+  {
+    "Latitude": 41.755117151,
+    "Longitude": -87.66355537,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.853523217,
+    "Longitude": -87.633455118,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.952802319,
+    "Longitude": -87.648641167,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.871986216,
+    "Longitude": -87.694613949,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.842637721,
+    "Longitude": -87.62689079,
+    "Primary Type": "INTERFERENCE WITH PUBLIC OFFICER"
+  },
+  {
+    "Latitude": 41.921889381,
+    "Longitude": -87.738923226,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.987800474,
+    "Longitude": -87.810066387,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.883659738,
+    "Longitude": -87.632421239,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 42.001032737,
+    "Longitude": -87.665603433,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.990427791,
+    "Longitude": -87.748331787,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.791832578,
+    "Longitude": -87.64995725,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.871811902,
+    "Longitude": -87.627340674,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.929644221,
+    "Longitude": -87.684131464,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.952879787,
+    "Longitude": -87.710434702,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 42.009502407,
+    "Longitude": -87.690800558,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.989963659,
+    "Longitude": -87.666245142,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.869707206,
+    "Longitude": -87.630495617,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.80273315,
+    "Longitude": -87.661167194,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.75361077,
+    "Longitude": -87.715513275,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.81811276,
+    "Longitude": -87.60674129,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.862068038,
+    "Longitude": -87.64559023,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.75958044,
+    "Longitude": -87.654848069,
+    "Primary Type": "NARCOTICS"
+  },
+  {
+    "Latitude": 41.975169925,
+    "Longitude": -87.840049953,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.908430535,
+    "Longitude": -87.638509526,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 42.008088319,
+    "Longitude": -87.678032399,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.736826212,
+    "Longitude": -87.545826145,
+    "Primary Type": "SEX OFFENSE"
+  },
+  {
+    "Latitude": 41.793588428,
+    "Longitude": -87.619196923,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.808449979,
+    "Longitude": -87.74316789,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.940577252,
+    "Longitude": -87.752808731,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.722748857,
+    "Longitude": -87.627480265,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.817584545,
+    "Longitude": -87.621432314,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.878144785,
+    "Longitude": -87.631233035,
+    "Primary Type": "PUBLIC PEACE VIOLATION"
+  },
+  {
+    "Latitude": 41.756523865,
+    "Longitude": -87.562686396,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.899667469,
+    "Longitude": -87.721332624,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.750332707,
+    "Longitude": -87.61126612,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.90161445,
+    "Longitude": -87.722610717,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.885452254,
+    "Longitude": -87.712125721,
+    "Primary Type": "NARCOTICS"
+  },
+  {
+    "Latitude": 41.745813125,
+    "Longitude": -87.603493223,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.750713304,
+    "Longitude": -87.607644795,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.887640628,
+    "Longitude": -87.619340283,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.871027611,
+    "Longitude": -87.699411225,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.804535047,
+    "Longitude": -87.606458255,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.749890743,
+    "Longitude": -87.64523144,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.88789622,
+    "Longitude": -87.637281436,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.74907084,
+    "Longitude": -87.574718487,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.841869335,
+    "Longitude": -87.709842734,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.936335635,
+    "Longitude": -87.650710119,
+    "Primary Type": "OFFENSE INVOLVING CHILDREN"
+  },
+  {
+    "Latitude": 41.897012256,
+    "Longitude": -87.632716018,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.882894911,
+    "Longitude": -87.696646239,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.771389725,
+    "Longitude": -87.683427501,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.839804007,
+    "Longitude": -87.627964177,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.80311258,
+    "Longitude": -87.667889773,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.855190551,
+    "Longitude": -87.623871195,
+    "Primary Type": "CRIMINAL SEXUAL ASSAULT"
+  },
+  {
+    "Latitude": 41.86625461,
+    "Longitude": -87.718967674,
+    "Primary Type": "CRIMINAL TRESPASS"
+  },
+  {
+    "Latitude": 41.671834945,
+    "Longitude": -87.638102391,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.861335178,
+    "Longitude": -87.625690175,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.846820192,
+    "Longitude": -87.647298713,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.918012049,
+    "Longitude": -87.74003577,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.764568009,
+    "Longitude": -87.632190432,
+    "Primary Type": "NARCOTICS"
+  },
+  {
+    "Latitude": 41.746741163,
+    "Longitude": -87.661612314,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.88096768,
+    "Longitude": -87.737940272,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.781002879,
+    "Longitude": -87.775277309,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.899172849,
+    "Longitude": -87.745903631,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.756071853,
+    "Longitude": -87.646305237,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.800327411,
+    "Longitude": -87.650171405,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.892724688,
+    "Longitude": -87.710134375,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.883610459,
+    "Longitude": -87.706998677,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.97584897,
+    "Longitude": -87.748012884,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.750832464,
+    "Longitude": -87.605224746,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.823193587,
+    "Longitude": -87.616978591,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.880366516,
+    "Longitude": -87.6243529,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.775014167,
+    "Longitude": -87.684747365,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.853885083,
+    "Longitude": -87.684329217,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.783208914,
+    "Longitude": -87.599501736,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.978526568,
+    "Longitude": -87.75708711,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.715911589,
+    "Longitude": -87.601842763,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.709015404,
+    "Longitude": -87.621554707,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.926616138,
+    "Longitude": -87.76851632,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.936455089,
+    "Longitude": -87.658849681,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.687221578,
+    "Longitude": -87.647089505,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.96899694,
+    "Longitude": -87.737922872,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.697982208,
+    "Longitude": -87.628963178,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.874030811,
+    "Longitude": -87.748201104,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.902598376,
+    "Longitude": -87.772952438,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.773950727,
+    "Longitude": -87.634889097,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.938650783,
+    "Longitude": -87.760452773,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.819480551,
+    "Longitude": -87.605621573,
+    "Primary Type": "SEX OFFENSE"
+  },
+  {
+    "Latitude": 41.905816461,
+    "Longitude": -87.689559998,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.871688213,
+    "Longitude": -87.66256009,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.736613778,
+    "Longitude": -87.556952322,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.896664035,
+    "Longitude": -87.629175344,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.777782578,
+    "Longitude": -87.77558753,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.991404284,
+    "Longitude": -87.656853651,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.801746197,
+    "Longitude": -87.593458768,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.848474762,
+    "Longitude": -87.724676285,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.934686124,
+    "Longitude": -87.707498853,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.777284135,
+    "Longitude": -87.694128349,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.839292845,
+    "Longitude": -87.625169769,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.967926722,
+    "Longitude": -87.662772235,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.946525106,
+    "Longitude": -87.747090201,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.722385688,
+    "Longitude": -87.581893417,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.777837668,
+    "Longitude": -87.798130882,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.827681913,
+    "Longitude": -87.665496311,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.886406836,
+    "Longitude": -87.706997072,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.945155469,
+    "Longitude": -87.822262452,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.912640948,
+    "Longitude": -87.655161982,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.922411845,
+    "Longitude": -87.786632059,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.865213688,
+    "Longitude": -87.727590376,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.765138728,
+    "Longitude": -87.648554452,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.745079376,
+    "Longitude": -87.605062559,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.779219754,
+    "Longitude": -87.68644283,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.722578383,
+    "Longitude": -87.662706548,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.933202175,
+    "Longitude": -87.659611631,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.958671656,
+    "Longitude": -87.765788396,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.935139129,
+    "Longitude": -87.788269124,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.711883653,
+    "Longitude": -87.598515275,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.894884155,
+    "Longitude": -87.761233398,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 42.000178193,
+    "Longitude": -87.694830891,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.772951871,
+    "Longitude": -87.580167052,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.760903375,
+    "Longitude": -87.647943398,
+    "Primary Type": "OFFENSE INVOLVING CHILDREN"
+  },
+  {
+    "Latitude": 41.940552082,
+    "Longitude": -87.727227042,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.975407211,
+    "Longitude": -87.661329394,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.832278311,
+    "Longitude": -87.611035696,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.745817472,
+    "Longitude": -87.603313617,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.751928332,
+    "Longitude": -87.644077264,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.899145291,
+    "Longitude": -87.627910223,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.735335992,
+    "Longitude": -87.663053811,
+    "Primary Type": "PROSTITUTION"
+  },
+  {
+    "Latitude": 41.833139425,
+    "Longitude": -87.615319213,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.715243369,
+    "Longitude": -87.534068763,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.716769577,
+    "Longitude": -87.536492917,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.862095128,
+    "Longitude": -87.657550249,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.736314583,
+    "Longitude": -87.569636606,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.773503267,
+    "Longitude": -87.665321767,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.954005002,
+    "Longitude": -87.689067928,
+    "Primary Type": "OFFENSE INVOLVING CHILDREN"
+  },
+  {
+    "Latitude": 41.921750717,
+    "Longitude": -87.782088688,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.713389387,
+    "Longitude": -87.559499007,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.925226238,
+    "Longitude": -87.662683065,
+    "Primary Type": "CRIMINAL SEXUAL ASSAULT"
+  },
+  {
+    "Latitude": 41.904052033,
+    "Longitude": -87.756717683,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.862533336,
+    "Longitude": -87.652292314,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.994723812,
+    "Longitude": -87.701970542,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.904419341,
+    "Longitude": -87.729930964,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.884790951,
+    "Longitude": -87.624469241,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.970698206,
+    "Longitude": -87.726886175,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.803885383,
+    "Longitude": -87.618822181,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.954860416,
+    "Longitude": -87.73087449,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.886355771,
+    "Longitude": -87.720934527,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.994424992,
+    "Longitude": -87.699534545,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.906370059,
+    "Longitude": -87.752192988,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.726219145,
+    "Longitude": -87.567294437,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.778660358,
+    "Longitude": -87.693381423,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.855661379,
+    "Longitude": -87.633068408,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.699272376,
+    "Longitude": -87.646243692,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.754823635,
+    "Longitude": -87.551092573,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.856079977,
+    "Longitude": -87.659929799,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.704095028,
+    "Longitude": -87.565733407,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.908560535,
+    "Longitude": -87.677409143,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.944059468,
+    "Longitude": -87.786300133,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.750675452,
+    "Longitude": -87.606432206,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 42.019372548,
+    "Longitude": -87.670887574,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.809942043,
+    "Longitude": -87.689372741,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.88171846,
+    "Longitude": -87.627760426,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.677294835,
+    "Longitude": -87.646550716,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.736636821,
+    "Longitude": -87.545821131,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.846399344,
+    "Longitude": -87.699672765,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.701911513,
+    "Longitude": -87.528177069,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.749500329,
+    "Longitude": -87.6011574,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.745882542,
+    "Longitude": -87.597167639,
+    "Primary Type": "CRIMINAL SEXUAL ASSAULT"
+  },
+  {
+    "Latitude": 41.746626309,
+    "Longitude": -87.618031954,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.771782439,
+    "Longitude": -87.649436929,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.763337967,
+    "Longitude": -87.597001131,
+    "Primary Type": "SEX OFFENSE"
+  },
+  {
+    "Latitude": 41.985875279,
+    "Longitude": -87.766403857,
+    "Primary Type": "SEX OFFENSE"
+  },
+  {
+    "Latitude": 41.76261474,
+    "Longitude": -87.652840463,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.89621515,
+    "Longitude": -87.728572048,
+    "Primary Type": "OFFENSE INVOLVING CHILDREN"
+  },
+  {
+    "Latitude": 41.748653803,
+    "Longitude": -87.602680492,
+    "Primary Type": "SEX OFFENSE"
+  },
+  {
+    "Latitude": 41.932015426,
+    "Longitude": -87.769916668,
+    "Primary Type": "OFFENSE INVOLVING CHILDREN"
+  },
+  {
+    "Latitude": 41.917562778,
+    "Longitude": -87.749828117,
+    "Primary Type": "OFFENSE INVOLVING CHILDREN"
+  },
+  {
+    "Latitude": 41.91065261,
+    "Longitude": -87.66614577,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.692833841,
+    "Longitude": -87.60431945,
+    "Primary Type": "STALKING"
+  },
+  {
+    "Latitude": 41.80890316,
+    "Longitude": -87.618139193,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.911574252,
+    "Longitude": -87.789972279,
+    "Primary Type": "CRIMINAL SEXUAL ASSAULT"
+  },
+  {
+    "Latitude": 41.737941794,
+    "Longitude": -87.591392313,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.788766927,
+    "Longitude": -87.650371164,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.875740168,
+    "Longitude": -87.756274592,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.898995081,
+    "Longitude": -87.774056512,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.788264552,
+    "Longitude": -87.62229949,
+    "Primary Type": "SEX OFFENSE"
+  },
+  {
+    "Latitude": 41.814049574,
+    "Longitude": -87.618283699,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.729190076,
+    "Longitude": -87.551235113,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.902320502,
+    "Longitude": -87.749133059,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.917656022,
+    "Longitude": -87.688750258,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.935883156,
+    "Longitude": -87.716219645,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.917790125,
+    "Longitude": -87.754624625,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.917506742,
+    "Longitude": -87.753392641,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.910962378,
+    "Longitude": -87.694559852,
+    "Primary Type": "CRIMINAL TRESPASS"
+  },
+  {
+    "Latitude": 41.921207741,
+    "Longitude": -87.754832585,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.929743818,
+    "Longitude": -87.684273777,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.903304304,
+    "Longitude": -87.670064675,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.930200015,
+    "Longitude": -87.761292788,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.943940866,
+    "Longitude": -87.663931542,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.873760261,
+    "Longitude": -87.699795456,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.924248302,
+    "Longitude": -87.745636923,
+    "Primary Type": "CRIMINAL TRESPASS"
+  },
+  {
+    "Latitude": 41.972359593,
+    "Longitude": -87.728142793,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.969229299,
+    "Longitude": -87.713386363,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.928235818,
+    "Longitude": -87.682084152,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.910107045,
+    "Longitude": -87.707676543,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.761701305,
+    "Longitude": -87.718642841,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.9301323,
+    "Longitude": -87.785676799,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.906519104,
+    "Longitude": -87.758359629,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.929743818,
+    "Longitude": -87.684273777,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.928869943,
+    "Longitude": -87.725672915,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.926287021,
+    "Longitude": -87.785547998,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.903125362,
+    "Longitude": -87.680983903,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.748232929,
+    "Longitude": -87.641533277,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.71286177,
+    "Longitude": -87.537694886,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.910491438,
+    "Longitude": -87.749936608,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.763423571,
+    "Longitude": -87.705236576,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.98142637,
+    "Longitude": -87.772997369,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.796510344,
+    "Longitude": -87.708540596,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.945583621,
+    "Longitude": -87.747047365,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.961202055,
+    "Longitude": -87.777049892,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.988962585,
+    "Longitude": -87.782770866,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.915389329,
+    "Longitude": -87.765701742,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.91943601,
+    "Longitude": -87.775564587,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.902562633,
+    "Longitude": -87.750879383,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.910505437,
+    "Longitude": -87.676316472,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.862914501,
+    "Longitude": -87.709737438,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.880399914,
+    "Longitude": -87.753008553,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.848474762,
+    "Longitude": -87.724676285,
+    "Primary Type": "CRIMINAL TRESPASS"
+  },
+  {
+    "Latitude": 41.778289651,
+    "Longitude": -87.695808518,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.935546943,
+    "Longitude": -87.642724821,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.872819865,
+    "Longitude": -87.701949002,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.916875237,
+    "Longitude": -87.750616985,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.76463904,
+    "Longitude": -87.643013869,
+    "Primary Type": "OFFENSE INVOLVING CHILDREN"
+  },
+  {
+    "Latitude": 42.01409633,
+    "Longitude": -87.68935968,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.953643409,
+    "Longitude": -87.72801475,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.779176188,
+    "Longitude": -87.689434991,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.815712552,
+    "Longitude": -87.701600451,
+    "Primary Type": "CRIMINAL SEXUAL ASSAULT"
+  },
+  {
+    "Latitude": 41.726703838,
+    "Longitude": -87.619110209,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.81227369,
+    "Longitude": -87.748176594,
+    "Primary Type": "CRIMINAL SEXUAL ASSAULT"
+  },
+  {
+    "Latitude": 41.745782809,
+    "Longitude": -87.721960773,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.808507017,
+    "Longitude": -87.676329034,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.794421073,
+    "Longitude": -87.662167181,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.751537713,
+    "Longitude": -87.581359277,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.795048126,
+    "Longitude": -87.703604031,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.773407549,
+    "Longitude": -87.621506778,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.807922197,
+    "Longitude": -87.622801079,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.764264872,
+    "Longitude": -87.64560204,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.905319751,
+    "Longitude": -87.692011564,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.875902562,
+    "Longitude": -87.69615018,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.97209549,
+    "Longitude": -87.807087563,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.891404732,
+    "Longitude": -87.628061509,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.914718362,
+    "Longitude": -87.756614335,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.902505497,
+    "Longitude": -87.774165467,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.751110539,
+    "Longitude": -87.653753563,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.787216162,
+    "Longitude": -87.632559728,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.745486902,
+    "Longitude": -87.686950123,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.879843886,
+    "Longitude": -87.627718623,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.954837291,
+    "Longitude": -87.711103124,
+    "Primary Type": "OFFENSE INVOLVING CHILDREN"
+  },
+  {
+    "Latitude": 41.893611655,
+    "Longitude": -87.66721933,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.756613958,
+    "Longitude": -87.613380078,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.930923653,
+    "Longitude": -87.680369985,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.773297415,
+    "Longitude": -87.665316571,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.871885139,
+    "Longitude": -87.704142817,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.705398755,
+    "Longitude": -87.619844102,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.858119816,
+    "Longitude": -87.693191846,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.762308477,
+    "Longitude": -87.655347143,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.942287436,
+    "Longitude": -87.822807301,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.745292271,
+    "Longitude": -87.588189295,
+    "Primary Type": "INTERFERENCE WITH PUBLIC OFFICER"
+  },
+  {
+    "Latitude": 41.873191445,
+    "Longitude": -87.743446563,
+    "Primary Type": "HOMICIDE"
+  },
+  {
+    "Latitude": 41.755353249,
+    "Longitude": -87.651440192,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.807145524,
+    "Longitude": -87.741921764,
+    "Primary Type": "PROSTITUTION"
+  },
+  {
+    "Latitude": 41.803995088,
+    "Longitude": -87.741389571,
+    "Primary Type": "PROSTITUTION"
+  },
+  {
+    "Latitude": 41.793703259,
+    "Longitude": -87.693147462,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.939051438,
+    "Longitude": -87.730438917,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.855947706,
+    "Longitude": -87.721121927,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.721691511,
+    "Longitude": -87.578982056,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.770020864,
+    "Longitude": -87.6913338,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.874363279,
+    "Longitude": -87.643013039,
+    "Primary Type": "CRIMINAL SEXUAL ASSAULT"
+  },
+  {
+    "Latitude": 41.873789876,
+    "Longitude": -87.696714581,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.754248524,
+    "Longitude": -87.607733245,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.907130946,
+    "Longitude": -87.694473144,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.818970326,
+    "Longitude": -87.642544391,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.746431352,
+    "Longitude": -87.646345733,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.760296965,
+    "Longitude": -87.684345797,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.779881706,
+    "Longitude": -87.636789913,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.853058663,
+    "Longitude": -87.650190508,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.843879386,
+    "Longitude": -87.620432585,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.858686589,
+    "Longitude": -87.631890095,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.762260854,
+    "Longitude": -87.692965274,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.935409279,
+    "Longitude": -87.74675098,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.850865888,
+    "Longitude": -87.712533884,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.756636028,
+    "Longitude": -87.566324432,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.968462532,
+    "Longitude": -87.707613294,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.96607814,
+    "Longitude": -87.647153241,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.965906449,
+    "Longitude": -87.708395773,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.736277091,
+    "Longitude": -87.585212192,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.763659945,
+    "Longitude": -87.626863438,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.891943951,
+    "Longitude": -87.768770463,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.748776618,
+    "Longitude": -87.605167356,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.769925563,
+    "Longitude": -87.637267875,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.913472752,
+    "Longitude": -87.764370362,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 42.000299008,
+    "Longitude": -87.807981016,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.809803372,
+    "Longitude": -87.64556634,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.98715762,
+    "Longitude": -87.668356321,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.806060798,
+    "Longitude": -87.590999348,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.768891175,
+    "Longitude": -87.614133593,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.872963554,
+    "Longitude": -87.753663295,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.880414105,
+    "Longitude": -87.72811149,
+    "Primary Type": "NARCOTICS"
+  },
+  {
+    "Latitude": 41.702027818,
+    "Longitude": -87.563981957,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.902642474,
+    "Longitude": -87.728111001,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.805309638,
+    "Longitude": -87.58899806,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.887771177,
+    "Longitude": -87.644304667,
+    "Primary Type": "CRIMINAL TRESPASS"
+  },
+  {
+    "Latitude": 41.973922349,
+    "Longitude": -87.67934257,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.921470593,
+    "Longitude": -87.732801776,
+    "Primary Type": "OFFENSE INVOLVING CHILDREN"
+  },
+  {
+    "Latitude": 41.853842942,
+    "Longitude": -87.623842041,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.776724154,
+    "Longitude": -87.687234143,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.897618116,
+    "Longitude": -87.769139223,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.920848651,
+    "Longitude": -87.7731786,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.855190551,
+    "Longitude": -87.623871195,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.967222325,
+    "Longitude": -87.709662541,
+    "Primary Type": "CRIMINAL TRESPASS"
+  },
+  {
+    "Latitude": 41.788524411,
+    "Longitude": -87.619066119,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.884476226,
+    "Longitude": -87.631310613,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.754476149,
+    "Longitude": -87.56507476,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.872844469,
+    "Longitude": -87.699441004,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.782211626,
+    "Longitude": -87.698354554,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.686267711,
+    "Longitude": -87.61979192,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.980782106,
+    "Longitude": -87.666808076,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.9206596,
+    "Longitude": -87.740444827,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.754730716,
+    "Longitude": -87.686637486,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.883028274,
+    "Longitude": -87.761636626,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.81797649,
+    "Longitude": -87.7239343,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.813833962,
+    "Longitude": -87.616712397,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.974187006,
+    "Longitude": -87.656355545,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.731921758,
+    "Longitude": -87.615304512,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.694019253,
+    "Longitude": -87.655405714,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.878604157,
+    "Longitude": -87.685096307,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.692029295,
+    "Longitude": -87.605979811,
+    "Primary Type": "STALKING"
+  },
+  {
+    "Latitude": 41.754639362,
+    "Longitude": -87.676820054,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.745069714,
+    "Longitude": -87.613545708,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.768002049,
+    "Longitude": -87.618535016,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.971872921,
+    "Longitude": -87.692568932,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.755364837,
+    "Longitude": -87.565826474,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.961102078,
+    "Longitude": -87.767263264,
+    "Primary Type": "CRIMINAL TRESPASS"
+  },
+  {
+    "Latitude": 41.866286618,
+    "Longitude": -87.715725607,
+    "Primary Type": "KIDNAPPING"
+  },
+  {
+    "Latitude": 41.967648053,
+    "Longitude": -87.693769564,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.807887928,
+    "Longitude": -87.722790148,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.917466034,
+    "Longitude": -87.699480934,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.711920502,
+    "Longitude": -87.642959263,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.86724898,
+    "Longitude": -87.640079073,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.775815434,
+    "Longitude": -87.615515359,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.690456945,
+    "Longitude": -87.630257161,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.975599033,
+    "Longitude": -87.66835154,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.740895201,
+    "Longitude": -87.606069845,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.673831325,
+    "Longitude": -87.620386834,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.787670818,
+    "Longitude": -87.64741635,
+    "Primary Type": "CRIMINAL TRESPASS"
+  },
+  {
+    "Latitude": 41.783092808,
+    "Longitude": -87.60844576,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.963070794,
+    "Longitude": -87.655984213,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.752558184,
+    "Longitude": -87.716252667,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.665814864,
+    "Longitude": -87.558853882,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.891193453,
+    "Longitude": -87.755812324,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.851487667,
+    "Longitude": -87.728776988,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.879580691,
+    "Longitude": -87.711826402,
+    "Primary Type": "NARCOTICS"
+  },
+  {
+    "Latitude": 41.93786671,
+    "Longitude": -87.716123338,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.760439035,
+    "Longitude": -87.672201358,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.905991963,
+    "Longitude": -87.678375871,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.663301707,
+    "Longitude": -87.632503294,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.867809872,
+    "Longitude": -87.697159411,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.762595746,
+    "Longitude": -87.667395894,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.875945922,
+    "Longitude": -87.743300063,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.851393305,
+    "Longitude": -87.723903515,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.684819803,
+    "Longitude": -87.647008859,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.759993951,
+    "Longitude": -87.628714274,
+    "Primary Type": "STALKING"
+  },
+  {
+    "Latitude": 41.861747467,
+    "Longitude": -87.711628352,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.96203391,
+    "Longitude": -87.645898728,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.761189159,
+    "Longitude": -87.65401376,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.793935909,
+    "Longitude": -87.625680278,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.838219696,
+    "Longitude": -87.704850674,
+    "Primary Type": "PUBLIC PEACE VIOLATION"
+  },
+  {
+    "Latitude": 41.743255632,
+    "Longitude": -87.601367592,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.680916759,
+    "Longitude": -87.632359783,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.868541914,
+    "Longitude": -87.639235361,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.917309067,
+    "Longitude": -87.714473331,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.867189673,
+    "Longitude": -87.644360507,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 42.006751752,
+    "Longitude": -87.662331544,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.903127397,
+    "Longitude": -87.680858986,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.909755664,
+    "Longitude": -87.7948114,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.820006933,
+    "Longitude": -87.616889375,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.787699819,
+    "Longitude": -87.605739095,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.83368122,
+    "Longitude": -87.612439993,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.930492323,
+    "Longitude": -87.710917158,
+    "Primary Type": "ARSON"
+  },
+  {
+    "Latitude": 41.771676658,
+    "Longitude": -87.572388286,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.793842071,
+    "Longitude": -87.620268584,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.928349655,
+    "Longitude": -87.642857579,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.774741046,
+    "Longitude": -87.794384227,
+    "Primary Type": "OFFENSE INVOLVING CHILDREN"
+  },
+  {
+    "Latitude": 42.019234358,
+    "Longitude": -87.666925556,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.923932635,
+    "Longitude": -87.769146299,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.789717304,
+    "Longitude": -87.625576333,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.857307384,
+    "Longitude": -87.644778606,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.995366855,
+    "Longitude": -87.684902319,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.964719947,
+    "Longitude": -87.71734971,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.876596598,
+    "Longitude": -87.652120991,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.906111588,
+    "Longitude": -87.773072333,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.690486111,
+    "Longitude": -87.627851381,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.791423128,
+    "Longitude": -87.798974984,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.947428137,
+    "Longitude": -87.747126039,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.915556135,
+    "Longitude": -87.759509355,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.739320771,
+    "Longitude": -87.604896792,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.885347387,
+    "Longitude": -87.627929824,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.794324214,
+    "Longitude": -87.643956933,
+    "Primary Type": "ARSON"
+  },
+  {
+    "Latitude": 41.778099133,
+    "Longitude": -87.633828531,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.785388356,
+    "Longitude": -87.634343305,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.924052887,
+    "Longitude": -87.797693352,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.868234232,
+    "Longitude": -87.704953287,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.976182125,
+    "Longitude": -87.876421145,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.71345022,
+    "Longitude": -87.570236958,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 42.014911903,
+    "Longitude": -87.671128898,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.812708431,
+    "Longitude": -87.60444003,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.87619881,
+    "Longitude": -87.723935954,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.70399846,
+    "Longitude": -87.620617627,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.945560284,
+    "Longitude": -87.707282238,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.909959349,
+    "Longitude": -87.638555401,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.767812898,
+    "Longitude": -87.593852468,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.803365964,
+    "Longitude": -87.622682706,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.981219319,
+    "Longitude": -87.783525344,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.849666532,
+    "Longitude": -87.631940932,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.946809107,
+    "Longitude": -87.682641363,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.734833707,
+    "Longitude": -87.663040714,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.724768174,
+    "Longitude": -87.628740293,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.745316916,
+    "Longitude": -87.59412899,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.752727431,
+    "Longitude": -87.568687129,
+    "Primary Type": "STALKING"
+  },
+  {
+    "Latitude": 42.002575704,
+    "Longitude": -87.65915619,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.874119819,
+    "Longitude": -87.624223667,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.99812694,
+    "Longitude": -87.66612678,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.899476558,
+    "Longitude": -87.72620879,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.950491896,
+    "Longitude": -87.649595954,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.96498423,
+    "Longitude": -87.758246066,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.803799227,
+    "Longitude": -87.590530312,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.893646656,
+    "Longitude": -87.631177143,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.984109031,
+    "Longitude": -87.660855375,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.735162406,
+    "Longitude": -87.703683752,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.771225099,
+    "Longitude": -87.685863303,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.771113236,
+    "Longitude": -87.722567122,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.943967854,
+    "Longitude": -87.669999929,
+    "Primary Type": "SEX OFFENSE"
+  },
+  {
+    "Latitude": 41.717843335,
+    "Longitude": -87.561119489,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.749058639,
+    "Longitude": -87.560126182,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.906940138,
+    "Longitude": -87.638463236,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.876000148,
+    "Longitude": -87.653350053,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.777594535,
+    "Longitude": -87.609519562,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.939527676,
+    "Longitude": -87.681976619,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.863740585,
+    "Longitude": -87.72510055,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.764862971,
+    "Longitude": -87.66794427,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.799275367,
+    "Longitude": -87.582312425,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.684796684,
+    "Longitude": -87.720096595,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.726566477,
+    "Longitude": -87.636065622,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.702244602,
+    "Longitude": -87.563979373,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.828499363,
+    "Longitude": -87.64361241,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.758524942,
+    "Longitude": -87.60872964,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.907050205,
+    "Longitude": -87.663450096,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.935432921,
+    "Longitude": -87.668504341,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.895397607,
+    "Longitude": -87.722912366,
+    "Primary Type": "NARCOTICS"
+  },
+  {
+    "Latitude": 41.998734156,
+    "Longitude": -87.660613118,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.939255207,
+    "Longitude": -87.714070054,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.91715988,
+    "Longitude": -87.727147152,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.880515138,
+    "Longitude": -87.743841898,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.949050296,
+    "Longitude": -87.706663599,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.899145291,
+    "Longitude": -87.627910223,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.867081407,
+    "Longitude": -87.619003708,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.700932568,
+    "Longitude": -87.607388178,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.745121812,
+    "Longitude": -87.601375711,
+    "Primary Type": "CRIMINAL TRESPASS"
+  },
+  {
+    "Latitude": 41.938268503,
+    "Longitude": -87.832461653,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.7478257,
+    "Longitude": -87.646385835,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.891893989,
+    "Longitude": -87.706752484,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.974861952,
+    "Longitude": -87.890372151,
+    "Primary Type": "CONCEALED CARRY LICENSE VIOLATION"
+  },
+  {
+    "Latitude": 41.808990794,
+    "Longitude": -87.70642393,
+    "Primary Type": "OFFENSE INVOLVING CHILDREN"
+  },
+  {
+    "Latitude": 41.753307626,
+    "Longitude": -87.667154745,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.807851044,
+    "Longitude": -87.725149,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.955736616,
+    "Longitude": -87.656168497,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.776589139,
+    "Longitude": -87.675052781,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.865397377,
+    "Longitude": -87.640660777,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.813986532,
+    "Longitude": -87.61258752,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 42.005384054,
+    "Longitude": -87.709326751,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.817822779,
+    "Longitude": -87.72392842,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 42.007893607,
+    "Longitude": -87.66661712,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.881998832,
+    "Longitude": -87.729400168,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.877532811,
+    "Longitude": -87.672387519,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.744081763,
+    "Longitude": -87.670562675,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.897131925,
+    "Longitude": -87.656791646,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.662944028,
+    "Longitude": -87.641411276,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.949640684,
+    "Longitude": -87.712796874,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.866853689,
+    "Longitude": -87.712996017,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.909524018,
+    "Longitude": -87.753986578,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.786343156,
+    "Longitude": -87.697609774,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.800740861,
+    "Longitude": -87.651399312,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.932669282,
+    "Longitude": -87.652083276,
+    "Primary Type": "CRIMINAL TRESPASS"
+  },
+  {
+    "Latitude": 41.712871535,
+    "Longitude": -87.552319304,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.718823567,
+    "Longitude": -87.643141787,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.779618399,
+    "Longitude": -87.653767961,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.87259132,
+    "Longitude": -87.721065935,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.707004754,
+    "Longitude": -87.636031665,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.828499363,
+    "Longitude": -87.64361241,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.793390915,
+    "Longitude": -87.711728299,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.752154317,
+    "Longitude": -87.665143707,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.768727829,
+    "Longitude": -87.624945647,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.780036279,
+    "Longitude": -87.604637829,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.807499342,
+    "Longitude": -87.590234482,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.731859652,
+    "Longitude": -87.554778427,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.881088655,
+    "Longitude": -87.720764494,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.744973301,
+    "Longitude": -87.596602719,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.700134558,
+    "Longitude": -87.561983199,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.918320935,
+    "Longitude": -87.705237426,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.727872617,
+    "Longitude": -87.551207132,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.761830729,
+    "Longitude": -87.627510276,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.80171934,
+    "Longitude": -87.630703621,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.867428687,
+    "Longitude": -87.626342565,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.881187452,
+    "Longitude": -87.684780097,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.771627792,
+    "Longitude": -87.706014366,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.774202812,
+    "Longitude": -87.608248922,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.929925166,
+    "Longitude": -87.746525605,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.685074357,
+    "Longitude": -87.642774065,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.765254159,
+    "Longitude": -87.641255151,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.871336669,
+    "Longitude": -87.625925,
+    "Primary Type": "CRIMINAL SEXUAL ASSAULT"
+  },
+  {
+    "Latitude": 41.973046564,
+    "Longitude": -87.7709563,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.883267969,
+    "Longitude": -87.712150552,
+    "Primary Type": "NARCOTICS"
+  },
+  {
+    "Latitude": 41.807135535,
+    "Longitude": -87.589992936,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.763358065,
+    "Longitude": -87.717468752,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.806890268,
+    "Longitude": -87.589834384,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.92537055,
+    "Longitude": -87.725577509,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.869047845,
+    "Longitude": -87.624125523,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.982603849,
+    "Longitude": -87.696713091,
+    "Primary Type": "CRIMINAL TRESPASS"
+  },
+  {
+    "Latitude": 41.751317167,
+    "Longitude": -87.563800456,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.91081797,
+    "Longitude": -87.654560398,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.982963773,
+    "Longitude": -87.716905397,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.917336596,
+    "Longitude": -87.712455913,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.749224132,
+    "Longitude": -87.577157314,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.800772595,
+    "Longitude": -87.673275953,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.855522867,
+    "Longitude": -87.680843862,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.789994324,
+    "Longitude": -87.652338285,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.751742742,
+    "Longitude": -87.661860682,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.883092889,
+    "Longitude": -87.650384784,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.95659747,
+    "Longitude": -87.700766117,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.801607877,
+    "Longitude": -87.739324672,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.926346433,
+    "Longitude": -87.724859021,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.928076536,
+    "Longitude": -87.785606186,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.681024396,
+    "Longitude": -87.614684538,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.890756989,
+    "Longitude": -87.636133879,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.744278483,
+    "Longitude": -87.647500963,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.71509729,
+    "Longitude": -87.644599112,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.758509638,
+    "Longitude": -87.609349222,
+    "Primary Type": "INTERFERENCE WITH PUBLIC OFFICER"
+  },
+  {
+    "Latitude": 41.817260819,
+    "Longitude": -87.700194873,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.780403178,
+    "Longitude": -87.665451811,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.692513124,
+    "Longitude": -87.629022848,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.913110178,
+    "Longitude": -87.633208656,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.716563317,
+    "Longitude": -87.564629081,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.872682495,
+    "Longitude": -87.714015459,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.822130356,
+    "Longitude": -87.603276576,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.881470317,
+    "Longitude": -87.665189884,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.884096556,
+    "Longitude": -87.612112232,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.794672085,
+    "Longitude": -87.623570871,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.879419844,
+    "Longitude": -87.751849706,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.788987036,
+    "Longitude": -87.74147999,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.693511976,
+    "Longitude": -87.641204594,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.865205115,
+    "Longitude": -87.694604352,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.965905724,
+    "Longitude": -87.645397479,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.858965656,
+    "Longitude": -87.71585846,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.953916833,
+    "Longitude": -87.70836586,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.76520694,
+    "Longitude": -87.610413911,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.80859321,
+    "Longitude": -87.665577234,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.893812529,
+    "Longitude": -87.624229924,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.944386341,
+    "Longitude": -87.727337759,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.83562445,
+    "Longitude": -87.640126906,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.883088627,
+    "Longitude": -87.763288609,
+    "Primary Type": "SEX OFFENSE"
+  },
+  {
+    "Latitude": 41.89221925,
+    "Longitude": -87.604682647,
+    "Primary Type": "CRIMINAL SEXUAL ASSAULT"
+  },
+  {
+    "Latitude": 41.687317053,
+    "Longitude": -87.654385071,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.879225851,
+    "Longitude": -87.646636417,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.738083675,
+    "Longitude": -87.587873258,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.996363572,
+    "Longitude": -87.703238225,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.673426131,
+    "Longitude": -87.635749987,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.788987036,
+    "Longitude": -87.74147999,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.8225226,
+    "Longitude": -87.690494093,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.891694878,
+    "Longitude": -87.626155832,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.848845969,
+    "Longitude": -87.629244886,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.739552385,
+    "Longitude": -87.602475891,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.807672926,
+    "Longitude": -87.675879062,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 42.006922562,
+    "Longitude": -87.670001247,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 42.001552964,
+    "Longitude": -87.659299433,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.812579436,
+    "Longitude": -87.604437824,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.947824587,
+    "Longitude": -87.799722047,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.745905086,
+    "Longitude": -87.549141439,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.695275433,
+    "Longitude": -87.626587071,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.78205732,
+    "Longitude": -87.70322518,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.702218321,
+    "Longitude": -87.530450967,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.721840482,
+    "Longitude": -87.617277592,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.960201886,
+    "Longitude": -87.683791965,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.901631293,
+    "Longitude": -87.709408616,
+    "Primary Type": "PUBLIC PEACE VIOLATION"
+  },
+  {
+    "Latitude": 41.737094305,
+    "Longitude": -87.572998178,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.939509837,
+    "Longitude": -87.764892445,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.727274127,
+    "Longitude": -87.587917642,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.868494355,
+    "Longitude": -87.683641769,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.745905086,
+    "Longitude": -87.549141439,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.880988964,
+    "Longitude": -87.704854042,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.976310466,
+    "Longitude": -87.689166788,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.86710024,
+    "Longitude": -87.723677264,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.797399927,
+    "Longitude": -87.620914942,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.893657639,
+    "Longitude": -87.713159097,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.882256871,
+    "Longitude": -87.763791752,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.870028132,
+    "Longitude": -87.708823855,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.876889575,
+    "Longitude": -87.741628007,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.794647866,
+    "Longitude": -87.67432161,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.707756212,
+    "Longitude": -87.580708771,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.737731152,
+    "Longitude": -87.654997489,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.851871656,
+    "Longitude": -87.697732131,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.854807287,
+    "Longitude": -87.686298371,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.78144942,
+    "Longitude": -87.652938342,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.721183199,
+    "Longitude": -87.56235057,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.871395715,
+    "Longitude": -87.72536577,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.911011997,
+    "Longitude": -87.780836457,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.853622744,
+    "Longitude": -87.625514585,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.807064211,
+    "Longitude": -87.618093625,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.734249897,
+    "Longitude": -87.582817634,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.90075729,
+    "Longitude": -87.731787389,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.711810762,
+    "Longitude": -87.639319919,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.866810739,
+    "Longitude": -87.625817031,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.923422944,
+    "Longitude": -87.730413365,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.793195202,
+    "Longitude": -87.687688498,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.861699337,
+    "Longitude": -87.722605232,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.902923197,
+    "Longitude": -87.697288509,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.904837592,
+    "Longitude": -87.687751444,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.744991196,
+    "Longitude": -87.717614993,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.897713751,
+    "Longitude": -87.775232067,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.997573831,
+    "Longitude": -87.698767532,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.75898158,
+    "Longitude": -87.663632474,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 42.011281985,
+    "Longitude": -87.681789636,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.767508679,
+    "Longitude": -87.683320046,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.899379012,
+    "Longitude": -87.755709189,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.892474929,
+    "Longitude": -87.71622631,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.90982859,
+    "Longitude": -87.677447594,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.793102569,
+    "Longitude": -87.65727433,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.749880266,
+    "Longitude": -87.663426578,
+    "Primary Type": "CRIMINAL TRESPASS"
+  },
+  {
+    "Latitude": 41.879996761,
+    "Longitude": -87.761814204,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.796936356,
+    "Longitude": -87.661018732,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.774953436,
+    "Longitude": -87.636868902,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 42.004204644,
+    "Longitude": -87.660838791,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.904524741,
+    "Longitude": -87.720812358,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.919148752,
+    "Longitude": -87.638841532,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.751831778,
+    "Longitude": -87.558703957,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 42.000265632,
+    "Longitude": -87.699715722,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.967040741,
+    "Longitude": -87.781963169,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.965423179,
+    "Longitude": -87.655621013,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.691339972,
+    "Longitude": -87.677493383,
+    "Primary Type": "PUBLIC PEACE VIOLATION"
+  },
+  {
+    "Latitude": 41.883572258,
+    "Longitude": -87.755183225,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.927899924,
+    "Longitude": -87.747062318,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.780415657,
+    "Longitude": -87.605608794,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.87968721,
+    "Longitude": -87.731830814,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.905068825,
+    "Longitude": -87.747241853,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.74974473,
+    "Longitude": -87.652507329,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.834690813,
+    "Longitude": -87.613705645,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.887739656,
+    "Longitude": -87.763746728,
+    "Primary Type": "CRIMINAL SEXUAL ASSAULT"
+  },
+  {
+    "Latitude": 41.806890268,
+    "Longitude": -87.589834384,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.869244422,
+    "Longitude": -87.62707888,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.944705219,
+    "Longitude": -87.789948362,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.9410841,
+    "Longitude": -87.647649169,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.908347446,
+    "Longitude": -87.668509926,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.907420613,
+    "Longitude": -87.685925328,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.682343181,
+    "Longitude": -87.662604657,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.961692571,
+    "Longitude": -87.661480876,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.932755165,
+    "Longitude": -87.647150367,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.754441912,
+    "Longitude": -87.633601696,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.785687563,
+    "Longitude": -87.616541923,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.844252757,
+    "Longitude": -87.724943845,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.915010762,
+    "Longitude": -87.682457437,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.807049263,
+    "Longitude": -87.591930589,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.651250849,
+    "Longitude": -87.547162057,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.742274536,
+    "Longitude": -87.651087579,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.918612938,
+    "Longitude": -87.708963978,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.941748603,
+    "Longitude": -87.668718084,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.691974413,
+    "Longitude": -87.605980429,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.707519433,
+    "Longitude": -87.601839023,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.965423179,
+    "Longitude": -87.655621013,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.752688801,
+    "Longitude": -87.704908791,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.921470593,
+    "Longitude": -87.732801776,
+    "Primary Type": "OFFENSE INVOLVING CHILDREN"
+  },
+  {
+    "Latitude": 41.76625017,
+    "Longitude": -87.640771585,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.938127563,
+    "Longitude": -87.731138599,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.677799762,
+    "Longitude": -87.642881123,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.800786864,
+    "Longitude": -87.620994789,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.892251677,
+    "Longitude": -87.772205489,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.769712828,
+    "Longitude": -87.584666196,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.750602491,
+    "Longitude": -87.646770341,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.886393351,
+    "Longitude": -87.765080772,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.723515597,
+    "Longitude": -87.629893219,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.970027594,
+    "Longitude": -87.696294098,
+    "Primary Type": "SEX OFFENSE"
+  },
+  {
+    "Latitude": 41.975267479,
+    "Longitude": -87.753475707,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.871838775,
+    "Longitude": -87.726117926,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.986181172,
+    "Longitude": -87.658097002,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.906507737,
+    "Longitude": -87.679795958,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.856051578,
+    "Longitude": -87.628218813,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.939224931,
+    "Longitude": -87.716602756,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.756430631,
+    "Longitude": -87.561470724,
+    "Primary Type": "SEX OFFENSE"
+  },
+  {
+    "Latitude": 41.926497977,
+    "Longitude": -87.711147073,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.938825971,
+    "Longitude": -87.807986017,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.788547837,
+    "Longitude": -87.741458362,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.911880784,
+    "Longitude": -87.764307348,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.881935685,
+    "Longitude": -87.701844578,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.809860998,
+    "Longitude": -87.645565723,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.734063117,
+    "Longitude": -87.656582192,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.807030055,
+    "Longitude": -87.591930811,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.960028926,
+    "Longitude": -87.706989887,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.698541312,
+    "Longitude": -87.532865844,
+    "Primary Type": "OFFENSE INVOLVING CHILDREN"
+  },
+  {
+    "Latitude": 41.729006364,
+    "Longitude": -87.558142967,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.896772914,
+    "Longitude": -87.621464432,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.760720857,
+    "Longitude": -87.652787167,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.665814864,
+    "Longitude": -87.558853882,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.87188334,
+    "Longitude": -87.704315401,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.881624191,
+    "Longitude": -87.629391908,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.897012256,
+    "Longitude": -87.632716018,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.843892459,
+    "Longitude": -87.622098627,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.788987036,
+    "Longitude": -87.74147999,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.953436358,
+    "Longitude": -87.746273229,
+    "Primary Type": "CRIMINAL TRESPASS"
+  },
+  {
+    "Latitude": 41.756518432,
+    "Longitude": -87.583430519,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.921021491,
+    "Longitude": -87.69730355,
+    "Primary Type": "OFFENSE INVOLVING CHILDREN"
+  },
+  {
+    "Latitude": 41.764487502,
+    "Longitude": -87.696110119,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.718823567,
+    "Longitude": -87.643141787,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.947183891,
+    "Longitude": -87.688269091,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.72192149,
+    "Longitude": -87.682094682,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.801102138,
+    "Longitude": -87.687315724,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.954704646,
+    "Longitude": -87.720626224,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.95273487,
+    "Longitude": -87.714082963,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 42.014981628,
+    "Longitude": -87.667054591,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.998103671,
+    "Longitude": -87.668264445,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.655594621,
+    "Longitude": -87.596798862,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.803661521,
+    "Longitude": -87.583695281,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 42.012205212,
+    "Longitude": -87.693709742,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.755908546,
+    "Longitude": -87.65763916,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.976290414,
+    "Longitude": -87.905227221,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.782132982,
+    "Longitude": -87.702010828,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.856829444,
+    "Longitude": -87.669880705,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.854273371,
+    "Longitude": -87.624663171,
+    "Primary Type": "CRIMINAL TRESPASS"
+  },
+  {
+    "Latitude": 41.866184155,
+    "Longitude": -87.72428806,
+    "Primary Type": "NARCOTICS"
+  },
+  {
+    "Latitude": 41.897924825,
+    "Longitude": -87.724937898,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.945863902,
+    "Longitude": -87.767912706,
+    "Primary Type": "CRIMINAL SEXUAL ASSAULT"
+  },
+  {
+    "Latitude": 41.954704646,
+    "Longitude": -87.720626224,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.879060101,
+    "Longitude": -87.626107881,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.897032275,
+    "Longitude": -87.664138817,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.913930301,
+    "Longitude": -87.636752477,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.76611512,
+    "Longitude": -87.572146101,
+    "Primary Type": "INTERFERENCE WITH PUBLIC OFFICER"
+  },
+  {
+    "Latitude": 41.811773522,
+    "Longitude": -87.665052667,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.746827981,
+    "Longitude": -87.603840848,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.896596292,
+    "Longitude": -87.692587363,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.877822179,
+    "Longitude": -87.655181405,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.893349463,
+    "Longitude": -87.623456403,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.902900602,
+    "Longitude": -87.699654403,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.853653762,
+    "Longitude": -87.630117143,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.852750046,
+    "Longitude": -87.640815604,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.828614918,
+    "Longitude": -87.67070047,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.738503031,
+    "Longitude": -87.585680998,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.995026304,
+    "Longitude": -87.682430017,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 42.012915394,
+    "Longitude": -87.674685821,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.833139425,
+    "Longitude": -87.615319213,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.882219372,
+    "Longitude": -87.677546419,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.807763621,
+    "Longitude": -87.602339331,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.936537008,
+    "Longitude": -87.643081672,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.878631263,
+    "Longitude": -87.764808046,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.880834047,
+    "Longitude": -87.679080847,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.931962854,
+    "Longitude": -87.712876373,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.865035371,
+    "Longitude": -87.62941605,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.938204223,
+    "Longitude": -87.710022552,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.672333016,
+    "Longitude": -87.643334855,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.798945386,
+    "Longitude": -87.654986779,
+    "Primary Type": "NARCOTICS"
+  },
+  {
+    "Latitude": 41.93878838,
+    "Longitude": -87.66743301,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.955190155,
+    "Longitude": -87.751712919,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.944749075,
+    "Longitude": -87.656681766,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.983381702,
+    "Longitude": -87.708931089,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.745454358,
+    "Longitude": -87.699830848,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.910291883,
+    "Longitude": -87.689974258,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.830530933,
+    "Longitude": -87.610277459,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.902437713,
+    "Longitude": -87.687011559,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.906760623,
+    "Longitude": -87.758364809,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.754787799,
+    "Longitude": -87.576054836,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.685826775,
+    "Longitude": -87.620821877,
+    "Primary Type": "NARCOTICS"
+  },
+  {
+    "Latitude": 41.870718789,
+    "Longitude": -87.632569976,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.911367051,
+    "Longitude": -87.626401638,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.69073279,
+    "Longitude": -87.626461055,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.966018559,
+    "Longitude": -87.710847252,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.958506815,
+    "Longitude": -87.648061706,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.768243533,
+    "Longitude": -87.689056789,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.871512969,
+    "Longitude": -87.705839075,
+    "Primary Type": "NARCOTICS"
+  },
+  {
+    "Latitude": 41.819290834,
+    "Longitude": -87.623100976,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.684587553,
+    "Longitude": -87.634878944,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.975704509,
+    "Longitude": -87.712672635,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.918247255,
+    "Longitude": -87.712377275,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.799749186,
+    "Longitude": -87.751499618,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.706875037,
+    "Longitude": -87.628265515,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.659189752,
+    "Longitude": -87.555156663,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.795760253,
+    "Longitude": -87.65005855,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.761484638,
+    "Longitude": -87.55806373,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.698696274,
+    "Longitude": -87.563172144,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.755239277,
+    "Longitude": -87.673277249,
+    "Primary Type": "CRIMINAL TRESPASS"
+  },
+  {
+    "Latitude": 41.891303157,
+    "Longitude": -87.628055281,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 42.003574794,
+    "Longitude": -87.681522434,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.937227668,
+    "Longitude": -87.644305471,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.766490771,
+    "Longitude": -87.641989643,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.809081165,
+    "Longitude": -87.633674979,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 42.015164168,
+    "Longitude": -87.697297389,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.769350572,
+    "Longitude": -87.614747976,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.909189095,
+    "Longitude": -87.651058196,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.933433923,
+    "Longitude": -87.641362086,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.851430749,
+    "Longitude": -87.724754706,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.990332555,
+    "Longitude": -87.781184693,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.916855183,
+    "Longitude": -87.694728891,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.946316385,
+    "Longitude": -87.731675415,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.766062984,
+    "Longitude": -87.681963712,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.993558695,
+    "Longitude": -87.655495503,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.903133353,
+    "Longitude": -87.680458524,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.953497705,
+    "Longitude": -87.647905817,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.794340626,
+    "Longitude": -87.715833715,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.732787885,
+    "Longitude": -87.565890141,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.778661058,
+    "Longitude": -87.68227253,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.883257356,
+    "Longitude": -87.669541269,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.881933769,
+    "Longitude": -87.701995157,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.874060099,
+    "Longitude": -87.705924314,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.750757383,
+    "Longitude": -87.636034766,
+    "Primary Type": "NARCOTICS"
+  },
+  {
+    "Latitude": 41.942848288,
+    "Longitude": -87.769086168,
+    "Primary Type": "SEX OFFENSE"
+  },
+  {
+    "Latitude": 41.648588776,
+    "Longitude": -87.539964437,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.801709383,
+    "Longitude": -87.596697686,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.766427022,
+    "Longitude": -87.631026525,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 42.012048033,
+    "Longitude": -87.700503994,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.872894484,
+    "Longitude": -87.627560076,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.95147011,
+    "Longitude": -87.668977369,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.855814401,
+    "Longitude": -87.722371238,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.887988672,
+    "Longitude": -87.625469546,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.666119868,
+    "Longitude": -87.641516349,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.885700244,
+    "Longitude": -87.641726854,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.883500187,
+    "Longitude": -87.627876698,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.72853976,
+    "Longitude": -87.59736201,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.896774009,
+    "Longitude": -87.640942565,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.88683958,
+    "Longitude": -87.70383084,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.736944201,
+    "Longitude": -87.650938817,
+    "Primary Type": "CRIMINAL SEXUAL ASSAULT"
+  },
+  {
+    "Latitude": 41.72292995,
+    "Longitude": -87.605913481,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.784740334,
+    "Longitude": -87.622210098,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.736582312,
+    "Longitude": -87.57692092,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.928408571,
+    "Longitude": -87.70420874,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.977978764,
+    "Longitude": -87.69899153,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.718957929,
+    "Longitude": -87.56568476,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.793223108,
+    "Longitude": -87.65120397,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.895013678,
+    "Longitude": -87.675740686,
+    "Primary Type": "SEX OFFENSE"
+  },
+  {
+    "Latitude": 41.755412283,
+    "Longitude": -87.562256233,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.922467354,
+    "Longitude": -87.779319275,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.775396322,
+    "Longitude": -87.662878824,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.870244627,
+    "Longitude": -87.686946779,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.762475016,
+    "Longitude": -87.708434706,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.891118758,
+    "Longitude": -87.686706987,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.948050641,
+    "Longitude": -87.657194575,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.893281677,
+    "Longitude": -87.627596446,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.699999944,
+    "Longitude": -87.563189544,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.931880417,
+    "Longitude": -87.640860695,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.877497847,
+    "Longitude": -87.760382378,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.83990321,
+    "Longitude": -87.728082354,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.905844192,
+    "Longitude": -87.726398267,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.767973069,
+    "Longitude": -87.577142454,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.988956425,
+    "Longitude": -87.718826534,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.774973026,
+    "Longitude": -87.68963101,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.87741656,
+    "Longitude": -87.697982127,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.665814864,
+    "Longitude": -87.558853882,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.74938411,
+    "Longitude": -87.653709473,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.873855191,
+    "Longitude": -87.762379293,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.732556602,
+    "Longitude": -87.571963587,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.814969058,
+    "Longitude": -87.669993754,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.654834273,
+    "Longitude": -87.607558429,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.890780947,
+    "Longitude": -87.703946396,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.760625129,
+    "Longitude": -87.649144902,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.748060338,
+    "Longitude": -87.741302702,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.87879543,
+    "Longitude": -87.731850193,
+    "Primary Type": "NARCOTICS"
+  },
+  {
+    "Latitude": 41.695308608,
+    "Longitude": -87.62395405,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.894824927,
+    "Longitude": -87.631788635,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.774200754,
+    "Longitude": -87.62152367,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.74932776,
+    "Longitude": -87.555274664,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.947997344,
+    "Longitude": -87.79851488,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.806890268,
+    "Longitude": -87.589834384,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.878797001,
+    "Longitude": -87.731626185,
+    "Primary Type": "NARCOTICS"
+  },
+  {
+    "Latitude": 41.895449977,
+    "Longitude": -87.653584531,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.896772914,
+    "Longitude": -87.621464432,
+    "Primary Type": "SEX OFFENSE"
+  },
+  {
+    "Latitude": 41.903168666,
+    "Longitude": -87.678467174,
+    "Primary Type": "SEX OFFENSE"
+  },
+  {
+    "Latitude": 41.990479499,
+    "Longitude": -87.692731805,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.854010712,
+    "Longitude": -87.724822014,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.872370362,
+    "Longitude": -87.757395385,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.695908161,
+    "Longitude": -87.595822806,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.767036006,
+    "Longitude": -87.582809521,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.898922292,
+    "Longitude": -87.731958884,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.958474197,
+    "Longitude": -87.65087832,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.79736226,
+    "Longitude": -87.582679493,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.744275098,
+    "Longitude": -87.725895925,
+    "Primary Type": "OFFENSE INVOLVING CHILDREN"
+  },
+  {
+    "Latitude": 41.735066839,
+    "Longitude": -87.650896405,
+    "Primary Type": "SEX OFFENSE"
+  },
+  {
+    "Latitude": 41.944216451,
+    "Longitude": -87.806967686,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.893865381,
+    "Longitude": -87.768863729,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.69073279,
+    "Longitude": -87.626461055,
+    "Primary Type": "CRIMINAL TRESPASS"
+  },
+  {
+    "Latitude": 41.947285426,
+    "Longitude": -87.747123671,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.707886031,
+    "Longitude": -87.606416363,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.786903184,
+    "Longitude": -87.622266865,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.75276137,
+    "Longitude": -87.580894222,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.739003786,
+    "Longitude": -87.649781161,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.987292267,
+    "Longitude": -87.658979074,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.850601726,
+    "Longitude": -87.635898418,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.694393194,
+    "Longitude": -87.624147184,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.740127827,
+    "Longitude": -87.555121917,
+    "Primary Type": "OFFENSE INVOLVING CHILDREN"
+  },
+  {
+    "Latitude": 41.819767809,
+    "Longitude": -87.600302468,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.995939349,
+    "Longitude": -87.688126446,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.94050159,
+    "Longitude": -87.677107624,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.725225985,
+    "Longitude": -87.666364252,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.905833996,
+    "Longitude": -87.638427474,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.783451628,
+    "Longitude": -87.70326286,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.74588634,
+    "Longitude": -87.596903757,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.963478472,
+    "Longitude": -87.664201385,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.886530514,
+    "Longitude": -87.697047165,
+    "Primary Type": "CRIMINAL TRESPASS"
+  },
+  {
+    "Latitude": 41.784732839,
+    "Longitude": -87.629011797,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.739558418,
+    "Longitude": -87.612991694,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.739897121,
+    "Longitude": -87.735687345,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.95024738,
+    "Longitude": -87.782791674,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.874180626,
+    "Longitude": -87.66785807,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.7360733,
+    "Longitude": -87.589329079,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.789674359,
+    "Longitude": -87.716674223,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.830697249,
+    "Longitude": -87.614476891,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.878386896,
+    "Longitude": -87.692347019,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.812373584,
+    "Longitude": -87.604432822,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.918211117,
+    "Longitude": -87.715853493,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.882931813,
+    "Longitude": -87.692918534,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.959354838,
+    "Longitude": -87.653611694,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.74981542,
+    "Longitude": -87.650084246,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.814935122,
+    "Longitude": -87.596010572,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.903299855,
+    "Longitude": -87.670244719,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.935970935,
+    "Longitude": -87.745499907,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.748472119,
+    "Longitude": -87.603888197,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.901267916,
+    "Longitude": -87.752073955,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.792831954,
+    "Longitude": -87.591628734,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.700551523,
+    "Longitude": -87.658332506,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.83368122,
+    "Longitude": -87.612439993,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.885702079,
+    "Longitude": -87.642031644,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.887521986,
+    "Longitude": -87.624552898,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.804695984,
+    "Longitude": -87.633253215,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.786903184,
+    "Longitude": -87.622266865,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.858880162,
+    "Longitude": -87.654977778,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.873242815,
+    "Longitude": -87.725407013,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.765652804,
+    "Longitude": -87.618073574,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.805577741,
+    "Longitude": -87.590564785,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.89067449,
+    "Longitude": -87.685785948,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.99157427,
+    "Longitude": -87.655431953,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.888709801,
+    "Longitude": -87.713673374,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.983638813,
+    "Longitude": -87.694315735,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.878403263,
+    "Longitude": -87.760344914,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.903888519,
+    "Longitude": -87.632137583,
+    "Primary Type": "NARCOTICS"
+  },
+  {
+    "Latitude": 41.798787465,
+    "Longitude": -87.742123311,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.950453457,
+    "Longitude": -87.649592688,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.900740317,
+    "Longitude": -87.732738927,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.939919138,
+    "Longitude": -87.653410162,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.806063471,
+    "Longitude": -87.590988314,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 42.017676014,
+    "Longitude": -87.665569188,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.812378587,
+    "Longitude": -87.608258712,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.995602717,
+    "Longitude": -87.672844745,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.950872498,
+    "Longitude": -87.730764998,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.913060734,
+    "Longitude": -87.678310956,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.867417305,
+    "Longitude": -87.627168747,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.886668404,
+    "Longitude": -87.746113681,
+    "Primary Type": "SEX OFFENSE"
+  },
+  {
+    "Latitude": 41.979365817,
+    "Longitude": -87.712773161,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.756094931,
+    "Longitude": -87.644659401,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.803201891,
+    "Longitude": -87.72198373,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.925078949,
+    "Longitude": -87.673734337,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.917279172,
+    "Longitude": -87.717078645,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.703640622,
+    "Longitude": -87.535285448,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.81641543,
+    "Longitude": -87.629438806,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.975334583,
+    "Longitude": -87.748311799,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.89551514,
+    "Longitude": -87.710559023,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.960360168,
+    "Longitude": -87.650534646,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.921021491,
+    "Longitude": -87.69730355,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.85092747,
+    "Longitude": -87.635311283,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.959353269,
+    "Longitude": -87.646890819,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.894862353,
+    "Longitude": -87.764025029,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.884960051,
+    "Longitude": -87.725791717,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.913528863,
+    "Longitude": -87.6258524,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.745905086,
+    "Longitude": -87.549141439,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.898767916,
+    "Longitude": -87.624116333,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.719717269,
+    "Longitude": -87.63752426,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.81769067,
+    "Longitude": -87.623059961,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.909691708,
+    "Longitude": -87.682327785,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.721699115,
+    "Longitude": -87.625466085,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.721292763,
+    "Longitude": -87.656870051,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.883150785,
+    "Longitude": -87.743534907,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.939385902,
+    "Longitude": -87.699300657,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.862906101,
+    "Longitude": -87.656858884,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.842674466,
+    "Longitude": -87.620401921,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.77861818,
+    "Longitude": -87.70312686,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.935428755,
+    "Longitude": -87.783400598,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.973426571,
+    "Longitude": -87.691663417,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.79798376,
+    "Longitude": -87.723298581,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.863375747,
+    "Longitude": -87.656457451,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 42.015164168,
+    "Longitude": -87.697297389,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.793834595,
+    "Longitude": -87.629289876,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.807842901,
+    "Longitude": -87.67345647,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.772429772,
+    "Longitude": -87.583839095,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.736758964,
+    "Longitude": -87.71723564,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.886069404,
+    "Longitude": -87.766721551,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.858858907,
+    "Longitude": -87.725686431,
+    "Primary Type": "NARCOTICS"
+  },
+  {
+    "Latitude": 41.745905086,
+    "Longitude": -87.549141439,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.706376496,
+    "Longitude": -87.68577827,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.803331407,
+    "Longitude": -87.617999436,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.950458972,
+    "Longitude": -87.682652033,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.913861315,
+    "Longitude": -87.646254251,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.760616571,
+    "Longitude": -87.710860822,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.778047465,
+    "Longitude": -87.586387726,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.81421223,
+    "Longitude": -87.619727208,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.897029874,
+    "Longitude": -87.664197611,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.710888352,
+    "Longitude": -87.553672774,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.876194374,
+    "Longitude": -87.724134277,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.821153535,
+    "Longitude": -87.624771671,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.859217539,
+    "Longitude": -87.732301669,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.857026887,
+    "Longitude": -87.654824838,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.882470918,
+    "Longitude": -87.627847625,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.951116487,
+    "Longitude": -87.654963829,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.873220883,
+    "Longitude": -87.657646023,
+    "Primary Type": "CRIMINAL TRESPASS"
+  },
+  {
+    "Latitude": 41.726219145,
+    "Longitude": -87.567294437,
+    "Primary Type": "SEX OFFENSE"
+  },
+  {
+    "Latitude": 41.843588067,
+    "Longitude": -87.713543763,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.975334679,
+    "Longitude": -87.692313579,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.750809487,
+    "Longitude": -87.59303986,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.757494439,
+    "Longitude": -87.619908754,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.736592879,
+    "Longitude": -87.563635515,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.789493708,
+    "Longitude": -87.779240956,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.813830355,
+    "Longitude": -87.596621175,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 42.001174965,
+    "Longitude": -87.701391704,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.865399465,
+    "Longitude": -87.639188585,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.742134096,
+    "Longitude": -87.556365508,
+    "Primary Type": "OFFENSE INVOLVING CHILDREN"
+  },
+  {
+    "Latitude": 41.892569681,
+    "Longitude": -87.622058354,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.803021054,
+    "Longitude": -87.621050731,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.797936811,
+    "Longitude": -87.606301777,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.917933711,
+    "Longitude": -87.680101929,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.801393686,
+    "Longitude": -87.605723566,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.969680787,
+    "Longitude": -87.692164343,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.700366916,
+    "Longitude": -87.537698795,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.785485007,
+    "Longitude": -87.694787568,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.807646537,
+    "Longitude": -87.741157889,
+    "Primary Type": "PROSTITUTION"
+  },
+  {
+    "Latitude": 41.663403306,
+    "Longitude": -87.625793875,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.95488231,
+    "Longitude": -87.662567089,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.880950476,
+    "Longitude": -87.763212138,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.937227668,
+    "Longitude": -87.644305471,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 42.016998846,
+    "Longitude": -87.680469059,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.963509992,
+    "Longitude": -87.71688337,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.910394484,
+    "Longitude": -87.62622133,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.748142315,
+    "Longitude": -87.645180485,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.903531104,
+    "Longitude": -87.729579331,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.931718627,
+    "Longitude": -87.801473334,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.801141301,
+    "Longitude": -87.685012091,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.737094305,
+    "Longitude": -87.572998178,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.963404656,
+    "Longitude": -87.669923368,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.902937196,
+    "Longitude": -87.695359835,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 42.011878761,
+    "Longitude": -87.678159078,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.751950586,
+    "Longitude": -87.549918085,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.940573762,
+    "Longitude": -87.654127293,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.818164041,
+    "Longitude": -87.700259347,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.970571665,
+    "Longitude": -87.723202734,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.876628485,
+    "Longitude": -87.650097441,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 42.017676014,
+    "Longitude": -87.665569188,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.806705999,
+    "Longitude": -87.745579036,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.880717301,
+    "Longitude": -87.72628358,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.745422451,
+    "Longitude": -87.584153287,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.750577197,
+    "Longitude": -87.584298575,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.697692756,
+    "Longitude": -87.652888169,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.808130863,
+    "Longitude": -87.656445106,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.87950297,
+    "Longitude": -87.626723575,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.880510667,
+    "Longitude": -87.744040233,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.764003661,
+    "Longitude": -87.683223468,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.901815571,
+    "Longitude": -87.720184397,
+    "Primary Type": "NARCOTICS"
+  },
+  {
+    "Latitude": 41.695982095,
+    "Longitude": -87.596653142,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.876388206,
+    "Longitude": -87.664758134,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 42.019387809,
+    "Longitude": -87.673537084,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.890389063,
+    "Longitude": -87.626673392,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.82968708,
+    "Longitude": -87.648105445,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.891700115,
+    "Longitude": -87.665535033,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.891742661,
+    "Longitude": -87.721437661,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.658317997,
+    "Longitude": -87.603406086,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.807887928,
+    "Longitude": -87.722790148,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.84445948,
+    "Longitude": -87.709256069,
+    "Primary Type": "NARCOTICS"
+  },
+  {
+    "Latitude": 41.858448442,
+    "Longitude": -87.717662155,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.929629262,
+    "Longitude": -87.669516415,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.882104132,
+    "Longitude": -87.633833677,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.756330877,
+    "Longitude": -87.602879293,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.766249073,
+    "Longitude": -87.575388558,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 42.013177932,
+    "Longitude": -87.680291032,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.877759656,
+    "Longitude": -87.629287444,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.764899756,
+    "Longitude": -87.615255831,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.815650851,
+    "Longitude": -87.687543716,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.760569493,
+    "Longitude": -87.646719087,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.675416129,
+    "Longitude": -87.632199846,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 42.013896545,
+    "Longitude": -87.666859849,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.803634539,
+    "Longitude": -87.616440953,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.880848443,
+    "Longitude": -87.696284653,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.881624191,
+    "Longitude": -87.629391908,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.781039118,
+    "Longitude": -87.68691218,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.815132141,
+    "Longitude": -87.684614224,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.761036477,
+    "Longitude": -87.630007712,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.700551523,
+    "Longitude": -87.658332506,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.721220015,
+    "Longitude": -87.627438388,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.924198765,
+    "Longitude": -87.74937447,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.877840272,
+    "Longitude": -87.627667225,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.984106893,
+    "Longitude": -87.693119361,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.939847306,
+    "Longitude": -87.766543433,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.837833146,
+    "Longitude": -87.62343176,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.878585843,
+    "Longitude": -87.745967363,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.912437783,
+    "Longitude": -87.736189335,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.95192443,
+    "Longitude": -87.721079292,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.755348175,
+    "Longitude": -87.640500316,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.73009084,
+    "Longitude": -87.643449824,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.854271872,
+    "Longitude": -87.624865071,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.952052445,
+    "Longitude": -87.646226566,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.950453457,
+    "Longitude": -87.649592688,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.753609394,
+    "Longitude": -87.658671114,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.898978873,
+    "Longitude": -87.67713989,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.852991574,
+    "Longitude": -87.682102891,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.986906237,
+    "Longitude": -87.808344941,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.968576911,
+    "Longitude": -87.693021162,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.86694152,
+    "Longitude": -87.71299884,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.790366443,
+    "Longitude": -87.6661808,
+    "Primary Type": "NARCOTICS"
+  },
+  {
+    "Latitude": 41.745802731,
+    "Longitude": -87.604449755,
+    "Primary Type": "OFFENSE INVOLVING CHILDREN"
+  },
+  {
+    "Latitude": 41.988719229,
+    "Longitude": -87.668384208,
+    "Primary Type": "SEX OFFENSE"
+  },
+  {
+    "Latitude": 41.80807526,
+    "Longitude": -87.666173157,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.735733251,
+    "Longitude": -87.667186172,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.994593984,
+    "Longitude": -87.706823988,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.767561769,
+    "Longitude": -87.575112845,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.685485557,
+    "Longitude": -87.576461697,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.8671612,
+    "Longitude": -87.646479181,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.939194266,
+    "Longitude": -87.719072976,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.723189905,
+    "Longitude": -87.650974475,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.971465046,
+    "Longitude": -87.785536165,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.692542579,
+    "Longitude": -87.626668247,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.75898158,
+    "Longitude": -87.663632474,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.722034416,
+    "Longitude": -87.605773396,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.780036279,
+    "Longitude": -87.604637829,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.907092509,
+    "Longitude": -87.694469854,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.751522091,
+    "Longitude": -87.644063286,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.961099303,
+    "Longitude": -87.74756329,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.737580752,
+    "Longitude": -87.585651392,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.806890268,
+    "Longitude": -87.589834384,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.752935445,
+    "Longitude": -87.5490632,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.655843444,
+    "Longitude": -87.595800693,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.928235818,
+    "Longitude": -87.682084152,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.887704163,
+    "Longitude": -87.674981991,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.828343176,
+    "Longitude": -87.626497604,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.719897535,
+    "Longitude": -87.565842073,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.769452949,
+    "Longitude": -87.6087643,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.921021491,
+    "Longitude": -87.69730355,
+    "Primary Type": "STALKING"
+  },
+  {
+    "Latitude": 41.685474655,
+    "Longitude": -87.607964681,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.745778498,
+    "Longitude": -87.664535567,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.926404101,
+    "Longitude": -87.792881805,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.82132742,
+    "Longitude": -87.623155514,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.749387444,
+    "Longitude": -87.566190849,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.878768626,
+    "Longitude": -87.734072016,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.699999944,
+    "Longitude": -87.563189544,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.731497731,
+    "Longitude": -87.658074565,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.909462982,
+    "Longitude": -87.758770392,
+    "Primary Type": "ROBBERY"
+  },
+  {
+    "Latitude": 41.885681122,
+    "Longitude": -87.767562293,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.866147972,
+    "Longitude": -87.726784885,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.737432391,
+    "Longitude": -87.728803639,
+    "Primary Type": "DECEPTIVE PRACTICE"
+  },
+  {
+    "Latitude": 41.813830355,
+    "Longitude": -87.596621175,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.807104168,
+    "Longitude": -87.591933624,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.923839898,
+    "Longitude": -87.774875827,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.993100382,
+    "Longitude": -87.679138918,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.776151397,
+    "Longitude": -87.641651267,
+    "Primary Type": "OTHER OFFENSE"
+  },
+  {
+    "Latitude": 41.92241644,
+    "Longitude": -87.698454519,
+    "Primary Type": "BURGLARY"
+  },
+  {
+    "Latitude": 41.895477034,
+    "Longitude": -87.662384681,
+    "Primary Type": "CRIMINAL DAMAGE"
+  },
+  {
+    "Latitude": 41.960613322,
+    "Longitude": -87.756182288,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.749287997,
+    "Longitude": -87.572282625,
+    "Primary Type": "CRIMINAL TRESPASS"
+  },
+  {
+    "Latitude": 41.960360168,
+    "Longitude": -87.650534646,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.751009781,
+    "Longitude": -87.563796798,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.707095328,
+    "Longitude": -87.628834415,
+    "Primary Type": "ASSAULT"
+  },
+  {
+    "Latitude": 41.886284525,
+    "Longitude": -87.760300204,
+    "Primary Type": "PUBLIC PEACE VIOLATION"
+  },
+  {
+    "Latitude": 41.867428687,
+    "Longitude": -87.626342565,
+    "Primary Type": "WEAPONS VIOLATION"
+  },
+  {
+    "Latitude": 41.77587085,
+    "Longitude": -87.609476619,
+    "Primary Type": "BATTERY"
+  },
+  {
+    "Latitude": 41.749315877,
+    "Longitude": -87.568628671,
+    "Primary Type": "THEFT"
+  },
+  {
+    "Latitude": 41.778984374,
+    "Longitude": -87.702346016,
+    "Primary Type": "CRIMINAL TRESPASS"
+  },
+  {
+    "Latitude": 41.725449081,
+    "Longitude": -87.630135884,
+    "Primary Type": "MOTOR VEHICLE THEFT"
+  },
+  {
+    "Latitude": 41.973387463,
+    "Longitude": -87.758887581,
+    "Primary Type": "ASSAULT"
+  }
+]

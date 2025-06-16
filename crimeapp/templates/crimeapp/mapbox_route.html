@@ -5,79 +5,184 @@
     <title>Route Map with Mapbox</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
 
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+
     <!-- Mapbox CSS -->
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+    <link href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.css" rel="stylesheet" />
+    <link href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.1/mapbox-gl-geocoder.css" rel="stylesheet" />
+
     <style>
         body { margin: 0; padding: 0; }
-        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+        #map {
+            height: 600px;
+        }
     </style>
 </head>
-<body>
-    <div id="map"></div>
+<body class="bg-gray-50">
 
-    <!-- Mapbox JS -->
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
-    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.css"
-      type="text/css"
-    />
+<div class="max-w-5xl mx-auto p-4 space-y-6">
 
-    <script>
-        mapboxgl.accessToken = '{{ mapbox_token }}';
+    <!-- Geocoder Search Bars -->
+    <div class="p-4 bg-white shadow rounded-md space-y-4">
+        <div id="geocoder-origin" class="w-full"></div>
+        <div id="geocoder-destination" class="w-full"></div>
+    </div>
 
-        const start = [{{ start_lon }}, {{ start_lat }}];
-        const end = [{{ end_lon }}, {{ end_lat }}];
+    <!-- Manual Coordinate Form -->
+    <div class="p-4 bg-white shadow rounded-md">
+        <h2 class="text-xl font-semibold mb-4 text-center">Plan a Route</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+                <label class="block text-sm font-medium">From (Lat, Lon):</label>
+                <input type="text" id="start-lat" placeholder="Start Latitude" class="border p-2 rounded w-full mb-2">
+                <input type="text" id="start-lon" placeholder="Start Longitude" class="border p-2 rounded w-full">
+                <button type="button"
+                        onclick="useCurrentLocation()"
+                        class="mt-2 text-sm text-blue-600 hover:underline">
+                    📍 Use My Current Location
+                </button>
+            </div>
+            <div>
+                <label class="block text-sm font-medium">To (Lat, Lon):</label>
+                <input type="text" id="end-lat" placeholder="End Latitude" class="border p-2 rounded w-full mb-2">
+                <input type="text" id="end-lon" placeholder="End Longitude" class="border p-2 rounded w-full">
+            </div>
+        </div>
+        <button onclick="planRoute()" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full">
+            🚀 Plan Route
+        </button>
+    </div>
 
-        const map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v12',
-            center: [{{ mid_lon }}, {{ mid_lat }}],
-            zoom: 13
-        });
+    <!-- Map -->
+    <div id="map" class="rounded shadow border w-full"></div>
+    <mapbox-search-box
+          access-token='pk.eyJ1IjoiaGFtamFhamVlIiwiYSI6ImNtYno5N2FsajE4MTMya3M2NGJpNDJvaWQifQ.627r71W4Bj_3PrYFgdhqLw'
+          proximity="0,0"
+        >
+        </mapbox-search-box>
+</div>
 
-        // Add markers
+<!-- Mapbox Scripts -->
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.1/mapbox-gl-geocoder.min.js"></script>
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiaGFtamFhamVlIiwiYSI6ImNtYno5N2FsajE4MTMya3M2NGJpNDJvaWQifQ.627r71W4Bj_3PrYFgdhqLw';
+
+    const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/navigation-day-v1',
+        center: [{{ mid_lon }}, {{ mid_lat }}],
+        zoom: 13
+    });
+
+    map.addControl(new mapboxgl.NavigationControl());
+
+    // Geocoder Setup
+    const geocoderOrigin = new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        placeholder: "Search Start Location",
+        mapboxgl: mapboxgl
+    });
+    geocoderOrigin.addTo(document.getElementById('geocoder-origin'));
+    geocoderOrigin.on('result', function (e) {
+        const coords = e.result.geometry.coordinates;
+        document.getElementById('start-lon').value = coords[0].toFixed(6);
+        document.getElementById('start-lat').value = coords[1].toFixed(6);
+    });
+
+    const geocoderDestination = new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        placeholder: "Search Destination",
+        mapboxgl: mapboxgl
+    });
+    geocoderDestination.addTo(document.getElementById('geocoder-destination'));
+    geocoderDestination.on('result', function (e) {
+        const coords = e.result.geometry.coordinates;
+        document.getElementById('end-lon').value = coords[0].toFixed(6);
+        document.getElementById('end-lat').value = coords[1].toFixed(6);
+    });
+
+    function useCurrentLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                function (position) {
+                    const lat = position.coords.latitude.toFixed(6);
+                    const lon = position.coords.longitude.toFixed(6);
+                    document.getElementById('start-lat').value = lat;
+                    document.getElementById('start-lon').value = lon;
+
+                    const endLat = document.getElementById('end-lat').value;
+                    const endLon = document.getElementById('end-lon').value;
+                    if (endLat && endLon) planRoute();
+                },
+                function (error) {
+                    alert("Geolocation failed: " + error.message);
+                },
+                { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 }
+            );
+        } else {
+            alert("Geolocation is not supported by this browser.");
+        }
+    }
+
+    function planRoute() {
+        const startLat = parseFloat(document.getElementById('start-lat').value);
+        const startLon = parseFloat(document.getElementById('start-lon').value);
+        const endLat = parseFloat(document.getElementById('end-lat').value);
+        const endLon = parseFloat(document.getElementById('end-lon').value);
+
+        if (isNaN(startLat) || isNaN(startLon) || isNaN(endLat) || isNaN(endLon)) {
+            alert("Please enter valid coordinates.");
+            return;
+        }
+
+        const start = [startLon, startLat];
+        const end = [endLon, endLat];
+
+        if (map.getLayer('route')) map.removeLayer('route');
+        if (map.getSource('route')) map.removeSource('route');
+        document.querySelectorAll('.mapboxgl-marker').forEach(m => m.remove());
+
         new mapboxgl.Marker({ color: 'green' }).setLngLat(start).setPopup(new mapboxgl.Popup().setText("Start")).addTo(map);
         new mapboxgl.Marker({ color: 'red' }).setLngLat(end).setPopup(new mapboxgl.Popup().setText("End")).addTo(map);
 
-        // Once map is loaded, fetch real route
-        map.on('load', () => {
-            const url = `https://api.mapbox.com/directions/v5/mapbox/driving/${start[0]},${start[1]};${end[0]},${end[1]}?geometries=geojson&access_token=${mapboxgl.accessToken}`;
+        map.flyTo({ center: [(start[0] + end[0]) / 2, (start[1] + end[1]) / 2], zoom: 13 });
 
-            fetch(url)
-                .then(response => response.json())
-                .then(data => {
-                    const route = data.routes[0].geometry;
+        const url = `https://api.mapbox.com/directions/v5/mapbox/driving/${start[0]},${start[1]};${end[0]},${end[1]}?geometries=geojson&overview=full&access_token=pk.eyJ1IjoiaGFtamFhamVlIiwiYSI6ImNtYno5N2FsajE4MTMya3M2NGJpNDJvaWQifQ.627r71W4Bj_3PrYFgdhqLw`;
 
-                    map.addSource('route', {
-                        type: 'geojson',
-                        data: {
-                            type: 'Feature',
-                            properties: {},
-                            geometry: route
-                        }
-                    });
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const route = data.routes[0].geometry;
+                map.addSource('route', {
+                    type: 'geojson',
+                    data: {
+                        type: 'Feature',
+                        properties: {},
+                        geometry: route
+                    }
+                });
 
-                    map.addLayer({
-                        id: 'route',
-                        type: 'line',
-                        source: 'route',
-                        layout: {
-                            'line-join': 'round',
-                            'line-cap': 'round'
-                        },
-                        paint: {
-                            'line-color': '#3887be',
-                            'line-width': 5,
-                            'line-opacity': 0.75
-                        }
-                    });
-                })
-                .catch(err => console.error('Error fetching route:', err));
-        });
-    </script>
-
-
+                map.addLayer({
+                    id: 'route',
+                    type: 'line',
+                    source: 'route',
+                    layout: {
+                        'line-join': 'round',
+                        'line-cap': 'round'
+                    },
+                    paint: {
+                        'line-color': '#3887be',
+                        'line-width': 5,
+                        'line-opacity': 0.75
+                    }
+                });
+            });
+    }
+</script>
 </body>
 </html>

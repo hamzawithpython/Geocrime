@@ -9,7 +9,8 @@ import openrouteservice
 from openrouteservice import convert
 from geopy.distance import geodesic
 
-API_KEY = "5b3ce3597851110001cf62481f0092ec302e4859b7961fa03b5a6575"
+GOOGLE_API_KEY = "AIzaSyCb52P3sm3JpZXDmeXhN_tmhO2bbp-WPLg"
+
 
 def index(request):
     csv_path = os.path.join(settings.BASE_DIR, 'data', 'cleaned_dataset.csv')
@@ -207,16 +208,37 @@ def mapbox_test(request):
         'mapbox_token': 'pk.eyJ1IjoiaGFtamFhamVlIiwiYSI6ImNtYnBrMnVhMTA0cXIyaXNjeXdxaDByNnQifQ.AYava7Fo3R3bWWBbzbiQkg'
     })
 
-def mapbox_route(request):
-    return render(request, 'crimeapp/mapbox_route.html', {
-        'mapbox_token': 'pk.eyJ1IjoiaGFtamFhamVlIiwiYSI6ImNtYnBrMnVhMTA0cXIyaXNjeXdxaDByNnQifQ.AYava7Fo3R3bWWBbzbiQkg',
-        'start_lat': 41.8781,
-        'start_lon': -87.6298,
-        'end_lat': 41.8858,
-        'end_lon': -87.6205,
-        'mid_lat': (41.8781 + 41.8858) / 2,
-        'mid_lon': (-87.6298 + -87.6205) / 2
+def google_route_view(request):
+    return render(request, 'crimeapp/google_route.html', {
+        'google_api_key': GOOGLE_API_KEY,
+        'center_lat': 41.8781,  # Chicago default
+        'center_lon': -87.6298
     })
+
+def mapbox_route(request):
+    # Sample route (will be replacing later)
+    start_lat = 41.8781
+    start_lon = -87.6298
+    end_lat = 41.8858
+    end_lon = -87.6205
+
+    # Loading crime data
+    csv_path = os.path.join(settings.BASE_DIR, 'data', 'cleaned_dataset.csv')
+    df = pd.read_csv(csv_path).dropna(subset=['Latitude', 'Longitude'])
+
+    crimes = df.head(100)[['Latitude', 'Longitude', 'Primary Type']].to_dict(orient='records')
+
+    return render(request, 'crimeapp/mapbox_route.html', {
+        'mapbox_token': 'pk.eyJ1IjoiaGFtamFhamVlIiwiYSI6ImNtYno5N2FsajE4MTMya3M2NGJpNDJvaWQifQ.627r71W4Bj_3PrYFgdhqLw',
+        'start_lat': start_lat,
+        'start_lon': start_lon,
+        'end_lat': end_lat,
+        'end_lon': end_lon,
+        'mid_lat': (start_lat + end_lat) / 2,
+        'mid_lon': (start_lon + end_lon) / 2,
+        'crimes': crimes
+    })
+
 
 
 

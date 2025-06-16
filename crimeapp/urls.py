@@ -8,6 +8,7 @@ urlpatterns = [
     path('route/', views.route_view, name='route_view'),
     path('mapbox-test/', views.mapbox_test, name='mapbox_test'),
     path('mapbox-route/', views.mapbox_route, name='mapbox_route'),
+    path('google-route/', views.google_route_view, name='google_route'),
 
 
 ]
