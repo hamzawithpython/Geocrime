@@ -1,91 +1,50 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Google Maps Route Planner</title>
-    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        #map {
-            height: 500px;
-            width: 500px;
-            border-radius: 12px;
-        }
-        .controls {
-            background-color: #fff;
-            border-radius: 4px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-            padding: 10px;
-            z-index: 5;
-        }
-        .modal-container {
-            max-height: 80vh;
-            overflow-y: auto;
-        }
-    </style>
-</head>
-<body class="bg-gray-100">
+{% extends "crimeapp/base.html" %}
 
-<div class="max-w-4xl mx-auto p-4 space-y-6">
+{% block title %}Google Maps Route Planner{% endblock %}
 
-    <!-- Map Section -->
-    <div class="flex flex-col items-center">
-        <!-- Floating search bar -->
-        <div class="relative w-full max-w-md mb-4">
-            <input
-                id="floating-search"
-                type="text"
-                placeholder="🔍 Search a place..."
-                class="w-full p-3 rounded-lg border border-gray-300"
-            />
+{% block content %}
+<div class="max-w-6xl mx-auto p-4 space-y-6">
+
+    <!-- Floating search bar -->
+    <div class="relative w-full max-w-md mx-auto">
+        <input
+            id="floating-search"
+            type="text"
+            placeholder="🔍 Search a place..."
+            class="w-full p-3 rounded-full border border-blue-500 text-sm pl-5"
+        />
+    </div>
+
+    <!-- Toggle Buttons -->
+    <div class="flex justify-center gap-3">
+        <button id="toggle-crime-markers" class="px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
+            Toggle Crime Markers
+        </button>
+        <button id="toggle-heatmap" class="px-5 py-2 bg-red-600 text-white rounded-full hover:bg-red-700 transition">
+            Toggle Heatmap
+        </button>
+    </div>
+
+    <!-- Responsive Map Container -->
+    <div class="w-full rounded-xl overflow-hidden shadow-lg" style="height: 75vh; position: relative;">
+        <div id="map" class="absolute inset-0" style="height: 100%; width: 100%;"></div>
+
+        <!-- Floating Info Card -->
+        <div id="click-info-card" class="absolute bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 w-80 hidden z-20">
+            <!-- content -->
         </div>
 
-        <!-- Toggle Buttons -->
-        <div class="flex gap-2 mb-4">
-            <button id="toggle-crime-markers" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
-                Toggle Crime Markers
-            </button>
-            <button id="toggle-heatmap" class="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700">
-                Toggle Heatmap
-            </button>
-        </div>
-
-        <!-- Map container -->
-        <div class="relative">
-            <div id="map" class="shadow-lg"></div>
-
-            <!-- Floating Info Card (Initially hidden) -->
-            <div id="click-info-card" class="absolute bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 w-80 hidden z-20">
-                <h3 class="font-semibold text-lg mb-2">Selected Location</h3>
-                <p class="text-sm mb-1"><strong>Address:</strong> <span id="card-address">...</span></p>
-                <p class="text-sm mb-1"><strong>Latitude:</strong> <span id="card-lat">...</span></p>
-                <p class="text-sm mb-3"><strong>Longitude:</strong> <span id="card-lng">...</span></p>
-                <button id="card-directions" class="mt-1 bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700">
-                    Get Directions
-                </button>
-            </div>
-
-            <!-- Routing Input Card -->
-            <div id="route-card" class="absolute bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 w-80 hidden z-20">
-                <h3 class="font-semibold text-lg mb-2">Plan Your Route</h3>
-                <div class="mb-2">
-                    <label class="block text-sm font-medium text-gray-600">Start Location:</label>
-                    <input id="route-start" class="w-full mt-1 p-2 border rounded text-sm" placeholder="My Location">
-                </div>
-                <div class="mb-3">
-                    <label class="block text-sm font-medium text-gray-600">Destination:</label>
-                    <input id="route-end" class="w-full mt-1 p-2 border rounded text-sm" readonly>
-                </div>
-                <button id="route-start-button" class="w-full bg-green-600 text-white py-2 px-3 rounded hover:bg-green-700">
-                    Start
-                </button>
-            </div>
-
-
+        <!-- Route Card -->
+        <div id="route-card" class="absolute bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 w-80 hidden z-20">
+            <!-- content -->
         </div>
     </div>
-</div>
 
+</div>
+{% endblock %}
+
+
+{% block scripts %}
 <script>
     let map, directionsService, directionsRenderer;
     let selectedMarker = null;
@@ -335,6 +294,4 @@
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key={{ google_api_key }}&libraries=places,visualization&callback=initMap" async defer></script>
-
-</body>
-</html>
+{% endblock %}

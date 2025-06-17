@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}My Maps App{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  {% block head %}{% endblock %}
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-blue-700 text-white shadow-md">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="text-xl font-bold">🗺️ My Map Planner</h1>
+      <nav class="space-x-4 text-sm">
+        <a href="/" class="hover:underline">Home</a>
+        <a href="/routes" class="hover:underline">Routes</a>
+        <a href="/about" class="hover:underline">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <main class="max-w-6xl mx-auto px-4 py-8">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 text-sm mt-10">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <p>&copy; 2025 Hamza's Route Planner</p>
+      <a href="#" class="hover:text-white">Back to top ↑</a>
+    </div>
+  </footer>
+
+  {% block scripts %}{% endblock %}
+</body>
+</html>
