@@ -30,14 +30,31 @@
         <div id="map" class="absolute inset-0" style="height: 100%; width: 100%;"></div>
 
         <!-- Floating Info Card -->
-        <div id="click-info-card" class="absolute bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 w-80 hidden z-20">
-            <!-- content -->
-        </div>
+            <div id="click-info-card" class="absolute bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 w-80 hidden z-20">
+                <h3 class="font-semibold text-lg mb-2">Selected Location</h3>
+                <p class="text-sm mb-1"><strong>Address:</strong> <span id="card-address">...</span></p>
+                <p class="text-sm mb-1"><strong>Latitude:</strong> <span id="card-lat">...</span></p>
+                <p class="text-sm mb-3"><strong>Longitude:</strong> <span id="card-lng">...</span></p>
+                <button id="card-directions" class="mt-1 bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700">
+                    Get Directions
+                </button>
+            </div>
 
-        <!-- Route Card -->
-        <div id="route-card" class="absolute bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 w-80 hidden z-20">
-            <!-- content -->
-        </div>
+            <!-- Routing Input Card -->
+            <div id="route-card" class="absolute bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 w-80 hidden z-20">
+                <h3 class="font-semibold text-lg mb-2">Plan Your Route</h3>
+                <div class="mb-2">
+                    <label class="block text-sm font-medium text-gray-600">Start Location:</label>
+                    <input id="route-start" class="w-full mt-1 p-2 border rounded text-sm" placeholder="My Location">
+                </div>
+                <div class="mb-3">
+                    <label class="block text-sm font-medium text-gray-600">Destination:</label>
+                    <input id="route-end" class="w-full mt-1 p-2 border rounded text-sm" readonly>
+                </div>
+                <button id="route-start-button" class="w-full bg-green-600 text-white py-2 px-3 rounded hover:bg-green-700">
+                    Start
+                </button>
+            </div>
     </div>
 
 </div>
