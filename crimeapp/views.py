@@ -8,6 +8,9 @@ from django.views.decorators.csrf import csrf_exempt
 import openrouteservice
 from openrouteservice import convert
 from geopy.distance import geodesic
+from django.http import JsonResponse
+import json
+from .route_engine import get_crime_aware_route
 
 GOOGLE_API_KEY = "AIzaSyCb52P3sm3JpZXDmeXhN_tmhO2bbp-WPLg"
 
@@ -238,6 +241,30 @@ def mapbox_route(request):
         'mid_lon': (start_lon + end_lon) / 2,
         'crimes': crimes
     })
+
+@csrf_exempt
+def get_custom_route(request):
+    if request.method == "POST":
+        try:
+            data = json.loads(request.body)
+            origin = data.get("origin")
+            destination = data.get("destination")
+
+            if not origin or not destination:
+                return JsonResponse({"error": "Missing origin or destination"}, status=400)
+
+            route = get_crime_aware_route(
+                origin_lat=origin["lat"],
+                origin_lng=origin["lng"],
+                dest_lat=destination["lat"],
+                dest_lng=destination["lng"]
+            )
+
+            return JsonResponse({"route": route}, status=200)
+
+        except Exception as e:
+            return JsonResponse({"error": str(e)}, status=500)
+    return JsonResponse({"error": "Only POST allowed"}, status=405)
 
 
 

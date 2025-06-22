@@ -5,15 +5,7 @@
 {% block content %}
 <div class="max-w-6xl mx-auto p-4 space-y-6">
 
-    <!-- Floating search bar -->
-    <div class="relative w-full max-w-md mx-auto">
-        <input
-            id="floating-search"
-            type="text"
-            placeholder="🔍 Search a place..."
-            class="w-full p-3 rounded-full border border-blue-500 text-sm pl-5"
-        />
-    </div>
+
 
     <!-- Toggle Buttons -->
     <div class="flex justify-center gap-3">
@@ -28,7 +20,15 @@
     <!-- Responsive Map Container -->
     <div class="w-full rounded-xl overflow-hidden shadow-lg" style="height: 75vh; position: relative;">
         <div id="map" class="absolute inset-0" style="height: 100%; width: 100%;"></div>
-
+            <!-- Floating search bar -->
+                <div class="absolute top-6 left-1/2 transform -translate-x-1/2 z-20 w-full max-w-md px-4">
+                    <input
+                        id="floating-search"
+                        type="text"
+                        placeholder="🔍 Search a place..."
+                        class="w-full p-3 rounded-full border border-blue-500 bg-white/90 backdrop-blur text-sm shadow-lg"
+                    />
+                </div>
         <!-- Floating Info Card -->
             <div id="click-info-card" class="absolute bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 w-80 hidden z-20">
                 <h3 class="font-semibold text-lg mb-2">Selected Location</h3>
@@ -75,10 +75,6 @@
         map = new google.maps.Map(document.getElementById("map"), {
             center: { lat: {{ center_lat }}, lng: {{ center_lon }} },
             zoom: 13,
-            styles: [
-                { "featureType": "poi", "stylers": [{ "visibility": "off" }] },
-                { "featureType": "transit", "stylers": [{ "visibility": "off" }] }
-            ]
         });
 
         directionsService = new google.maps.DirectionsService();
@@ -109,20 +105,54 @@
                 return;
             }
 
-            map.setCenter(place.geometry.location);
+            const location = place.geometry.location;
+
+            map.setCenter(location);
             map.setZoom(15);
 
             if (selectedMarker) selectedMarker.setMap(null);
 
             selectedMarker = new google.maps.Marker({
-                position: place.geometry.location,
+                position: location,
                 map: map,
                 icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
             });
 
+            // ✅ Reverse geocode the selected place and update the info card
+            const geocoder = new google.maps.Geocoder();
+            geocoder.geocode({ location: location }, (results, status) => {
+                if (status === "OK" && results[0]) {
+                    const address = results[0].formatted_address;
+
+                    document.getElementById("card-address").textContent = address;
+                    document.getElementById("card-lat").textContent = location.lat().toFixed(6);
+                    document.getElementById("card-lng").textContent = location.lng().toFixed(6);
+                    document.getElementById("click-info-card").classList.remove("hidden");
+
+                    lastSelectedAddress = address;
+
+                    // Set up directions button just like in the click handler
+                    document.getElementById("card-directions").onclick = () => {
+                        const routeCard = document.getElementById("route-card");
+                        const routeStart = document.getElementById("route-start");
+                        const routeEnd = document.getElementById("route-end");
+
+                        routeStart.value = "";
+                        awaitingStartClick = true;
+
+                        alert("Click on the map to select your starting point.");
+                        routeEnd.value = lastSelectedAddress;
+
+                        routeCard.classList.remove("hidden");
+                    };
+                } else {
+                    console.error("Reverse geocoding failed: " + status);
+                }
+            });
+
             document.getElementById("floating-search").value = place.formatted_address || place.name;
-            lastSelectedAddress = place.formatted_address || place.name;
         });
+
     }
 
     function setupMapClickToGetAddress() {
@@ -294,17 +324,52 @@
         }
     });
 
-    document.getElementById("route-start-button").addEventListener("click", () => {
-        const start = document.getElementById("route-start").value;
-        const end = document.getElementById("route-end").value;
-
-        if (!start || !end) {
-            alert("Please enter both start and end points.");
+    document.getElementById("route-start-button").addEventListener("click", async () => {
+        if (!startMarker || !selectedMarker) {
+            alert("Please select both start and destination on the map.");
             return;
         }
 
-        calculateAndDisplayRoute(start, end);
+        const origin = {
+            lat: startMarker.getPosition().lat(),
+            lng: startMarker.getPosition().lng()
+        };
+
+        const destination = {
+            lat: selectedMarker.getPosition().lat(),
+            lng: selectedMarker.getPosition().lng()
+        };
+
+        const response = await fetch("/api/custom-route/", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ origin, destination }),
+        });
+
+        const data = await response.json();
+
+        if (response.ok && data.route) {
+            const path = data.route.map(coord => ({
+                lat: coord[0],
+                lng: coord[1],
+            }));
+
+            // Draw the polyline on the map
+            new google.maps.Polyline({
+                path: path,
+                geodesic: true,
+                strokeColor: "#FF0000",
+                strokeOpacity: 1.0,
+                strokeWeight: 4,
+                map: map
+            });
+
+        } else {
+            alert("Error generating safe route: " + (data.error || "Unknown error"));
+            console.error(data.error);
+        }
     });
+
 
 
     window.initMap = initMap;
