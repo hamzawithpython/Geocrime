@@ -25,27 +25,27 @@ def crime_map(request):
     csv_path = os.path.join(settings.BASE_DIR, 'data', 'cleaned_dataset.csv')
     df = pd.read_csv(csv_path)
 
-    # Create Folium map centered on Chicago
+    # Creating Folium map centered on Chicago
     folium_map = folium.Map(location=[41.8781, -87.6298], zoom_start=11)
 
-    # Prepare heatmap data
+    # Preparing heatmap data
     heat_data = [[row['Latitude'], row['Longitude']] for index, row in df.iterrows() if not pd.isnull(row['Latitude']) and not pd.isnull(row['Longitude'])]
 
-    # Add heatmap to map
+    # Adding heatmap to map
     HeatMap(heat_data).add_to(folium_map)
 
-    # Save generated map as static HTML file
-    map_path = os.path.join(settings.BASE_DIR, 'crimeapp', 'templates', 'crimeapp', 'map.html')
+    # Saving generated map as static HTML file
+    map_path = os.path.join(settings.BASE_DIR, 'crimeapp', 'templates', 'crimeapp', 'crime_map.html')
     folium_map.save(map_path)
 
-    return render(request, 'crimeapp/map.html')
+    return render(request, 'crimeapp/crime_map.html')
 
 @csrf_exempt
 def map_with_input(request):
     lat = 41.8781
     lon = -87.6298
     selected_type = None
-    map_view = 'heatmap'  # default view
+    map_view = 'heatmap'
 
     if request.method == 'POST':
         lat = float(request.POST.get('lat'))
@@ -57,16 +57,16 @@ def map_with_input(request):
     csv_path = os.path.join(settings.BASE_DIR, 'data', 'cleaned_dataset.csv')
     df = pd.read_csv(csv_path)
 
-    # Filter by crime type
+    # Filtering by crime type
     if selected_type:
         df = df[df['Primary Type'].str.upper() == selected_type.upper()]
 
     folium_map = folium.Map(location=[lat, lon], zoom_start=12)
 
-    # Add user location marker
+    # Adding user location marker
     folium.Marker([lat, lon], tooltip='Your Location', icon=folium.Icon(color='blue')).add_to(folium_map)
 
-    # Prepare data
+    # Preparing data
     filtered_data = df[['Latitude', 'Longitude', 'Primary Type', 'Description']].dropna()
 
     if map_view == 'heatmap':
@@ -81,7 +81,7 @@ def map_with_input(request):
                 icon=folium.Icon(color='red', icon='info-sign')
             ).add_to(marker_cluster)
 
-    map_path = os.path.join(settings.BASE_DIR, 'crimeapp', 'static', 'map.html')
+    map_path = os.path.join(settings.BASE_DIR, 'crimeapp', 'static', 'crime_map.html')
     folium_map.save(map_path)
 
     return render(request, 'crimeapp/map_with_input.html', {
@@ -103,7 +103,7 @@ def route_view(request):
     if request.method == 'POST':
         saved_id = request.POST.get('saved_route')
 
-        # Load saved route or get input
+        # Loading saved route or get input
         if saved_id:
             try:
                 saved = SavedRoute.objects.get(id=saved_id)
@@ -122,7 +122,7 @@ def route_view(request):
             end_lat = float(request.POST['end_lat'])
             end_lon = float(request.POST['end_lon'])
 
-        # Save route if user entered a name
+        # Saving route if user entered a name
         route_name = request.POST.get('save_name', '').strip()
         if route_name and not SavedRoute.objects.filter(name=route_name).exists():
             SavedRoute.objects.create(
@@ -141,14 +141,14 @@ def route_view(request):
         decoded = convert.decode_polyline(geometry)
         route_points = [(pt[1], pt[0]) for pt in decoded['coordinates']]
 
-        # Load crimes
+        # Loading crimes
         csv_path = os.path.join(settings.BASE_DIR, 'data', 'cleaned_dataset.csv')
         df = pd.read_csv(csv_path).dropna(subset=['Latitude', 'Longitude'])
         selected_crime_type = request.POST.get('crime_type', '').strip().upper()
         if selected_crime_type:
             df = df[df['Primary Type'] == selected_crime_type]
 
-        # Analyze danger points
+        # Analyzing danger points
         max_distance_m = 200
         for _, crime in df.iterrows():
             crime_point = (crime['Latitude'], crime['Longitude'])
@@ -168,7 +168,7 @@ def route_view(request):
         else:
             safety_score = ("Risky", "red")
 
-        # Generate map
+        # Generating map
         mid_lat = (start_lat + end_lat) / 2
         mid_lon = (start_lon + end_lon) / 2
         folium_map = folium.Map(location=[mid_lat, mid_lon], zoom_start=13)
@@ -208,18 +208,17 @@ def route_view(request):
 
 def mapbox_test(request):
     return render(request, 'crimeapp/mapbox_test.html', {
-        'mapbox_token': 'pk.eyJ1IjoiaGFtamFhamVlIiwiYSI6ImNtYnBrMnVhMTA0cXIyaXNjeXdxaDByNnQifQ.AYava7Fo3R3bWWBbzbiQkg'
+        'mapbox_token': 'pk.eyJ1IjoiaGFtamFhamVlIiwiYSI6ImNtYno5N2FsajE4MTMya3M2NGJpNDJvaWQifQ.627r71W4Bj_3PrYFgdhqLw'
     })
 
 def google_route_view(request):
     return render(request, 'crimeapp/google_route.html', {
         'google_api_key': GOOGLE_API_KEY,
-        'center_lat': 41.8781,  # Chicago default
+        'center_lat': 41.8781,
         'center_lon': -87.6298
     })
 
 def mapbox_route(request):
-    # Sample route (will be replacing later)
     start_lat = 41.8781
     start_lon = -87.6298
     end_lat = 41.8858

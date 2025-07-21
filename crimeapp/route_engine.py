@@ -2,13 +2,13 @@ import networkx as nx
 import osmnx as ox
 from geopy.distance import geodesic
 
-# Load the crime-weighted graph
+# Loading the crime-weighted graph
 G = nx.read_graphml("chicago_crime_weighted.graphml")
 
-# Convert node keys to integers
+# Converting node keys to integers
 G = nx.convert_node_labels_to_integers(G, label_attribute="osmid")
 
-# Rebuild spatial index for nearest node search
+# Rebuilding spatial index for nearest node search
 nodes = [(float(data['y']), float(data['x'])) for _, data in G.nodes(data=True)]
 node_ids = list(G.nodes)
 
@@ -27,10 +27,10 @@ def get_crime_aware_route(origin_lat, origin_lng, dest_lat, dest_lng):
     source_node = find_nearest_node(origin_lat, origin_lng)
     target_node = find_nearest_node(dest_lat, dest_lng)
 
-    # Run A* using our custom edge weights
+    # Running A* using our custom edge weights
     path = nx.astar_path(G, source_node, target_node, weight="crime_weight")
 
-    # Extract lat/lng coordinates from path
+    # Extracting lat/lng coordinates from path
     latlng_path = []
     for node in path:
         lat = float(G.nodes[node]['y'])
@@ -41,7 +41,7 @@ def get_crime_aware_route(origin_lat, origin_lng, dest_lat, dest_lng):
 
 
 if __name__ == "__main__":
-    origin = (41.831, -87.628)  # Example: near downtown Chicago
+    origin = (41.831, -87.628)
     destination = (41.844, -87.64)
 
     route = get_crime_aware_route(*origin, *destination)

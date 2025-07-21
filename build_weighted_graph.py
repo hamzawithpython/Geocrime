@@ -1,46 +1,78 @@
 import json
 import networkx as nx
-from geopy.distance import geodesic
 from scipy.spatial import KDTree
 import numpy as np
 
-# Load road graph
-G = nx.read_graphml("chicago_road_graph.graphml")
-G = nx.convert_node_labels_to_integers(G, label_attribute='osmid')
+CRIME_SEVERITY = {
+    "HOMICIDE": 10,
+    "KIDNAPPING": 9,
+    "CRIMINAL SEXUAL ASSAULT": 9,
+    "SEX OFFENSE": 8,
+    "ROBBERY": 8,
+    "ASSAULT": 7,
+    "BATTERY": 7,
+    "WEAPONS VIOLATION": 7,
+    "STALKING": 6,
+    "OFFENSE INVOLVING CHILDREN": 6,
+    "ARSON": 6,
+    "BURGLARY": 5,
+    "MOTOR VEHICLE THEFT": 5,
+    "CRIMINAL DAMAGE": 4,
+    "CRIMINAL TRESPASS": 4,
+    "NARCOTICS": 3,
+    "PUBLIC PEACE VIOLATION": 3,
+    "DECEPTIVE PRACTICE": 2,
+    "INTERFERENCE WITH PUBLIC OFFICER": 2,
+    "CONCEALED CARRY LICENSE VIOLATION": 2,
+    "PROSTITUTION": 2,
+    "OTHER OFFENSE": 1,
+    "THEFT": 1,
+}
 
-# Load crime data
+print("[INFO] Loading road graph...")
+G = nx.read_graphml("chicago_road_graph.graphml")
+
+print("[INFO] Building KDTree of edge midpoints...")
+edge_coords = []
+edge_keys = []
+
+for u, v, k, data in G.edges(keys=True, data=True):
+    try:
+        x1, y1 = float(G.nodes[u]['x']), float(G.nodes[u]['y'])
+        x2, y2 = float(G.nodes[v]['x']), float(G.nodes[v]['y'])
+        midpoint = ((y1 + y2) / 2, (x1 + x2) / 2)
+        edge_coords.append(midpoint)
+        edge_keys.append((u, v, k))
+    except KeyError:
+        continue
+
+tree = KDTree(edge_coords)
+
+print("[INFO] Loading crime data...")
 with open("crimeapp/static/crime_data.json", "r") as f:
     crime_data = json.load(f)
 
-crime_coords = [(entry["Latitude"], entry["Longitude"]) for entry in crime_data]
+print("[INFO] Overlaying crime data onto edges...")
+for crime in crime_data:
+    try:
+        crime_lat = float(crime["Latitude"])
+        crime_lon = float(crime["Longitude"])
+    except (KeyError, ValueError):
+        continue
 
-# Build KDTree for fast spatial queries
-crime_tree = KDTree(np.radians(crime_coords))  # use radians for haversine queries
+    dist, idx = tree.query((crime_lat, crime_lon), distance_upper_bound=0.0015)
+    if np.isinf(dist) or idx >= len(edge_keys):
+        continue
 
-# Define constants
-CRIME_RADIUS_METERS = 100
-CRIME_WEIGHT = 50
+    u, v, k = edge_keys[idx]
+    edge = G.edges[u, v, k]
 
-EARTH_RADIUS_M = 6371000  # meters
-radius_radians = CRIME_RADIUS_METERS / EARTH_RADIUS_M
+    crime_type = crime.get("Primary Type", "").upper()
+    severity = CRIME_SEVERITY.get(crime_type, 1)
 
-print("Overlaying crime data with KDTree...")
+    edge["crime_weight"] = edge.get("crime_weight", 1.0) + severity
 
-# Process each edge
-for u, v, k, data in G.edges(keys=True, data=True):
-    lat_u, lon_u = float(G.nodes[u]['y']), float(G.nodes[u]['x'])
-    lat_v, lon_v = float(G.nodes[v]['y']), float(G.nodes[v]['x'])
-    midpoint = [(lat_u + lat_v) / 2, (lon_u + lon_v) / 2]
-
-    # Query crimes within radius
-    nearby_idx = crime_tree.query_ball_point(np.radians(midpoint), radius_radians)
-    crime_count = len(nearby_idx)
-
-    base_length = float(data.get("length", 0))
-    total_cost = base_length + (crime_count * CRIME_WEIGHT)
-
-    data["crime_weight"] = total_cost
-
-print("Done assigning crime weights.")
+print("[INFO] Saving crime-weighted graph...")
 nx.write_graphml(G, "chicago_crime_weighted.graphml")
-print("Saved as 'chicago_crime_weighted.graphml'")
+print("[SUCCESS] Crime-weighted graph saved as 'chicago_crime_weighted.graphml'")
+print(f"Overlay complete. Total crimes processed: {len(crime_data)}")
