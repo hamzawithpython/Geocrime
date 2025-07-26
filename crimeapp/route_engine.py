@@ -13,7 +13,7 @@ nodes = [(float(data['y']), float(data['x'])) for _, data in G.nodes(data=True)]
 node_ids = list(G.nodes)
 
 def find_nearest_node(lat, lng):
-    """Return node in G closest to given (lat, lng)."""
+    """Returning node in G closest to given (lat, lng)."""
     min_dist = float('inf')
     nearest = None
     for node, coords in zip(node_ids, nodes):

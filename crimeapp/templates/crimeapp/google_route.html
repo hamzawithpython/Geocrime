@@ -51,9 +51,11 @@
                     <label class="block text-sm font-medium text-gray-600">Destination:</label>
                     <input id="route-end" class="w-full mt-1 p-2 border rounded text-sm" readonly>
                 </div>
-                <button id="route-start-button" class="w-full bg-green-600 text-white py-2 px-3 rounded hover:bg-green-700">
-                    Start
+                <button id="route-start-button" class="w-full bg-green-600 text-white py-2 px-3 rounded hover:bg-green-700 flex items-center justify-center gap-2">
+                    <span id="start-button-spinner" class="hidden animate-spin inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full"></span>
+                    <span id="start-button-text">Start</span>
                 </button>
+
             </div>
     </div>
 
@@ -330,6 +332,13 @@
             return;
         }
 
+        // Toggle to loading state
+        const btnText = document.getElementById("start-button-text");
+        const btnSpinner = document.getElementById("start-button-spinner");
+        btnText.textContent = "Loading...";
+        btnSpinner.classList.remove("hidden");
+        document.getElementById("route-start-button").disabled = true;
+
         const origin = {
             lat: startMarker.getPosition().lat(),
             lng: startMarker.getPosition().lng()
@@ -348,13 +357,17 @@
 
         const data = await response.json();
 
+        // Reset loading state
+        btnText.textContent = "Start";
+        btnSpinner.classList.add("hidden");
+        document.getElementById("route-start-button").disabled = false;
+
         if (response.ok && data.route) {
             const path = data.route.map(coord => ({
                 lat: coord[0],
                 lng: coord[1],
             }));
 
-            // Draw the polyline on the map
             new google.maps.Polyline({
                 path: path,
                 geodesic: true,
@@ -369,6 +382,7 @@
             console.error(data.error);
         }
     });
+
 
 
 
