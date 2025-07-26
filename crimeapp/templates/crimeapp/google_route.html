@@ -230,6 +230,23 @@
                 }
             });
         });
+
+
+        map.addListener("dragstart", function () {
+            if (!awaitingStartClick && selectedMarker) {
+                selectedMarker.setMap(null);
+                selectedMarker = null;
+                document.getElementById("click-info-card").classList.add("hidden");
+            }
+        });
+
+        map.addListener("zoom_changed", function () {
+            if (!awaitingStartClick && selectedMarker) {
+                selectedMarker.setMap(null);
+                selectedMarker = null;
+                document.getElementById("click-info-card").classList.add("hidden");
+            }
+        });
     }
 
 
