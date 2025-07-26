@@ -72,6 +72,8 @@
     let crimeMarkers = [];
     let heatmapLayer = null;
     let lastSelectedAddress = "";
+    let destinationMarker = null;
+
 
     function initMap() {
         map = new google.maps.Map(document.getElementById("map"), {
@@ -112,13 +114,14 @@
             map.setCenter(location);
             map.setZoom(15);
 
-            if (selectedMarker) selectedMarker.setMap(null);
-
-            selectedMarker = new google.maps.Marker({
-                position: location,
+            if (destinationMarker) destinationMarker.setMap(null);
+            destinationMarker = new google.maps.Marker({
+                position: clickedLatLng,
                 map: map,
                 icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
             });
+            selectedMarker = destinationMarker;
+
 
             // ✅ Reverse geocode the selected place and update the info card
             const geocoder = new google.maps.Geocoder();
@@ -166,10 +169,10 @@
         const cardDirectionsBtn = document.getElementById("card-directions");
 
         map.addListener("click", function (e) {
-            if (awaitingStartClick) {
-                const clickedLatLng = e.latLng;
-                const geocoder = new google.maps.Geocoder();
+            const clickedLatLng = e.latLng;
 
+            if (awaitingStartClick) {
+                // ✅ User is selecting start location
                 if (startMarker) startMarker.setMap(null);
 
                 startMarker = new google.maps.Marker({
@@ -181,7 +184,7 @@
                 geocoder.geocode({ location: clickedLatLng }, (results, status) => {
                     if (status === "OK" && results[0]) {
                         document.getElementById("route-start").value = results[0].formatted_address;
-                        awaitingStartClick = false;
+                        // keep awaitingStartClick = true if user may keep clicking to change
                     } else {
                         console.error("Reverse geocode failed: " + status);
                     }
@@ -190,10 +193,10 @@
                 return;
             }
 
-            const clickedLatLng = e.latLng;
+            // ✅ User is selecting destination location (before clicking "Get Directions")
+            if (destinationMarker) destinationMarker.setMap(null);
 
-            if (selectedMarker) selectedMarker.setMap(null);
-            selectedMarker = new google.maps.Marker({
+            destinationMarker = new google.maps.Marker({
                 position: clickedLatLng,
                 map: map,
                 icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
@@ -218,12 +221,10 @@
                         awaitingStartClick = true;
 
                         alert("Click on the map to select your starting point.");
-
                         routeEnd.value = lastSelectedAddress;
 
                         routeCard.classList.remove("hidden");
                     };
-
                 } else {
                     console.error("Geocoder failed: " + status);
                     card.classList.add("hidden");
@@ -231,23 +232,24 @@
             });
         });
 
-
+        // Optional: Hide destination marker on drag/zoom (but not in start selection mode)
         map.addListener("dragstart", function () {
-            if (!awaitingStartClick && selectedMarker) {
-                selectedMarker.setMap(null);
-                selectedMarker = null;
-                document.getElementById("click-info-card").classList.add("hidden");
+            if (!awaitingStartClick && destinationMarker) {
+                destinationMarker.setMap(null);
+                destinationMarker = null;
+                card.classList.add("hidden");
             }
         });
 
         map.addListener("zoom_changed", function () {
-            if (!awaitingStartClick && selectedMarker) {
-                selectedMarker.setMap(null);
-                selectedMarker = null;
-                document.getElementById("click-info-card").classList.add("hidden");
+            if (!awaitingStartClick && destinationMarker) {
+                destinationMarker.setMap(null);
+                destinationMarker = null;
+                card.classList.add("hidden");
             }
         });
     }
+
 
 
     function loadCrimeData() {
