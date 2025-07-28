@@ -42,6 +42,8 @@
 
             <!-- Routing Input Card -->
             <div id="route-card" class="absolute bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 w-80 hidden z-20">
+                <div>🚨 Crimes near this route: <strong id="crime-count"></strong></div>
+                <div>🛑 Risk Level: <strong id="risk-level"></strong></div>
                 <h3 class="font-semibold text-lg mb-2">Plan Your Route</h3>
                 <div class="mb-2">
                     <label class="block text-sm font-medium text-gray-600">Start Location:</label>
@@ -73,6 +75,12 @@
     let heatmapLayer = null;
     let lastSelectedAddress = "";
     let destinationMarker = null;
+    let activeInputField = null;
+    let destinationSelected = false;
+    let startSelected = false;
+    let startAlertShown = false;
+    let endAlertShown = false;
+
 
 
     function initMap() {
@@ -92,6 +100,25 @@
             }
         });
 
+        document.getElementById("route-start").addEventListener("focus", () => {
+            activeInputField = "start";
+            if (!startAlertShown) {
+                alert("Click on the map or search a place to select your Start Location.");
+                startAlertShown = true;
+            }
+        });
+
+        document.getElementById("route-end").addEventListener("focus", () => {
+            activeInputField = "end";
+            if (!endAlertShown) {
+                alert("Click on the map or search a place to select your Destination.");
+                endAlertShown = true;
+            }
+        });
+
+
+
+
         setupFloatingSearch();
         setupMapClickToGetAddress();
         loadCrimeData();
@@ -110,55 +137,48 @@
             }
 
             const location = place.geometry.location;
+            const address = place.formatted_address || place.name;
+            document.getElementById("floating-search").value = address;
 
             map.setCenter(location);
             map.setZoom(15);
 
-            if (destinationMarker) destinationMarker.setMap(null);
-            destinationMarker = new google.maps.Marker({
-                position: clickedLatLng,
-                map: map,
-                icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
-            });
-            selectedMarker = destinationMarker;
-
-
-            // ✅ Reverse geocode the selected place and update the info card
             const geocoder = new google.maps.Geocoder();
+
+            // Handle based on which input is active
+            if (activeInputField === "start") {
+                if (startMarker) startMarker.setMap(null);
+                startMarker = new google.maps.Marker({
+                    position: location,
+                    map: map,
+                    icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+                });
+                document.getElementById("route-start").value = address;
+
+            } else if (activeInputField === "end") {
+                if (selectedMarker) selectedMarker.setMap(null);
+                selectedMarker = new google.maps.Marker({
+                    position: location,
+                    map: map,
+                    icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+                });
+                document.getElementById("route-end").value = address;
+            }
+
+            // Optionally update the floating info card
             geocoder.geocode({ location: location }, (results, status) => {
                 if (status === "OK" && results[0]) {
-                    const address = results[0].formatted_address;
-
-                    document.getElementById("card-address").textContent = address;
+                    document.getElementById("card-address").textContent = results[0].formatted_address;
                     document.getElementById("card-lat").textContent = location.lat().toFixed(6);
                     document.getElementById("card-lng").textContent = location.lng().toFixed(6);
                     document.getElementById("click-info-card").classList.remove("hidden");
-
-                    lastSelectedAddress = address;
-
-                    // Set up directions button just like in the click handler
-                    document.getElementById("card-directions").onclick = () => {
-                        const routeCard = document.getElementById("route-card");
-                        const routeStart = document.getElementById("route-start");
-                        const routeEnd = document.getElementById("route-end");
-
-                        routeStart.value = "";
-                        awaitingStartClick = true;
-
-                        alert("Click on the map to select your starting point.");
-                        routeEnd.value = lastSelectedAddress;
-
-                        routeCard.classList.remove("hidden");
-                    };
                 } else {
                     console.error("Reverse geocoding failed: " + status);
                 }
             });
-
-            document.getElementById("floating-search").value = place.formatted_address || place.name;
         });
-
     }
+
 
     function setupMapClickToGetAddress() {
         const geocoder = new google.maps.Geocoder();
@@ -171,8 +191,8 @@
         map.addListener("click", function (e) {
             const clickedLatLng = e.latLng;
 
-            if (awaitingStartClick) {
-                // ✅ User is selecting start location
+            // ✅ If user is selecting start location
+            if (activeInputField === "start" || awaitingStartClick) {
                 if (startMarker) startMarker.setMap(null);
 
                 startMarker = new google.maps.Marker({
@@ -184,7 +204,7 @@
                 geocoder.geocode({ location: clickedLatLng }, (results, status) => {
                     if (status === "OK" && results[0]) {
                         document.getElementById("route-start").value = results[0].formatted_address;
-                        // keep awaitingStartClick = true if user may keep clicking to change
+                        if (awaitingStartClick) awaitingStartClick = false;
                     } else {
                         console.error("Reverse geocode failed: " + status);
                     }
@@ -193,10 +213,30 @@
                 return;
             }
 
-            // ✅ User is selecting destination location (before clicking "Get Directions")
-            if (destinationMarker) destinationMarker.setMap(null);
+            // ✅ If user is selecting destination location
+            if (activeInputField === "end") {
+                if (selectedMarker) selectedMarker.setMap(null);
 
-            destinationMarker = new google.maps.Marker({
+                selectedMarker = new google.maps.Marker({
+                    position: clickedLatLng,
+                    map: map,
+                    icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+                });
+
+                geocoder.geocode({ location: clickedLatLng }, (results, status) => {
+                    if (status === "OK" && results[0]) {
+                        document.getElementById("route-end").value = results[0].formatted_address;
+                    } else {
+                        console.error("Reverse geocode failed: " + status);
+                    }
+                });
+
+                return;
+            }
+
+            // 🟡 Default case before clicking route inputs: show destination card
+            if (selectedMarker) selectedMarker.setMap(null);
+            selectedMarker = new google.maps.Marker({
                 position: clickedLatLng,
                 map: map,
                 icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
@@ -219,6 +259,7 @@
 
                         routeStart.value = "";
                         awaitingStartClick = true;
+                        activeInputField = "start";
 
                         alert("Click on the map to select your starting point.");
                         routeEnd.value = lastSelectedAddress;
@@ -232,23 +273,26 @@
             });
         });
 
-        // Optional: Hide destination marker on drag/zoom (but not in start selection mode)
+        // Optional: hide card & marker on zoom/drag when not selecting
         map.addListener("dragstart", function () {
-            if (!awaitingStartClick && destinationMarker) {
-                destinationMarker.setMap(null);
-                destinationMarker = null;
+            if (!awaitingStartClick && activeInputField !== "start" && selectedMarker) {
+                selectedMarker.setMap(null);
+                selectedMarker = null;
                 card.classList.add("hidden");
             }
         });
 
         map.addListener("zoom_changed", function () {
-            if (!awaitingStartClick && destinationMarker) {
-                destinationMarker.setMap(null);
-                destinationMarker = null;
+            if (!awaitingStartClick && activeInputField !== "start" && selectedMarker) {
+                selectedMarker.setMap(null);
+                selectedMarker = null;
                 card.classList.add("hidden");
             }
         });
     }
+
+
+
 
 
 
@@ -395,6 +439,12 @@
                 strokeWeight: 4,
                 map: map
             });
+
+            // Show route safety info from backend
+            document.getElementById("crime-count").textContent = data.safety_info.nearby_crimes;
+            document.getElementById("risk-level").textContent = data.safety_info.risk_level;
+            document.getElementById("route-safety-info").classList.remove("hidden");
+
 
         } else {
             alert("Error generating safe route: " + (data.error || "Unknown error"));

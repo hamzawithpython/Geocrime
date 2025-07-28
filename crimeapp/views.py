@@ -252,18 +252,23 @@ def get_custom_route(request):
             if not origin or not destination:
                 return JsonResponse({"error": "Missing origin or destination"}, status=400)
 
-            route = get_crime_aware_route(
+            result = get_crime_aware_route(
                 origin_lat=origin["lat"],
                 origin_lng=origin["lng"],
                 dest_lat=destination["lat"],
                 dest_lng=destination["lng"]
             )
 
-            return JsonResponse({"route": route}, status=200)
+            return JsonResponse({
+                "route": result["route"],
+                "safety_info": result["safety_info"]
+            }, status=200)
 
         except Exception as e:
             return JsonResponse({"error": str(e)}, status=500)
+
     return JsonResponse({"error": "Only POST allowed"}, status=405)
+
 
 
 
