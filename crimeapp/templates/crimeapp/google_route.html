@@ -45,14 +45,30 @@
                 <div>🚨 Crimes near this route: <strong id="crime-count"></strong></div>
                 <div>🛑 Risk Level: <strong id="risk-level"></strong></div>
                 <h3 class="font-semibold text-lg mb-2">Plan Your Route</h3>
-                <div class="mb-2">
+                <div class="mb-2 relative">
                     <label class="block text-sm font-medium text-gray-600">Start Location:</label>
-                    <input id="route-start" class="w-full mt-1 p-2 border rounded text-sm" placeholder="My Location">
+                    <input id="route-start" class="w-full mt-1 p-2 pr-10 border rounded text-sm" placeholder="My Location">
+                    <button
+                        type="button"
+                        id="start-current-btn"
+                        class="absolute right-2 top-9 text-blue-600 hover:text-blue-800"
+                        title="Use Current Location"
+                        aria-label="Use current location for start"
+                    >📍</button>
                 </div>
-                <div class="mb-3">
+
+                <div class="mb-3 relative">
                     <label class="block text-sm font-medium text-gray-600">Destination:</label>
-                    <input id="route-end" class="w-full mt-1 p-2 border rounded text-sm" readonly>
+                    <input id="route-end" class="w-full mt-1 p-2 pr-10 border rounded text-sm" readonly>
+                    <button
+                        type="button"
+                        id="end-current-btn"
+                        class="absolute right-2 top-9 text-blue-600 hover:text-blue-800"
+                        title="Use Current Location"
+                        aria-label="Use current location for destination"
+                    >📍</button>
                 </div>
+
                 <button id="route-start-button" class="w-full bg-green-600 text-white py-2 px-3 rounded hover:bg-green-700 flex items-center justify-center gap-2">
                     <span id="start-button-spinner" class="hidden animate-spin inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full"></span>
                     <span id="start-button-text">Start</span>
@@ -291,6 +307,79 @@
         });
     }
 
+    function setCurrentLocation(target) {
+        if (!navigator.geolocation) {
+            alert("Geolocation is not supported by your browser.");
+            return;
+        }
+
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                const lat = position.coords.latitude;
+                const lng = position.coords.longitude;
+                const currentLatLng = new google.maps.LatLng(lat, lng);
+
+                const geocoder = new google.maps.Geocoder();
+                geocoder.geocode({ location: currentLatLng }, (results, status) => {
+                    if (status === "OK" && results[0]) {
+                        const address = results[0].formatted_address;
+
+                        if (target === "start") {
+                            // Fill input
+                            document.getElementById("route-start").value = address;
+
+                            // Marker (green)
+                            if (startMarker) startMarker.setMap(null);
+                            startMarker = new google.maps.Marker({
+                                position: currentLatLng,
+                                map: map,
+                                icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+                            });
+
+                        } else if (target === "end") {
+                            // Fill input
+                            document.getElementById("route-end").value = address;
+
+                            // Marker (blue)
+                            if (selectedMarker) selectedMarker.setMap(null);
+                            selectedMarker = new google.maps.Marker({
+                                position: currentLatLng,
+                                map: map,
+                                icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+                            });
+                        }
+
+                        // Center & zoom the map
+                        map.setCenter(currentLatLng);
+                        map.setZoom(15);
+
+                        // Optional: show info card for context
+                        document.getElementById("card-address").textContent = address;
+                        document.getElementById("card-lat").textContent = lat.toFixed(6);
+                        document.getElementById("card-lng").textContent = lng.toFixed(6);
+                        document.getElementById("click-info-card").classList.remove("hidden");
+                    } else {
+                        console.error("Reverse geocode failed:", status);
+                        alert("Could not determine an address for your current location.");
+                    }
+                });
+            },
+            (error) => {
+                console.error("Geolocation error:", error);
+                const msg =
+                    error.code === error.PERMISSION_DENIED
+                        ? "Location permission denied. You can still click on the map or use the search box."
+                        : "Unable to get your current location. Please try again.";
+                alert(msg);
+            },
+            {
+                enableHighAccuracy: true,
+                timeout: 10000,
+                maximumAge: 0
+            }
+        );
+    }
+
 
 
 
@@ -389,11 +478,16 @@
         }
     });
 
+    document.getElementById("start-current-btn").addEventListener("click", () => setCurrentLocation("start"));
+    document.getElementById("end-current-btn").addEventListener("click", () => setCurrentLocation("end"));
+
+
     document.getElementById("route-start-button").addEventListener("click", async () => {
         if (!startMarker || !selectedMarker) {
             alert("Please select both start and destination on the map.");
             return;
         }
+
 
         // Toggle to loading state
         const btnText = document.getElementById("start-button-text");
