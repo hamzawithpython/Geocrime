@@ -96,6 +96,7 @@
     let startSelected = false;
     let startAlertShown = false;
     let endAlertShown = false;
+    let crimeInfoWindow = null;
 
 
 
@@ -115,6 +116,15 @@
                 strokeWeight: 4
             }
         });
+
+        // One shared InfoWindow for all crime markers
+        crimeInfoWindow = new google.maps.InfoWindow();
+
+        // Close it on map interactions
+        map.addListener("click", () => crimeInfoWindow.close());
+        map.addListener("dragstart", () => crimeInfoWindow.close());
+        map.addListener("zoom_changed", () => crimeInfoWindow.close());
+
 
         document.getElementById("route-start").addEventListener("focus", () => {
             activeInputField = "start";
@@ -413,13 +423,21 @@
                         title: type
                     });
 
-                    const infowindow = new google.maps.InfoWindow({
-                        content: `<div class="p-2"><strong>${type}</strong><br>${crime.Description || ''}</div>`
+                    marker.addListener("click", () => {
+                        // Build content
+                        const html = `<div class="p-2">
+                            <strong>${type}</strong><br>${crime.Description || ""}
+                        </div>`;
+
+                        // Always reuse the same InfoWindow so only one is open
+                        if (!crimeInfoWindow) {
+                            crimeInfoWindow = new google.maps.InfoWindow();
+                        }
+                        crimeInfoWindow.close();                  // ensure previous is closed
+                        crimeInfoWindow.setContent(html);         // set new content
+                        crimeInfoWindow.open({ anchor: marker, map: map, shouldFocus: false });
                     });
 
-                    marker.addListener("click", () => {
-                        infowindow.open(map, marker);
-                    });
 
                     crimeMarkers.push(marker);
                 });
@@ -465,6 +483,8 @@
 
 
     document.getElementById("toggle-crime-markers").addEventListener("click", () => {
+        if (crimeInfoWindow) crimeInfoWindow.close();
+
         crimeMarkers.forEach(marker => {
             const visible = marker.getMap();
             marker.setMap(visible ? null : map);
