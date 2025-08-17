@@ -1,0 +1,113 @@
+{% extends "crimeapp/base.html" %}
+{% load static %}
+
+{% block title %}Privacy Policy | GeoCrime{% endblock %}
+
+{% block content %}
+
+<section class="bg-white dark:bg-gray-900">
+  <div class="max-w-5xl mx-auto px-4 py-10 lg:py-14">
+    <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-white">Privacy Policy</h1>
+    <p class="mt-4 text-gray-600 dark:text-gray-300">
+      This Privacy Policy explains what information GeoCrime collects, how we use it, and the choices you have.
+      Using GeoCrime means you agree to this policy and our terms.
+    </p>
+  </div>
+</section>
+
+<section class="bg-gray-50 dark:bg-gray-800/50">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Information We Collect</h2>
+    <div class="mt-4 grid md:grid-cols-2 gap-6 text-sm text-gray-700 dark:text-gray-300">
+      <div class="p-5 bg-white border rounded-2xl dark:bg-gray-900 dark:border-gray-700">
+        <h3 class="font-medium text-gray-900 dark:text-white">Contact Info</h3>
+        <p class="mt-2">If you use the contact form, we collect your email and message so we can reply.</p>
+      </div>
+      <div class="p-5 bg-white border rounded-2xl dark:bg-gray-900 dark:border-gray-700">
+        <h3 class="font-medium text-gray-900 dark:text-white">Location</h3>
+        <p class="mt-2">When you use map/routing, we may use your approximate location to center maps and compute routes. We don’t store precise location by default.</p>
+      </div>
+      <div class="p-5 bg-white border rounded-2xl dark:bg-gray-900 dark:border-gray-700">
+        <h3 class="font-medium text-gray-900 dark:text-white">Usage & Device Data</h3>
+        <p class="mt-2">IP address, browser type, and basic logs for security, troubleshooting, and improving the app.</p>
+      </div>
+      <div class="p-5 bg-white border rounded-2xl dark:bg-gray-900 dark:border-gray-700">
+        <h3 class="font-medium text-gray-900 dark:text-white">Cookies / Local Storage</h3>
+        <p class="mt-2">Used to keep preferences and improve UX. You can control cookies via your browser settings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-white dark:bg-gray-900">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">How We Use Information</h2>
+    <ul class="mt-3 list-disc ps-6 text-gray-600 dark:text-gray-300">
+      <li>Provide and improve map, routing, and risk visualizations.</li>
+      <li>Respond to messages you send via the contact form.</li>
+      <li>Protect our services from abuse and troubleshoot issues.</li>
+      <li>Comply with legal obligations when required.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="bg-gray-50 dark:bg-gray-800/50">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Sharing</h2>
+    <p class="mt-3 text-gray-600 dark:text-gray-300">
+      We don’t sell your personal information. We may share limited data with service providers who help us run GeoCrime (e.g., email delivery, hosting).
+    </p>
+  </div>
+</section>
+
+<section class="bg-white dark:bg-gray-900">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Data Retention</h2>
+    <p class="mt-3 text-gray-600 dark:text-gray-300">
+      We keep personal information only as long as necessary for the purposes above, then delete or anonymize it, unless required by law to keep it longer.
+    </p>
+  </div>
+</section>
+
+<section class="bg-gray-50 dark:bg-gray-800/50">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Security</h2>
+    <p class="mt-3 text-gray-600 dark:text-gray-300">
+      We use reasonable safeguards to protect information. No method of transmission or storage is 100% secure.
+    </p>
+  </div>
+</section>
+
+<section class="bg-white dark:bg-gray-900">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Your Choices</h2>
+    <ul class="mt-3 list-disc ps-6 text-gray-600 dark:text-gray-300">
+      <li>You can disable cookies in your browser.</li>
+      <li>You can contact us to access, update, or delete information you’ve provided.</li>
+      <li>Regional rights (e.g., GDPR/CCPA) may apply; contact us to exercise them.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="bg-gray-50 dark:bg-gray-800/50">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Children’s Privacy</h2>
+    <p class="mt-3 text-gray-600 dark:text-gray-300">
+      GeoCrime is not intended for children under 13, and we don’t knowingly collect personal data from children.
+    </p>
+  </div>
+</section>
+
+<section class="bg-white dark:bg-gray-900">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Contact Us</h2>
+    <p class="mt-3 text-gray-600 dark:text-gray-300">
+      Questions about this policy? <a href="{% url 'contact' %}" class="text-blue-600 hover:underline">Contact us</a>.
+    </p>
+    <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+      Last updated: 17 August, 2025
+    </p>
+  </div>
+</section>
+
+{% endblock %}

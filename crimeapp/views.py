@@ -313,6 +313,10 @@ def contact(request):
 
     return render(request, "crimeapp/contact.html")
 
+def privacy(request):
+    return render(request, "crimeapp/privacy.html")
+
+
 
 
 
