@@ -275,6 +275,10 @@ def about(request):
 def disclaimer(request):
     return render(request, "crimeapp/disclaimer.html")
 
+def help(request):
+    return render(request, "crimeapp/help.html")
+
+
 
 
 

@@ -1,0 +1,133 @@
+{% extends "crimeapp/base.html" %}
+{% load static %}
+
+{% block title %}Help · GeoCrime{% endblock %}
+
+{% block head_extra %}
+<meta name="description" content="How to use GeoCrime: safer routing, heatmaps, markers, and crime classifications.">
+{% endblock %}
+
+{% block content %}
+
+<!-- Hero -->
+<section class="bg-white dark:bg-gray-900">
+  <div class="max-w-6xl mx-auto px-4 py-12 lg:py-16">
+    <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-white">Help & How-To</h1>
+    <p class="mt-4 text-gray-600 dark:text-gray-300">
+      New to GeoCrime? This page explains core features, how to read the map, and what our crime classifications mean.
+    </p>
+  </div>
+</section>
+
+<!-- Quick start cards -->
+<section class="bg-gray-50 dark:bg-gray-800/50">
+  <div class="max-w-6xl mx-auto px-4 py-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <a href="{% url 'google_route' %}" class="block p-5 bg-white border rounded-2xl hover:shadow-md transition dark:bg-gray-900 dark:border-gray-700">
+      <h3 class="font-semibold text-gray-900 dark:text-white">Safer Routes (Google)</h3>
+      <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Pick origin/destination and get a crime-aware route.</p>
+    </a>
+    <a href="{% url 'route_view' %}" class="block p-5 bg-white border rounded-2xl hover:shadow-md transition dark:bg-gray-900 dark:border-gray-700">
+      <h3 class="font-semibold text-gray-900 dark:text-white">Route Analyzer</h3>
+      <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Analyze risk along a path and view safety labels.</p>
+    </a>
+    <a href="{% url 'map_with_input' %}" class="block p-5 bg-white border rounded-2xl hover:shadow-md transition dark:bg-gray-900 dark:border-gray-700">
+      <h3 class="font-semibold text-gray-900 dark:text-white">Heatmap / Markers</h3>
+      <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Search an area, filter by crime type, choose view.</p>
+    </a>
+    <a href="{% url 'crime_map' %}" class="block p-5 bg-white border rounded-2xl hover:shadow-md transition dark:bg-gray-900 dark:border-gray-700">
+      <h3 class="font-semibold text-gray-900 dark:text-white">City Overview</h3>
+      <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Explore aggregated incidents across the city.</p>
+    </a>
+  </div>
+</section>
+
+<!-- Using the map -->
+<section class="bg-white dark:bg-gray-900">
+  <div class="max-w-6xl mx-auto px-4 py-10 space-y-8">
+    <div>
+      <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Using the Map</h2>
+      <ul class="mt-3 list-disc ps-6 text-gray-600 dark:text-gray-300 space-y-2 text-sm">
+        <li><strong>Set start & end:</strong> Search or click to select points; we’ll draw a proposed path.</li>
+        <li><strong>Crime layers:</strong> Toggle heatmap or markers to visualize nearby incidents.</li>
+        <li><strong>Filter:</strong> Limit by crime type to focus on specific categories (e.g., Robbery, Assault).</li>
+        <li><strong>Save routes:</strong> In the analyzer, name & save a route to reuse later.</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Understanding Safety Labels</h2>
+      <p class="mt-3 text-gray-600 dark:text-gray-300 text-sm">
+        We count incidents near your path and compute a risk label:
+        <span class="inline-block ms-2 px-2 py-0.5 rounded bg-green-100 text-green-800 text-xs">Safe</span>,
+        <span class="inline-block ms-1 px-2 py-0.5 rounded bg-yellow-100 text-yellow-800 text-xs">Moderate Risk</span>,
+        <span class="inline-block ms-1 px-2 py-0.5 rounded bg-red-100 text-red-800 text-xs">Risky</span>.
+        These are advisory and depend on available data.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Crime classifications (simple, no severity) -->
+<section class="bg-gray-50 dark:bg-gray-800/50">
+  <div class="max-w-6xl mx-auto px-4 py-10">
+    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Crime Classifications</h2>
+    <p class="mt-3 text-gray-600 dark:text-gray-300 text-sm">
+      Below are common categories used on the map. Descriptions are brief and may be summarized from public definitions.
+    </p>
+
+    <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {% comment %} Keep or trim this list as you like {% endcomment %}
+      <div class="p-4 bg-white border rounded-xl dark:bg-gray-900 dark:border-gray-700"><h3 class="font-medium text-gray-900 dark:text-white">Homicide</h3><p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Unlawful killing of a person.</p></div>
+      <div class="p-4 bg-white border rounded-xl dark:bg-gray-900 dark:border-gray-700"><h3 class="font-medium text-gray-900 dark:text-white">Kidnapping</h3><p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Unlawful abduction or restraint of a person.</p></div>
+      <div class="p-4 bg-white border rounded-xl dark:bg-gray-900 dark:border-gray-700"><h3 class="font-medium text-gray-900 dark:text-white">Criminal Sexual Assault</h3><p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Sexual assault offenses defined by statute.</p></div>
+      <div class="p-4 bg-white border rounded-xl dark:bg-gray-900 dark:border-gray-700"><h3 class="font-medium text-gray-900 dark:text-white">Sex Offense</h3><p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Non-consensual or prohibited sexual conduct.</p></div>
+      <div class="p-4 bg-white border rounded-xl dark:bg-gray-900 dark:border-gray-700"><h3 class="font-medium text-gray-900 dark:text-white">Robbery</h3><p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Taking property by force or intimidation.</p></div>
+      <div class="p-4 bg-white border rounded-xl dark:bg-gray-900 dark:border-gray-700"><h3 class="font-medium text-gray-900 dark:text-white">Assault</h3><p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Attempt or threat of physical harm.</p></div>
+      <div class="p-4 bg-white border rounded-xl dark:bg-gray-900 dark:border-gray-700"><h3 class="font-medium text-gray-900 dark:text-white">Battery</h3><p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Intentional physical contact that causes harm.</p></div>
+      <div class="p-4 bg-white border rounded-xl dark:bg-gray-900 dark:border-gray-700"><h3 class="font-medium text-gray-900 dark:text-white">Weapons Violation</h3><p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Unlawful possession or use of weapons.</p></div>
+      <div class="p-4 bg-white border rounded-xl dark:bg-gray-900 dark:border-gray-700"><h3 class="font-medium text-gray-900 dark:text-white">Stalking</h3><p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Repeated unwanted attention causing fear.</p></div>
+      <div class="p-4 bg-white border rounded-xl dark:bg-gray-900 dark:border-gray-700"><h3 class="font-medium text-gray-900 dark:text-white">Offense Involving Children</h3><p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Crimes where children are victims.</p></div>
+      <div class="p-4 bg-white border rounded-xl dark:bg-gray-900 dark:border-gray-700"><h3 class="font-medium text-gray-900 dark:text-white">Arson</h3><p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Intentionally setting property on fire.</p></div>
+      <div class="p-4 bg-white border rounded-xl dark:bg-gray-900 dark:border-gray-700"><h3 class="font-medium text-gray-900 dark:text-white">Burglary</h3><p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Illegal entry into a building to commit a crime.</p></div>
+      <div class="p-4 bg-white border rounded-xl dark:bg-gray-900 dark:border-gray-700"><h3 class="font-medium text-gray-900 dark:text-white">Motor Vehicle Theft</h3><p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Theft or attempted theft of a vehicle.</p></div>
+      <div class="p-4 bg-white border rounded-xl dark:bg-gray-900 dark:border-gray-700"><h3 class="font-medium text-gray-900 dark:text-white">Criminal Damage</h3><p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Intentional damage to property.</p></div>
+      <div class="p-4 bg-white border rounded-xl dark:bg-gray-900 dark:border-gray-700"><h3 class="font-medium text-gray-900 dark:text-white">Criminal Trespass</h3><p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Entering or remaining on property without permission.</p></div>
+      <div class="p-4 bg-white border rounded-xl dark:bg-gray-900 dark:border-gray-700"><h3 class="font-medium text-gray-900 dark:text-white">Narcotics</h3><p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Possession, distribution, or manufacture of illegal drugs.</p></div>
+      <div class="p-4 bg-white border rounded-xl dark:bg-gray-900 dark:border-gray-700"><h3 class="font-medium text-gray-900 dark:text-white">Public Peace Violation</h3><p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Acts disturbing public order.</p></div>
+      <div class="p-4 bg-white border rounded-xl dark:bg-gray-900 dark:border-gray-700"><h3 class="font-medium text-gray-900 dark:text-white">Deceptive Practice</h3><p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Fraud or dishonest schemes.</p></div>
+      <div class="p-4 bg-white border rounded-xl dark:bg-gray-900 dark:border-gray-700"><h3 class="font-medium text-gray-900 dark:text-white">Interference with Public Officer</h3><p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Obstructing or resisting officials.</p></div>
+      <div class="p-4 bg-white border rounded-xl dark:bg-gray-900 dark:border-gray-700"><h3 class="font-medium text-gray-900 dark:text-white">Concealed Carry License Violation</h3><p class="mt-2 text-sm text-gray-600 dark:text-gray-300">License or carry violations.</p></div>
+      <div class="p-4 bg-white border rounded-xl dark:bg-gray-900 dark:border-gray-700"><h3 class="font-medium text-gray-900 dark:text-white">Prostitution</h3><p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Prostitution-related offenses.</p></div>
+      <div class="p-4 bg-white border rounded-xl dark:bg-gray-900 dark:border-gray-700"><h3 class="font-medium text-gray-900 dark:text-white">Other Offense</h3><p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Incidents not otherwise classified.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="bg-white dark:bg-gray-900">
+  <div class="max-w-6xl mx-auto px-4 py-10 space-y-6">
+    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">FAQ</h2>
+    <details class="p-4 border rounded-xl bg-white dark:bg-gray-900 dark:border-gray-700">
+      <summary class="font-medium text-gray-900 dark:text-white cursor-pointer">Why does the map show incidents I didn’t hear about?</summary>
+      <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Public datasets can lag, be reclassified, or be incomplete. We display what’s available at ingest time.</p>
+    </details>
+    <details class="p-4 border rounded-xl bg-white dark:bg-gray-900 dark:border-gray-700">
+      <summary class="font-medium text-gray-900 dark:text-white cursor-pointer">Is the “safer” route always the best?</summary>
+      <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">No—our routes are advisory. Always use your judgment and follow local guidance and laws.</p>
+    </details>
+    <details class="p-4 border rounded-xl bg-white dark:bg-gray-900 dark:border-gray-700">
+      <summary class="font-medium text-gray-900 dark:text-white cursor-pointer">Do you collect personal data?</summary>
+      <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">We avoid collecting personal data for this app. See our <a href="{% url 'disclaimer' %}" class="text-blue-600 hover:underline">Disclaimer</a> for details.</p>
+    </details>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="bg-gray-50 dark:bg-gray-800/50">
+  <div class="max-w-6xl mx-auto px-4 py-12 text-center">
+    <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">Need more help?</h2>
+    <p class="mt-2 text-gray-600 dark:text-gray-300">Email us at <a href="mailto:hamza.asif6182@gmail.com" class="text-blue-600 hover:underline">hamza.asif6182@gmail.com</a>.</p>
+  </div>
+</section>
+
+{% endblock %}

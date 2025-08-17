@@ -12,6 +12,7 @@ urlpatterns = [
     path("api/custom-route/", views.get_custom_route, name="custom_route"),
     path("about/", views.about, name="about"),
     path("disclaimer/", views.disclaimer, name="disclaimer"),
+    path("help/", views.help, name="help"),
 
 
 
