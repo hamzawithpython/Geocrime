@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from django.contrib import messages
 import pandas as pd
 import os
 from django.conf import settings
@@ -278,7 +279,39 @@ def disclaimer(request):
 def help(request):
     return render(request, "crimeapp/help.html")
 
+def contact(request):
+    if request.method == "POST":
+        # simple honeypot
+        if request.POST.get("website"):
+            return redirect("contact")
 
+        email = (request.POST.get("email") or "").strip()
+        subject = (request.POST.get("subject") or "").strip()
+        message_body = (request.POST.get("message") or "").strip()
+
+        errors = []
+        if not email:
+            errors.append("Email is required.")
+        if not message_body:
+            errors.append("Message is required.")
+
+        if errors:
+            return render(request, "crimeapp/contact.html", {
+                "errors": errors,
+                "form": {"email": email, "subject": subject, "message": message_body},
+            })
+
+        # For now, just log it to the console (safe default without email setup)
+        print("\n===== CONTACT MESSAGE =====")
+        print(f"From: {email}")
+        print(f"Subject: {subject}")
+        print(f"Message:\n{message_body}")
+        print("==========================\n")
+
+        messages.success(request, "Thanks! Your message has been sent.")
+        return redirect("contact")
+
+    return render(request, "crimeapp/contact.html")
 
 
 

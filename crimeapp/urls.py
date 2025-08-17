@@ -13,6 +13,8 @@ urlpatterns = [
     path("about/", views.about, name="about"),
     path("disclaimer/", views.disclaimer, name="disclaimer"),
     path("help/", views.help, name="help"),
+    path("contact/", views.contact, name="contact"),
+
 
 
 
