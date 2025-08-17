@@ -1,0 +1,85 @@
+{% extends "crimeapp/base.html" %}
+{% load static %}
+
+{% block title %}Disclaimer · GeoCrime{% endblock %}
+
+{# Optional: only works if you added a head_extra block in base.html #}
+{% block head_extra %}
+<meta name="robots" content="noindex">
+<meta name="description" content="Disclaimer for GeoCrime: informational-use notice, data sources, accuracy limits, and liability terms.">
+<meta property="og:title" content="Disclaimer · GeoCrime">
+<meta property="og:description" content="GeoCrime provides crime-aware routing for awareness only. Read our disclaimer on data sources and limitations.">
+{% endblock %}
+
+{% block content %}
+<section class="bg-white dark:bg-gray-900">
+  <div class="max-w-6xl mx-auto px-4 py-12 lg:py-16">
+    <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-white">Disclaimer</h1>
+    <p class="mt-4 text-gray-600 dark:text-gray-300">
+      GeoCrime is a crime-aware routing and visualization tool built for awareness and research. The information presented here is provided
+      for <strong>informational purposes only</strong> and should not be treated as authoritative, comprehensive, or real-time safety guidance.
+    </p>
+
+    <div class="mt-10 space-y-8">
+      <div>
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Data Sources & Coverage</h2>
+        <p class="mt-2 text-gray-600 dark:text-gray-300">
+          Crime locations and attributes may be aggregated from publicly available records (e.g., police incident data) and/or curated datasets.
+          Availability varies by place and time. Records can be incomplete, delayed, reclassified, or removed by their publishers. As a result,
+          displayed maps, counts, and labels may not reflect the full set of incidents for any area or time period.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">No Warranties</h2>
+        <p class="mt-2 text-gray-600 dark:text-gray-300">
+          GeoCrime and its contributors provide this site on an “as is” and “as available” basis without warranties of any kind,
+          including accuracy, timeliness, fitness for a particular purpose, or non-infringement. Your use of the site and any decisions you make
+          based on its content are at your own risk.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Incident Status</h2>
+        <p class="mt-2 text-gray-600 dark:text-gray-300">
+          Markers or summaries may describe <em>reported</em> incidents. Alleged individuals are presumed innocent until proven guilty in court.
+          Visualizations are not legal findings or official notices.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Not an Emergency Service</h2>
+        <p class="mt-2 text-gray-600 dark:text-gray-300">
+          GeoCrime does not monitor or dispatch emergency services. In an emergency or to report a crime, contact your local authorities immediately.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Routing & Risk</h2>
+        <p class="mt-2 text-gray-600 dark:text-gray-300">
+          Suggested routes are generated using crime-weighted heuristics and mapping services. They are advisory only and
+          may differ from the optimal or official routes. Always use your judgment and comply with local laws and guidance.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Use & Attribution</h2>
+        <p class="mt-2 text-gray-600 dark:text-gray-300">
+          Except where otherwise noted, content on this site is for personal, non-commercial use. Do not scrape, republish, or redistribute
+          data without permission from original sources and rights holders. Map tiles and services are subject to their providers’ terms.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Corrections & Requests</h2>
+        <p class="mt-2 text-gray-600 dark:text-gray-300">
+          If you believe something is inaccurate or should be reviewed, please contact us at <a href="mailto:contact@example.com" class="text-blue-600 hover:underline">contact@example.com</a>.
+          Provide the URL, a description of the issue, and any supporting details.
+        </p>
+      </div>
+
+      <p class="text-sm text-gray-500 dark:text-gray-400">Last updated: {% now "F j, Y" %}</p>
+    </div>
+  </div>
+</section>
+{% endblock %}

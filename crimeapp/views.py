@@ -272,6 +272,8 @@ def get_custom_route(request):
 def about(request):
     return render(request, "crimeapp/about.html")
 
+def disclaimer(request):
+    return render(request, "crimeapp/disclaimer.html")
 
 
 
