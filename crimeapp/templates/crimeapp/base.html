@@ -2,8 +2,6 @@
 <html lang="en" class="h-full">
 <head>
     {% load static %}
-
-    <!-- header -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Your Site{% endblock %}</title>
@@ -14,20 +12,15 @@
 </head>
 <body class="flex flex-col min-h-screen">
 
-    <!-- Navbar -->
     {% include "partials/navbar.html" %}
 
-
-    <!-- Main content -->
-    <main class="flex-grow">
-        {% block content %}
-        {% endblock %}
+    <!-- Add top padding so content doesn't go under the sticky nav -->
+    <main class="flex-grow pt-20">
+        {% block content %}{% endblock %}
     </main>
 
-    <!-- Footer -->
     {% include "partials/footer.html" %}
 
-
-  {% block scripts %}{% endblock %}
+    {% block scripts %}{% endblock %}
 </body>
 </html>
