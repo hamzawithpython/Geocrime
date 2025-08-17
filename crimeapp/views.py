@@ -316,6 +316,9 @@ def contact(request):
 def privacy(request):
     return render(request, "crimeapp/privacy.html")
 
+def terms(request):
+    return render(request, "crimeapp/terms.html")
+
 
 
 

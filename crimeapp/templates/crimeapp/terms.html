@@ -1,0 +1,109 @@
+{% extends "crimeapp/base.html" %}
+{% load static %}
+
+{% block title %}Terms of Use | GeoCrime{% endblock %}
+
+{% block content %}
+
+<section class="bg-white dark:bg-gray-900">
+  <div class="max-w-5xl mx-auto px-4 py-10 lg:py-14">
+    <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-white">Terms of Use</h1>
+    <p class="mt-4 text-gray-600 dark:text-gray-300">
+      Welcome to GeoCrime. By accessing or using this site, you agree to these Terms of Use and our
+      <a href="{% url 'privacy' %}" class="text-blue-600 hover:underline">Privacy Policy</a>.
+      If you do not agree, please don’t use the site.
+    </p>
+  </div>
+</section>
+
+<section class="bg-gray-50 dark:bg-gray-800/50">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Acceptable Use Policy</h2>
+    <p class="mt-3 text-gray-600 dark:text-gray-300">
+      Be nice with our data and website. You agree not to:
+    </p>
+    <ul class="mt-4 list-disc ps-6 space-y-2 text-gray-700 dark:text-gray-300">
+      <li>Use the site for any illegal, abusive, or unethical activities (e.g., distributing malware, harassment, infringement of others’ rights).</li>
+      <li>Send unsolicited bulk messages (“spam”).</li>
+      <li>Store or transmit personal information in violation of applicable data-protection laws.</li>
+      <li>Impersonate others, spoof headers, or misrepresent your authorization.</li>
+      <li>Undermine security or attempt unauthorized access to any system or network.</li>
+      <li>Allow others to misuse the site via your account or resources.</li>
+      <li>Share copyrighted files unlawfully or enable unlawful file sharing.</li>
+      <li>Cause us to violate an upstream provider’s acceptable use policy.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="bg-white dark:bg-gray-900">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Content & Data</h2>
+    <p class="mt-3 text-gray-600 dark:text-gray-300">
+      Crime data may come from police reports and/or news sources. Reported incidents can change as agencies update their records.
+      Alleged perpetrators may not have been tried or found guilty. Do not rely on the site for emergency services.
+      In an emergency, call your local authorities immediately.
+    </p>
+  </div>
+</section>
+
+<section class="bg-gray-50 dark:bg-gray-800/50">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Intellectual Property & Usage</h2>
+    <ul class="mt-3 list-disc ps-6 space-y-2 text-gray-700 dark:text-gray-300">
+      <li>All site content, design, and code are owned by us or our licensors.</li>
+      <li>We grant you a limited, non-exclusive, non-transferable license to access and use the site for personal, non-commercial purposes.</li>
+      <li>No scraping, bulk downloading, or automated access without prior written permission.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="bg-white dark:bg-gray-900">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">No Warranties</h2>
+    <p class="mt-3 text-gray-600 dark:text-gray-300">
+      The site is provided “as is” and “as available” without warranties of any kind, express or implied.
+      We do not guarantee accuracy, completeness, or fitness for a particular purpose.
+    </p>
+  </div>
+</section>
+
+<section class="bg-gray-50 dark:bg-gray-800/50">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Limitation of Liability</h2>
+    <p class="mt-3 text-gray-600 dark:text-gray-300">
+      To the fullest extent permitted by law, we are not liable for any indirect, incidental, special, consequential,
+      exemplary, or punitive damages, or for loss of profits, data, goodwill, or other intangible losses arising from your use of the site.
+    </p>
+  </div>
+</section>
+
+<section class="bg-white dark:bg-gray-900">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Termination</h2>
+    <p class="mt-3 text-gray-600 dark:text-gray-300">
+      We may suspend or terminate access to the site at any time for any reason, including suspected violations of these Terms.
+    </p>
+  </div>
+</section>
+
+<section class="bg-gray-50 dark:bg-gray-800/50">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Changes to These Terms</h2>
+    <p class="mt-3 text-gray-600 dark:text-gray-300">
+      We may update these Terms from time to time. Continued use of the site means you accept the updated Terms.
+      See also our <a href="{% url 'privacy' %}" class="text-blue-600 hover:underline">Privacy Policy</a> and
+      <a href="{% url 'disclaimer' %}" class="text-blue-600 hover:underline">Disclaimer</a>.
+    </p>
+  </div>
+</section>
+
+<section class="bg-white dark:bg-gray-900">
+  <div class="max-w-5xl mx-auto px-4 py-8">
+    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Contact</h2>
+    <p class="mt-3 text-gray-600 dark:text-gray-300">
+      Questions about these Terms? <a href="{% url 'contact' %}" class="text-blue-600 hover:underline">Contact us</a>.
+    </p>
+  </div>
+</section>
+
+{% endblock %}
