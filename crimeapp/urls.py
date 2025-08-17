@@ -10,6 +10,7 @@ urlpatterns = [
     path('mapbox-route/', views.mapbox_route, name='mapbox_route'),
     path('google-route/', views.google_route_view, name='google_route'),
     path("api/custom-route/", views.get_custom_route, name="custom_route"),
+    path("about/", views.about_view, name="about_view"),
 
 
 

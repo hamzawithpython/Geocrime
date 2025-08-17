@@ -269,6 +269,9 @@ def get_custom_route(request):
 
     return JsonResponse({"error": "Only POST allowed"}, status=405)
 
+def about_view(request):
+    return render(request, "crimeapp/about.html")
+
 
 
 

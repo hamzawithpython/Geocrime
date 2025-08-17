@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}About GeoCrime{% endblock %}
+
+{# Optional per-page meta (works if you added head_extra block) #}
+{% block head_extra %}
+<meta name="description" content="GeoCrime is a crime-aware route planning app that helps you choose safer paths by analyzing historical crime data and risk along your trip.">
+<meta property="og:title" content="About GeoCrime">
+<meta property="og:description" content="Crime-aware routing, interactive map, safety scoring, and risk-aware navigation.">
+<meta property="og:image" content="{% static 'crimeapp/images/file.svg' %}">
+<meta property="og:type" content="website">
+{% endblock %}
+
+{% block content %}
+
+<!-- Hero -->
+<section class="bg-white dark:bg-gray-900">
+  <div class="max-w-6xl mx-auto px-4 py-12 lg:py-16">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-white">About <span class="text-blue-600">GeoCrime</span></h1>
+        <p class="mt-4 text-gray-600 dark:text-gray-300">
+          GeoCrime is a <strong>crime-aware route planning</strong> web app. It analyzes historical crime data and
+          uses a custom A* routing engine to suggest paths that balance <em>safety</em> and <em>travel time</em>.
+        </p>
+        <p class="mt-3 text-gray-600 dark:text-gray-300">
+          Built as a <strong>Final Year Project (BSc Hons Computer Science)</strong>, GeoCrime aims to make urban travel more informed and confident.
+        </p>
+        <div class="mt-6">
+          <a href="{% url 'google_route' %}" class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">Try the Map</a>
+        </div>
+      </div>
+      <div class="flex justify-center md:justify-end">
+        <img src="{% static 'crimeapp/images/file.svg' %}" alt="GeoCrime Logo" class="h-28 w-28 md:h-36 md:w-36">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mission -->
+<section class="bg-gray-50 dark:bg-gray-800/50">
+  <div class="max-w-6xl mx-auto px-4 py-10">
+    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Mission</h2>
+    <p class="mt-3 text-gray-600 dark:text-gray-300">
+      Traditional navigation optimizes for distance or time and rarely considers <strong>risk exposure</strong>.
+      GeoCrime integrates crime history into routing to help users avoid high-risk areas, visualize nearby incidents,
+      and make better decisions on the go.
+    </p>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="bg-white dark:bg-gray-900">
+  <div class="max-w-6xl mx-auto px-4 py-10">
+    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">How It Works</h2>
+    <div class="mt-6 grid md:grid-cols-3 gap-6">
+      <div class="p-5 border rounded-2xl dark:border-gray-700">
+        <h3 class="font-medium text-gray-900 dark:text-white">1) Data Ingestion</h3>
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+          Crime data (historical records by location & type) is loaded (CSV/JSON; migrating to PostgreSQL).
+        </p>
+      </div>
+      <div class="p-5 border rounded-2xl dark:border-gray-700">
+        <h3 class="font-medium text-gray-900 dark:text-white">2) Crime-Weighted Graph</h3>
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+          Using OSMnx + NetworkX, we build a road graph. Edges near higher crime density receive higher costs.
+        </p>
+      </div>
+      <div class="p-5 border rounded-2xl dark:border-gray-700">
+        <h3 class="font-medium text-gray-900 dark:text-white">3) Safer Routing</h3>
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+          A custom A* algorithm finds a path that balances safety and efficiency, then computes a Safety Count & Danger Score.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="bg-gray-50 dark:bg-gray-800/50">
+  <div class="max-w-6xl mx-auto px-4 py-10">
+    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Key Features</h2>
+    <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="p-5 bg-white border rounded-2xl dark:bg-gray-900 dark:border-gray-700">
+        <h3 class="font-medium text-gray-900 dark:text-white">Crime-Aware Routing</h3>
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Custom A* with crime-weighted edges.</p>
+      </div>
+      <div class="p-5 bg-white border rounded-2xl dark:bg-gray-900 dark:border-gray-700">
+        <h3 class="font-medium text-gray-900 dark:text-white">Interactive Map</h3>
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Pick start/destination, view routes, and toggle layers.</p>
+      </div>
+      <div class="p-5 bg-white border rounded-2xl dark:bg-gray-900 dark:border-gray-700">
+        <h3 class="font-medium text-gray-900 dark:text-white">Risk Labels</h3>
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Safety Count & Danger Score → Safe / Moderate / High Risk.</p>
+      </div>
+      <div class="p-5 bg-white border rounded-2xl dark:bg-gray-900 dark:border-gray-700">
+        <h3 class="font-medium text-gray-900 dark:text-white">Layers & Visuals</h3>
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Markers, heatmaps, and density overlays.</p>
+      </div>
+      <div class="p-5 bg-white border rounded-2xl dark:bg-gray-900 dark:border-gray-700">
+        <h3 class="font-medium text-gray-900 dark:text-white">City-Agnostic</h3>
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Designed for Chicago first, portable to other cities.</p>
+      </div>
+      <div class="p-5 bg-white border rounded-2xl dark:bg-gray-900 dark:border-gray-700">
+        <h3 class="font-medium text-gray-900 dark:text-white">Dev-Friendly</h3>
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Django backend, Google Maps front-end, clear API endpoints.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tech Stack -->
+<section class="bg-white dark:bg-gray-900">
+  <div class="max-w-6xl mx-auto px-4 py-10">
+    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Technology Stack</h2>
+    <ul class="mt-4 grid sm:grid-cols-2 gap-3 text-sm text-gray-700 dark:text-gray-300">
+      <li><strong>Frontend:</strong> Google Maps JS API, Tailwind CSS, Flowbite</li>
+      <li><strong>Backend:</strong> Django (Python 3.12)</li>
+      <li><strong>Routing:</strong> OSMnx + NetworkX (crime-weighted A*)</li>
+      <li><strong>Data:</strong> CSV/JSON → PostgreSQL (in progress)</li>
+      <li><strong>Utilities:</strong> Geopy, Ngrok for remote testing</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Ethics & Privacy -->
+<section class="bg-gray-50 dark:bg-gray-800/50">
+  <div class="max-w-6xl mx-auto px-4 py-10">
+    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Ethics & Privacy</h2>
+    <p class="mt-3 text-gray-600 dark:text-gray-300">
+      GeoCrime uses historical, publicly sourced crime data where available. We avoid collecting personal data from users,
+      and we clearly label risk estimates as <em>advisory</em>, not definitive. Users should still exercise judgment and follow local guidance.
+    </p>
+  </div>
+</section>
+
+<!-- Roadmap -->
+<section class="bg-white dark:bg-gray-900">
+  <div class="max-w-6xl mx-auto px-4 py-10">
+    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Roadmap</h2>
+    <ul class="mt-4 list-disc ps-6 text-gray-600 dark:text-gray-300">
+      <li>PostgreSQL migration with optimized spatial indices.</li>
+      <li>Real-time feeds and near-real-time overlays.</li>
+      <li>User incident reports & community moderation.</li>
+      <li>Improved mobile UX and offline hints.</li>
+      <li>Multi-city support out of the box.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Acknowledgment -->
+<section class="bg-gray-50 dark:bg-gray-800/50">
+  <div class="max-w-6xl mx-auto px-4 py-10">
+    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">Acknowledgment</h2>
+    <p class="mt-3 text-gray-600 dark:text-gray-300">
+      Developed as a Final Year Project at <em>[Your University]</em>. With thanks to supervisors and peers for guidance and feedback.
+    </p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-white dark:bg-gray-900">
+  <div class="max-w-6xl mx-auto px-4 py-12 text-center">
+    <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">Ready to explore safer routes?</h2>
+    <a href="{% url 'google_route' %}" class="mt-4 inline-flex items-center px-5 py-2.5 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">Open the Map</a>
+  </div>
+</section>
+
+{% endblock %}
