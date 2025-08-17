@@ -14,8 +14,8 @@
 
     {% include "partials/navbar.html" %}
 
-    <!-- Add top padding so content doesn't go under the sticky nav -->
-    <main class="flex-grow pt-20">
+    <!-- No top padding needed for a sticky navbar -->
+    <main class="flex-grow">
         {% block content %}{% endblock %}
     </main>
 
