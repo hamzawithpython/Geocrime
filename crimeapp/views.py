@@ -251,24 +251,53 @@ def get_custom_route(request):
             destination = data.get("destination")
 
             if not origin or not destination:
-                return JsonResponse({"error": "Missing origin or destination"}, status=400)
+                return JsonResponse({
+                    "ok": False,
+                    "code": "MISSING_POINTS",
+                    "message": "Please select both a start and destination point."
+                }, status=400)
 
-            result = get_crime_aware_route(
-                origin_lat=origin["lat"],
-                origin_lng=origin["lng"],
-                dest_lat=destination["lat"],
-                dest_lng=destination["lng"]
-            )
+            try:
+                result = get_crime_aware_route(
+                    origin_lat=origin["lat"],
+                    origin_lng=origin["lng"],
+                    dest_lat=destination["lat"],
+                    dest_lng=destination["lng"]
+                )
+            except ValueError as ve:
+                # Suppose your route engine raises ValueError for out-of-bounds nodes
+                return JsonResponse({
+                    "ok": False,
+                    "code": "OUT_OF_BOUNDS",
+                    "message": str(ve) or "Selected points are outside the supported Chicago area."
+                }, status=400)
+            except RuntimeError as re:
+                # No path between nodes
+                return JsonResponse({
+                    "ok": False,
+                    "code": "NO_PATH",
+                    "message": "No safe path could be found between the selected locations."
+                }, status=404)
 
             return JsonResponse({
+                "ok": True,
                 "route": result["route"],
                 "safety_info": result["safety_info"]
             }, status=200)
 
         except Exception as e:
-            return JsonResponse({"error": str(e)}, status=500)
+            return JsonResponse({
+                "ok": False,
+                "code": "SERVER_ERROR",
+                "message": "Unexpected server error: " + str(e)
+            }, status=500)
 
-    return JsonResponse({"error": "Only POST allowed"}, status=405)
+    return JsonResponse({
+        "ok": False,
+        "code": "METHOD_NOT_ALLOWED",
+        "message": "Only POST requests are allowed."
+    }, status=405)
+
 
 def about(request):
     return render(request, "crimeapp/about.html")

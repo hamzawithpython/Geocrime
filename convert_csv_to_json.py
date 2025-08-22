@@ -9,9 +9,7 @@ json_path = os.path.join(base_dir, 'crimeapp', 'static', 'crime_data.json')
 df = pd.read_csv(csv_path)
 
 df = df[['Latitude', 'Longitude', 'Primary Type']].dropna()
-
 data = df.to_dict(orient='records')
-
 with open(json_path, 'w') as f:
     json.dump(data, f, indent=2)
 

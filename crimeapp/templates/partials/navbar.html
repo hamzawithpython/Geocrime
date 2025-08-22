@@ -3,7 +3,7 @@
 <!-- Navbar -->
 <nav class="sticky top-0 z-50 bg-white/95 border-b border-gray-200 dark:bg-gray-900/95 dark:border-gray-700 backdrop-blur">
   <div class="max-w-screen-xl relative flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="{% url 'index' %}" class="flex items-center space-x-3 rtl:space-x-reverse">
+    <a href="{% url 'google_route' %}" class="flex items-center space-x-3 rtl:space-x-reverse">
       <img src="{% static 'crimeapp/images/file.svg' %}" class="h-16 w-auto" alt="Logo">
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">GeoCrime</span>
     </a>
@@ -20,10 +20,10 @@
           <path fill="#3c3b6e" d="M0 0h2964v2100H0z"/>
           <g fill="#fff"><g id="d"><g id="c"><g id="e"><g id="b">
             <path id="a" d="M247 90l70.534 217.082-184.66-134.164h228.253L176.466 307.082z"/>
-            <use xlink:href="#a" y="420"/><use xlink:href="#a" y="840"/><use xlink:href="#a" y="1260"/></g>
-            <use xlink:href="#a" y="1680"/></g><use xlink:href="#b" x="247" y="210"/></g>
-            <use xlink:href="#c" x="494"/></g><use xlink:href="#d" x="988"/><use xlink:href="#c" x="1976"/>
-            <use xlink:href="#e" x="2470"/></g>
+            <use href="#a" y="420"/><use href="#a" y="840"/><use href="#a" y="1260"/></g>
+            <use href="#a" y="1680"/></g><use href="#b" x="247" y="210"/></g>
+            <use href="#c" x="494"/></g><use href="#d" x="988"/><use href="#c" x="1976"/>
+            <use href="#e" x="2470"/></g>
         </svg>
         English (US)
       </button>
@@ -39,7 +39,7 @@
                   <g fill-rule="evenodd"><g stroke-width="1pt">
                     <path fill="#bd3d44" d="M0 0h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z" transform="scale(3.9385)"/>
                     <path fill="#fff" d="M0 10h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z" transform="scale(3.9385)"/></g>
-                    <path fill="#192f5d" d="M0 0h98.8v70H0z" transform="scale(3.9385)"/>
+                  </g>
                 </svg>
                 English (US)
               </div>
@@ -98,41 +98,47 @@
       </button>
     </div>
 
+    {% with current=request.resolver_match.url_name %}
+    {% url 'index' as index_url %}
+    {% url 'about' as about_url %}
     <!-- Main links -->
     <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-language">
       <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50
                  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent
                  dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+
+        <!-- Home -->
         <li>
-          <a href="{% url 'index' %}"
-             class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
-             aria-current="page">Home</a>
+          <a href="{{ index_url }}"
+             class="block py-2 px-3 rounded-sm md:p-0
+                    {% if current == 'index' or request.path == index_url %}
+                      text-white bg-blue-700 md:bg-transparent md:text-blue-700 md:dark:text-blue-500
+                    {% else %}
+                      text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700
+                      dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white
+                    {% endif %}"
+             aria-current="{% if current == 'index' or request.path == index_url %}page{% endif %}">
+            Home
+          </a>
         </li>
+
+        <!-- About -->
         <li>
-          <a href="{% url 'about' %}"
-             class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+          <a href="{{ about_url }}"
+             class="block py-2 px-3 rounded-sm md:p-0
+                    {% if current == 'about' or request.path == about_url %}
+                      text-white bg-blue-700 md:bg-transparent md:text-blue-700 md:dark:text-blue-500
+                    {% else %}
+                      text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700
+                      dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white
+                    {% endif %}"
+             aria-current="{% if current == 'about' or request.path == about_url %}page{% endif %}">
             About
           </a>
         </li>
-        <li>
-          <a href="#"
-             class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-            Services
-          </a>
-        </li>
-        <li>
-          <a href="#"
-             class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-            Pricing
-          </a>
-        </li>
-        <li>
-          <a href="{% url 'contact' %}"
-             class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-            Contact
-          </a>
-        </li>
+
       </ul>
     </div>
+    {% endwith %}
   </div>
 </nav>

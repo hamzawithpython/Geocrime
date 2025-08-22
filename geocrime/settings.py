@@ -26,13 +26,19 @@ SECRET_KEY = 'django-insecure-7eeua^ec=szazhi)xpdo_mj5dw6dyxqr%*e^(mc8=1+6!=0p$0
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "192.168.1.103",
     "127.0.0.1",
-    "4f1970e5c292.ngrok-free.app"
+    "localhost",
+    "192.168.1.103",
+    ".ngrok-free.app",
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.ngrok-free.app",
+    "http://127.0.0.1:8000",
+    "http://localhost:8000",
+]
 
-# Application definition
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 INSTALLED_APPS = [
     'django.contrib.admin',
