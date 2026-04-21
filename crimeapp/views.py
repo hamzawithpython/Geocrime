@@ -13,7 +13,11 @@ from django.http import JsonResponse
 import json
 from .route_engine import get_crime_aware_route
 
-GOOGLE_API_KEY = "AIzaSyCb52P3sm3JpZXDmeXhN_tmhO2bbp-WPLg"
+from dotenv import load_dotenv
+
+load_dotenv()
+
+GOOGLE_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY", "")
 
 
 def index(request):
@@ -207,10 +211,6 @@ def route_view(request):
         'saved_routes': saved_routes
     })
 
-def mapbox_test(request):
-    return render(request, 'crimeapp/mapbox_test.html', {
-        'mapbox_token': 'pk.eyJ1IjoiaGFtamFhamVlIiwiYSI6ImNtYno5N2FsajE4MTMya3M2NGJpNDJvaWQifQ.627r71W4Bj_3PrYFgdhqLw'
-    })
 
 def google_route_view(request):
     return render(request, 'crimeapp/google_route.html', {
@@ -219,28 +219,6 @@ def google_route_view(request):
         'center_lon': -87.6298
     })
 
-def mapbox_route(request):
-    start_lat = 41.8781
-    start_lon = -87.6298
-    end_lat = 41.8858
-    end_lon = -87.6205
-
-    # Loading crime data
-    csv_path = os.path.join(settings.BASE_DIR, 'data', 'cleaned_dataset.csv')
-    df = pd.read_csv(csv_path).dropna(subset=['Latitude', 'Longitude'])
-
-    crimes = df.head(100)[['Latitude', 'Longitude', 'Primary Type']].to_dict(orient='records')
-
-    return render(request, 'crimeapp/mapbox_route.html', {
-        'mapbox_token': 'pk.eyJ1IjoiaGFtamFhamVlIiwiYSI6ImNtYno5N2FsajE4MTMya3M2NGJpNDJvaWQifQ.627r71W4Bj_3PrYFgdhqLw',
-        'start_lat': start_lat,
-        'start_lon': start_lon,
-        'end_lat': end_lat,
-        'end_lon': end_lon,
-        'mid_lat': (start_lat + end_lat) / 2,
-        'mid_lon': (start_lon + end_lon) / 2,
-        'crimes': crimes
-    })
 
 @csrf_exempt
 def get_custom_route(request):
