@@ -1,20 +1,20 @@
-asgiref==3.8.1
-branca==0.8.1
-certifi==2025.4.26
-charset-normalizer==3.4.2
+# Django framework
 Django==5.2.1
 django-tailwind==4.0.1
-folium==0.19.6
-idna==3.10
-Jinja2==3.1.6
-MarkupSafe==3.0.2
-numpy==2.2.6
+
+# Data processing
 pandas==2.2.3
-python-dateutil==2.9.0.post0
-pytz==2025.2
+numpy==1.26.4
+
+# Mapping and geospatial
+folium==0.19.6
+geopy==2.4.1
+osmnx==1.9.4
+networkx==3.3
+scipy==1.14.1
+
+# Routing API client
+openrouteservice==2.3.3
+
+# HTTP and utilities
 requests==2.32.3
-six==1.17.0
-sqlparse==0.5.3
-tzdata==2025.2
-urllib3==2.4.0
-xyzservices==2025.4.0
