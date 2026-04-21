@@ -24,3 +24,30 @@ db.sqlite3
 staticfiles/
 media/
 map.html
+
+# Agent extension additions
+# Secrets and environment files
+.env
+.env.*
+!.env.example
+
+# Large data files (use Git LFS or external storage if needed)
+*.graphml
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.pkl
+*.joblib
+
+# ML model artifacts
+models/*.bin
+models/*.onnx
+
+# Jupyter notebook auto-saves
+.ipynb_checkpoints/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+desktop.ini
