@@ -53,3 +53,6 @@ models/*.onnx
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Data files (downloaded crime CSVs, large processed files)
+agent/data/
