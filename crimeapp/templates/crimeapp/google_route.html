@@ -20,17 +20,21 @@
         <div id="map" class="absolute inset-0" style="height: 100%; width: 100%;"></div>
 
         <!-- Floating search bar -->
-        <div class="absolute top-6 left-1/2 transform -translate-x-1/2 z-20 w-full max-w-md px-4">
-            <input
-                id="floating-search"
-                type="text"
-                placeholder="🔍 Search a place..."
-                class="w-full p-3 rounded-full border border-blue-500 bg-white/90 backdrop-blur text-sm shadow-lg"
-            />
+        <div class="absolute top-6 left-1/2 transform -translate-x-1/2 z-[1000] w-full max-w-md px-4">
+            <div class="relative">
+                <input
+                    id="floating-search"
+                    type="text"
+                    placeholder="🔍 Search a place..."
+                    autocomplete="off"
+                    class="w-full p-3 rounded-full border border-blue-500 bg-white/90 backdrop-blur text-sm shadow-lg"
+                />
+                <div id="search-dropdown" class="search-dropdown"></div>
+            </div>
         </div>
 
         <!-- Floating Info Card -->
-        <div id="click-info-card" class="absolute bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 w-80 hidden z-20">
+        <div id="click-info-card" class="absolute bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 w-80 hidden z-[1000]">
             <h3 class="font-semibold text-lg mb-2">Selected Location</h3>
             <p class="text-sm mb-1"><strong>Address:</strong> <span id="card-address">...</span></p>
             <p class="text-sm mb-1"><strong>Latitude:</strong> <span id="card-lat">...</span></p>
@@ -41,7 +45,7 @@
         </div>
 
         <!-- Routing Input Card -->
-        <div id="route-card" class="absolute bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 w-80 hidden z-20">
+        <div id="route-card" class="absolute bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 w-80 hidden z-[1000]">
             <div>🚨 Crimes near this route: <strong id="crime-count"></strong></div>
             <div>🛑 Risk Level: <strong id="risk-level"></strong></div>
             <h3 class="font-semibold text-lg mb-2">Plan Your Route</h3>
@@ -148,574 +152,607 @@
 
 
 {% block scripts %}
-<!-- Flowbite (for Tailwind components like modal) -->
+<!-- Leaflet CSS -->
+<link rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""/>
+
+<style>
+  /* Custom search dropdown styling */
+  .search-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 16px;
+    right: 16px;
+    margin-top: 4px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    max-height: 240px;
+    overflow-y: auto;
+    z-index: 1001;
+    display: none;
+  }
+  .search-dropdown-item {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    color: #374151;
+    border-bottom: 1px solid #f3f4f6;
+  }
+  .search-dropdown-item:last-child {
+    border-bottom: none;
+  }
+  .search-dropdown-item:hover {
+    background: #f3f4f6;
+  }
+</style>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+
+<!-- leaflet-geosearch (provides OpenStreetMapProvider for autocomplete) -->
+<script src="https://unpkg.com/leaflet-geosearch@3.11.1/dist/geosearch.umd.js"></script>
+
+<!-- Leaflet.heat (heatmap layer) -->
+<script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+
+<!-- Flowbite (unchanged — for modal) -->
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js" defer></script>
 
 <script>
-    let map, directionsService, directionsRenderer;
-    let selectedMarker = null;
-    let startMarker = null;
-    let awaitingStartClick = false;
-    let crimeMarkers = [];
-    let heatmapLayer = null;
-    let lastSelectedAddress = "";
-    let destinationMarker = null;
-    let activeInputField = null;
-    let destinationSelected = false;
-    let startSelected = false;
-    let startAlertShown = false;
-    let endAlertShown = false;
-    let crimeInfoWindow = null;
+  // ===== Global state =====
+  let map;
+  let startMarker = null;          // Green pin for start location
+  let destinationMarker = null;    // Blue pin for destination
+  let activeInputField = null;     // "start" | "end" | null — controls click behavior
+  let lastSelectedAddress = "";    // Address shown in info card (for "Get Directions")
+  let crimeLayer = null;        // Layer group holding all crime circle markers
+  let heatmapLayer = null;      // Heatmap layer
+  let crimeDataLoaded = false;  // Flag to avoid loading twice
+  let currentRoute = null;      // Active route polyline (so we can remove before drawing new one)
 
-    function showToast(message, variant = "info", timeout = 3000) {
-      const id = "toast-" + Date.now();
-      const box = document.createElement("div");
+  // ===== Custom marker icons (Leaflet doesn't ship colored pins) =====
+  const greenIcon = new L.Icon({
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
+  });
 
-      const colors = {
-        info:    "border-blue-200",
-        success: "border-green-200",
-        warning: "border-yellow-200",
-        error:   "border-red-200",
-      };
-      const icons = {
-        info:    "ℹ️",
-        success: "✅",
-        warning: "⚠️",
-        error:   "❌",
-      };
+  const blueIcon = new L.Icon({
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
+  });
 
-      // Default style
-      let textColor = "text-gray-700 dark:text-gray-200";
-      let container = document.getElementById("toast-container");
-      let alignment = "flex w-80 items-center rounded-lg bg-white p-4 shadow border";
+  // ===== Toast helper (unchanged) =====
+  function showToast(message, variant = "info", timeout = 3000) {
+    const box = document.createElement("div");
 
-      // Special styling for "Tip" messages
-      if (message.startsWith("Tip:")) {
-        textColor = "text-blue-600 dark:text-blue-400 font-medium";
-        container = document.getElementById("toast-center-container"); // use center container
-        alignment = "flex w-[28rem] items-center justify-center rounded-lg bg-white p-6 shadow border";
+    const colors = {
+      info:    "border-blue-200",
+      success: "border-green-200",
+      warning: "border-yellow-200",
+      error:   "border-red-200",
+    };
+    const icons = {
+      info:    "ℹ️",
+      success: "✅",
+      warning: "⚠️",
+      error:   "❌",
+    };
+
+    let textColor = "text-gray-700 dark:text-gray-200";
+    let container = document.getElementById("toast-container");
+    let alignment = "flex w-80 items-center rounded-lg bg-white p-4 shadow border";
+
+    if (message.startsWith("Tip:")) {
+      textColor = "text-blue-600 dark:text-blue-400 font-medium";
+      container = document.getElementById("toast-center-container");
+      alignment = "flex w-[28rem] items-center justify-center rounded-lg bg-white p-6 shadow border";
+    }
+
+    box.role = "alert";
+    box.className = `pointer-events-auto ${alignment} ${(colors[variant] || colors.info)}`;
+    box.innerHTML = `
+      <div class="mr-3">${icons[variant] || icons.info}</div>
+      <div class="text-sm ${textColor}">${message}</div>
+      <button type="button" class="ml-auto inline-flex h-6 w-6 items-center justify-center rounded hover:bg-gray-100" aria-label="Close">✖</button>
+    `;
+
+    container.appendChild(box);
+    const closeBtn = box.querySelector("button");
+    const remove = () => box.remove();
+    closeBtn.onclick = remove;
+    if (timeout) setTimeout(remove, timeout);
+  }
+
+  // ===== Flowbite modal helper (unchanged) =====
+  function openMissingPointsModal(titleText, bodyHtml) {
+    if (titleText) document.getElementById("mpm-title").textContent = titleText;
+    if (bodyHtml)  document.getElementById("mpm-body").innerHTML = bodyHtml;
+    const trigger = document.getElementById("open-missing-points-modal-trigger");
+    if (trigger) trigger.click();
+  }
+
+  // ===== Nominatim reverse geocoding (lat/lon → address) =====
+  async function reverseGeocode(lat, lon) {
+    try {
+      const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}&zoom=18&addressdetails=1`;
+      const response = await fetch(url, {
+        headers: { 'Accept-Language': 'en' }
+      });
+      if (!response.ok) throw new Error(`Nominatim error: ${response.status}`);
+      const data = await response.json();
+      return data.display_name || `${lat.toFixed(5)}, ${lon.toFixed(5)}`;
+    } catch (err) {
+      console.error("Reverse geocode failed:", err);
+      return `${lat.toFixed(5)}, ${lon.toFixed(5)}`;
+    }
+  }
+
+  // ===== Initialize Leaflet map =====
+  function initMap() {
+    const centerLat = {{ center_lat }};
+    const centerLon = {{ center_lon }};
+
+    map = L.map('map').setView([centerLat, centerLon], 13);
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+      subdomains: 'abcd',
+      maxZoom: 19
+    }).addTo(map);
+
+    setupMapClickHandler();
+    setupInputFocusTracking();
+    setupFloatingSearch();
+    loadCrimeData();
+  }
+
+  // ===== Click handler: different behavior based on active input field =====
+  function setupMapClickHandler() {
+    const card = document.getElementById("click-info-card");
+    const cardAddress = document.getElementById("card-address");
+    const cardLat = document.getElementById("card-lat");
+    const cardLng = document.getElementById("card-lng");
+    const cardDirectionsBtn = document.getElementById("card-directions");
+
+    map.on('click', async (e) => {
+      const lat = e.latlng.lat;
+      const lon = e.latlng.lng;
+
+      // Case 1: Start input is active → drop GREEN start marker
+      if (activeInputField === "start") {
+        if (startMarker) map.removeLayer(startMarker);
+        startMarker = L.marker([lat, lon], { icon: greenIcon }).addTo(map);
+
+        const address = await reverseGeocode(lat, lon);
+        document.getElementById("route-start").value = address;
+        return;
       }
 
-      box.id = id;
-      box.role = "alert";
-      box.className = `pointer-events-auto ${alignment} ${(colors[variant] || colors.info)}`;
+      // Case 2: Destination input is active → drop BLUE destination marker
+      if (activeInputField === "end") {
+        if (destinationMarker) map.removeLayer(destinationMarker);
+        destinationMarker = L.marker([lat, lon], { icon: blueIcon }).addTo(map);
 
-      box.innerHTML = `
-        <div class="mr-3">${icons[variant] || icons.info}</div>
-        <div class="text-sm ${textColor}">${message}</div>
-        <button type="button" class="ml-auto inline-flex h-6 w-6 items-center justify-center rounded hover:bg-gray-100 dark:hover:bg-gray-700" aria-label="Close">✖</button>
-      `;
+        const address = await reverseGeocode(lat, lon);
+        document.getElementById("route-end").value = address;
+        return;
+      }
 
-      container.appendChild(box);
+      // Case 3: Default — drop destination marker and show info card
+      if (destinationMarker) map.removeLayer(destinationMarker);
+      destinationMarker = L.marker([lat, lon], { icon: blueIcon }).addTo(map);
 
-      const closeBtn = box.querySelector("button");
-      const remove = () => box.remove();
+      const address = await reverseGeocode(lat, lon);
+      lastSelectedAddress = address;
 
-      closeBtn.onclick = remove;
-      if (timeout) setTimeout(remove, timeout);
+      cardAddress.textContent = address;
+      cardLat.textContent = lat.toFixed(6);
+      cardLng.textContent = lon.toFixed(6);
+      card.classList.remove("hidden");
+
+      // "Get Directions" button behavior
+      cardDirectionsBtn.onclick = () => {
+        const routeCard = document.getElementById("route-card");
+        const routeStart = document.getElementById("route-start");
+        const routeEnd = document.getElementById("route-end");
+
+        routeStart.value = "";
+        activeInputField = "start";
+        routeEnd.value = lastSelectedAddress;
+        routeCard.classList.remove("hidden");
+
+        openMissingPointsModal(
+          "Pick your Start Location",
+          "Click anywhere on the map to choose your <b>Start</b>, or use one of the options below."
+        );
+        // Wire up modal buttons
+        const useCurrentBtn = document.getElementById("modal-use-current");
+        if (useCurrentBtn) useCurrentBtn.onclick = () => setCurrentLocation("start");
+      };
+    });
+  }
+
+  // ===== Input focus tracking =====
+  function setupInputFocusTracking() {
+    document.getElementById("route-start").addEventListener("focus", () => {
+      activeInputField = "start";
+      showToast("Tip: Click on the map to set your Start.", "info", 2500);
+    });
+    document.getElementById("route-end").addEventListener("focus", () => {
+      activeInputField = "end";
+      showToast("Tip: Click on the map to set your Destination.", "info", 2500);
+    });
+  }
+
+  // ===== Floating search box with Nominatim autocomplete =====
+  function setupFloatingSearch() {
+    const provider = new window.GeoSearch.OpenStreetMapProvider();
+    const input = document.getElementById("floating-search");
+    const dropdown = document.getElementById("search-dropdown");
+
+    let debounceTimer = null;
+
+    input.addEventListener("input", (e) => {
+      const query = e.target.value.trim();
+
+      // Hide dropdown if query is too short
+      if (query.length < 3) {
+        dropdown.style.display = "none";
+        dropdown.innerHTML = "";
+        return;
+      }
+
+      // Debounce: wait 300ms after last keystroke
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(async () => {
+        try {
+          const results = await provider.search({ query });
+          renderSearchResults(results);
+        } catch (err) {
+          console.error("Search failed:", err);
+          dropdown.style.display = "none";
+        }
+      }, 300);
+    });
+
+    // Hide dropdown when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest("#floating-search") && !e.target.closest("#search-dropdown")) {
+        dropdown.style.display = "none";
+      }
+    });
+
+    function renderSearchResults(results) {
+      if (!results || results.length === 0) {
+        dropdown.innerHTML = '<div class="search-dropdown-item" style="cursor:default; color:#9ca3af;">No results found</div>';
+        dropdown.style.display = "block";
+        return;
+      }
+
+      dropdown.innerHTML = "";
+      results.slice(0, 6).forEach((result) => {
+        const item = document.createElement("div");
+        item.className = "search-dropdown-item";
+        item.textContent = result.label;
+        item.onclick = () => selectSearchResult(result);
+        dropdown.appendChild(item);
+      });
+      dropdown.style.display = "block";
     }
 
+    async function selectSearchResult(result) {
+      const lat = result.y;
+      const lon = result.x;
+      const address = result.label;
 
+      input.value = address;
+      dropdown.style.display = "none";
 
-    // ---- Open Flowbite modal programmatically ----
-    function openMissingPointsModal(titleText, bodyHtml) {
-      if (titleText) document.getElementById("mpm-title").textContent = titleText;
-      if (bodyHtml)  document.getElementById("mpm-body").innerHTML = bodyHtml;
-      const trigger = document.getElementById("open-missing-points-modal-trigger");
-      if (trigger) trigger.click();
-    }
+      // Pan map to the result
+      map.setView([lat, lon], 15);
 
-    function initMap() {
-        map = new google.maps.Map(document.getElementById("map"), {
-            center: { lat: {{ center_lat }}, lng: {{ center_lon }} },
-            zoom: 13,
-        });
+      // Drop appropriate pin based on active input
+      if (activeInputField === "start") {
+        if (startMarker) map.removeLayer(startMarker);
+        startMarker = L.marker([lat, lon], { icon: greenIcon }).addTo(map);
+        document.getElementById("route-start").value = address;
+      } else if (activeInputField === "end") {
+        if (destinationMarker) map.removeLayer(destinationMarker);
+        destinationMarker = L.marker([lat, lon], { icon: blueIcon }).addTo(map);
+        document.getElementById("route-end").value = address;
+      } else {
+        // Default: drop blue pin and show info card
+        if (destinationMarker) map.removeLayer(destinationMarker);
+        destinationMarker = L.marker([lat, lon], { icon: blueIcon }).addTo(map);
+        lastSelectedAddress = address;
 
-        directionsService = new google.maps.DirectionsService();
-        directionsRenderer = new google.maps.DirectionsRenderer({
-            map: map,
-            suppressMarkers: true,
-            polylineOptions: {
-                strokeColor: "#3b82f6",
-                strokeOpacity: 0.8,
-                strokeWeight: 4
-            }
-        });
-
-        // One shared InfoWindow for all crime markers
-        crimeInfoWindow = new google.maps.InfoWindow();
-
-        // Close it on map interactions
-        map.addListener("click", () => crimeInfoWindow.close());
-        map.addListener("dragstart", () => crimeInfoWindow.close());
-        map.addListener("zoom_changed", () => crimeInfoWindow.close());
-
-        // Replace focus alerts with toasts
-        document.getElementById("route-start").addEventListener("focus", () => {
-            activeInputField = "start";
-            if (!startAlertShown) {
-                showToast("Tip: Click on the map or use search to set your Start.", "info", 2500);
-                startAlertShown = true;
-            }
-        });
-        document.getElementById("route-end").addEventListener("focus", () => {
-            activeInputField = "end";
-            if (!endAlertShown) {
-                showToast("Tip: Click on the map or use search to set your Destination.", "info", 2500);
-                endAlertShown = true;
-            }
-        });
-
-        setupFloatingSearch();
-        setupMapClickToGetAddress();
-        loadCrimeData();
-    }
-
-    function setupFloatingSearch() {
-        const input = document.getElementById("floating-search");
-        const autocomplete = new google.maps.places.Autocomplete(input);
-        autocomplete.bindTo("bounds", map);
-
-        autocomplete.addListener("place_changed", () => {
-            const place = autocomplete.getPlace();
-            if (!place.geometry || !place.geometry.location) {
-                showToast("No location found for the input.", "warning");
-                return;
-            }
-
-            const location = place.geometry.location;
-            const address = place.formatted_address || place.name;
-            document.getElementById("floating-search").value = address;
-
-            map.setCenter(location);
-            map.setZoom(15);
-
-            const geocoder = new google.maps.Geocoder();
-
-            // Handle based on which input is active
-            if (activeInputField === "start") {
-                if (startMarker) startMarker.setMap(null);
-                startMarker = new google.maps.Marker({
-                    position: location,
-                    map: map,
-                    icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
-                });
-                document.getElementById("route-start").value = address;
-
-            } else if (activeInputField === "end") {
-                if (selectedMarker) selectedMarker.setMap(null);
-                selectedMarker = new google.maps.Marker({
-                    position: location,
-                    map: map,
-                    icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
-                });
-                document.getElementById("route-end").value = address;
-            }
-
-            // Optionally update the floating info card
-            geocoder.geocode({ location: location }, (results, status) => {
-                if (status === "OK" && results[0]) {
-                    document.getElementById("card-address").textContent = results[0].formatted_address;
-                    document.getElementById("card-lat").textContent = location.lat().toFixed(6);
-                    document.getElementById("card-lng").textContent = location.lng().toFixed(6);
-                    document.getElementById("click-info-card").classList.remove("hidden");
-                } else {
-                    console.error("Reverse geocoding failed: " + status);
-                }
-            });
-        });
-    }
-
-    function setupMapClickToGetAddress() {
-        const geocoder = new google.maps.Geocoder();
         const card = document.getElementById("click-info-card");
-        const cardAddress = document.getElementById("card-address");
-        const cardLat = document.getElementById("card-lat");
-        const cardLng = document.getElementById("card-lng");
-        const cardDirectionsBtn = document.getElementById("card-directions");
+        document.getElementById("card-address").textContent = address;
+        document.getElementById("card-lat").textContent = lat.toFixed(6);
+        document.getElementById("card-lng").textContent = lon.toFixed(6);
+        card.classList.remove("hidden");
 
-        map.addListener("click", function (e) {
-            const clickedLatLng = e.latLng;
-
-            // ✅ If user is selecting start location
-            if (activeInputField === "start" || awaitingStartClick) {
-                if (startMarker) startMarker.setMap(null);
-
-                startMarker = new google.maps.Marker({
-                    position: clickedLatLng,
-                    map: map,
-                    icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
-                });
-
-                geocoder.geocode({ location: clickedLatLng }, (results, status) => {
-                    if (status === "OK" && results[0]) {
-                        document.getElementById("route-start").value = results[0].formatted_address;
-                        if (awaitingStartClick) awaitingStartClick = false;
-                    } else {
-                        console.error("Reverse geocode failed: " + status);
-                    }
-                });
-
-                return;
-            }
-
-            // ✅ If user is selecting destination location
-            if (activeInputField === "end") {
-                if (selectedMarker) selectedMarker.setMap(null);
-
-                selectedMarker = new google.maps.Marker({
-                    position: clickedLatLng,
-                    map: map,
-                    icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
-                });
-
-                geocoder.geocode({ location: clickedLatLng }, (results, status) => {
-                    if (status === "OK" && results[0]) {
-                        document.getElementById("route-end").value = results[0].formatted_address;
-                    } else {
-                        console.error("Reverse geocode failed: " + status);
-                    }
-                });
-
-                return;
-            }
-
-            // 🟡 Default case before clicking route inputs: show destination card
-            if (selectedMarker) selectedMarker.setMap(null);
-            selectedMarker = new google.maps.Marker({
-                position: clickedLatLng,
-                map: map,
-                icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
-            });
-
-            geocoder.geocode({ location: clickedLatLng }, (results, status) => {
-                if (status === "OK" && results[0]) {
-                    const address = results[0].formatted_address;
-                    lastSelectedAddress = address;
-
-                    cardAddress.textContent = address;
-                    cardLat.textContent = clickedLatLng.lat().toFixed(6);
-                    cardLng.textContent = clickedLatLng.lng().toFixed(6);
-                    card.classList.remove("hidden");
-
-                    // Get Directions button → open Flowbite modal
-                    cardDirectionsBtn.onclick = () => {
-                        const routeCard = document.getElementById("route-card");
-                        const routeStart = document.getElementById("route-start");
-                        const routeEnd = document.getElementById("route-end");
-
-                        routeStart.value = "";
-                        awaitingStartClick = true;
-                        activeInputField = "start";
-                        routeEnd.value = lastSelectedAddress;
-                        routeCard.classList.remove("hidden");
-
-                        openMissingPointsModal(
-                          "Pick your Start Location",
-                          "Click anywhere on the map to choose your <b>Start</b>, or use one of the options below."
-                        );
-
-                        const pickStartBtn = document.getElementById("modal-pick-start");
-                        const useCurrentBtn = document.getElementById("modal-use-current");
-                        if (pickStartBtn) pickStartBtn.onclick = () => { activeInputField = "start"; };
-                        if (useCurrentBtn) useCurrentBtn.onclick = () => setCurrentLocation("start");
-                    };
-                } else {
-                    console.error("Geocoder failed: " + status);
-                    card.classList.add("hidden");
-                }
-            });
-        });
-
-        // Optional: hide card & marker on zoom/drag when not selecting
-        map.addListener("dragstart", function () {
-            if (!awaitingStartClick && activeInputField !== "start" && selectedMarker) {
-                selectedMarker.setMap(null);
-                selectedMarker = null;
-                card.classList.add("hidden");
-            }
-        });
-
-        map.addListener("zoom_changed", function () {
-            if (!awaitingStartClick && activeInputField !== "start" && selectedMarker) {
-                selectedMarker.setMap(null);
-                selectedMarker = null;
-                card.classList.add("hidden");
-            }
-        });
-    }
-
-    function setCurrentLocation(target) {
-        if (!navigator.geolocation) {
-            showToast("Geolocation is not supported by your browser.", "warning");
-            return;
-        }
-
-        navigator.geolocation.getCurrentPosition(
-            (position) => {
-                const lat = position.coords.latitude;
-                const lng = position.coords.longitude;
-                const currentLatLng = new google.maps.LatLng(lat, lng);
-
-                const geocoder = new google.maps.Geocoder();
-                geocoder.geocode({ location: currentLatLng }, (results, status) => {
-                    if (status === "OK" && results[0]) {
-                        const address = results[0].formatted_address;
-
-                        if (target === "start") {
-                            document.getElementById("route-start").value = address;
-                            if (startMarker) startMarker.setMap(null);
-                            startMarker = new google.maps.Marker({
-                                position: currentLatLng,
-                                map: map,
-                                icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
-                            });
-                        } else if (target === "end") {
-                            document.getElementById("route-end").value = address;
-                            if (selectedMarker) selectedMarker.setMap(null);
-                            selectedMarker = new google.maps.Marker({
-                                position: currentLatLng,
-                                map: map,
-                                icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
-                            });
-                        }
-
-                        map.setCenter(currentLatLng);
-                        map.setZoom(15);
-
-                        document.getElementById("card-address").textContent = address;
-                        document.getElementById("card-lat").textContent = lat.toFixed(6);
-                        document.getElementById("card-lng").textContent = lng.toFixed(6);
-                        document.getElementById("click-info-card").classList.remove("hidden");
-                    } else {
-                        console.error("Reverse geocode failed:", status);
-                        showToast("Could not determine an address for your current location.", "warning");
-                    }
-                });
-            },
-            (error) => {
-                console.error("Geolocation error:", error);
-                const msg =
-                    error.code === error.PERMISSION_DENIED
-                        ? "Location permission denied. You can still click on the map or use the search box."
-                        : "Unable to get your current location. Please try again.";
-                showToast(msg, "warning");
-            },
-            {
-                enableHighAccuracy: true,
-                timeout: 10000,
-                maximumAge: 0
-            }
-        );
-    }
-
-    function loadCrimeData() {
-        fetch("/static/crime_data.json")
-            .then(response => response.json())
-            .then(data => {
-                const heatmapData = [];
-
-                data.forEach(crime => {
-                    const lat = parseFloat(crime.Latitude);
-                    const lon = parseFloat(crime.Longitude);
-                    const type = crime["Primary Type"];
-                    if (isNaN(lat) || isNaN(lon)) return;
-
-                    heatmapData.push(new google.maps.LatLng(lat, lon));
-
-                    let iconColor = "http://maps.google.com/mapfiles/ms/icons/green-dot.png";
-                    if (["ASSAULT", "ROBBERY", "HOMICIDE"].includes(type)) {
-                        iconColor = "http://maps.google.com/mapfiles/ms/icons/red-dot.png";
-                    } else if (["BURGLARY", "BATTERY"].includes(type)) {
-                        iconColor = "http://maps.google.com/mapfiles/ms/icons/orange-dot.png";
-                    }
-
-                    const marker = new google.maps.Marker({
-                        position: { lat, lng: lon },
-                        map: null,
-                        icon: iconColor,
-                        title: type
-                    });
-
-                    marker.addListener("click", () => {
-                        const html = `<div class="p-2">
-                            <strong>${type}</strong><br>${crime.Description || ""}
-                        </div>`;
-                        if (!crimeInfoWindow) {
-                            crimeInfoWindow = new google.maps.InfoWindow();
-                        }
-                        crimeInfoWindow.close();
-                        crimeInfoWindow.setContent(html);
-                        crimeInfoWindow.open({ anchor: marker, map: map, shouldFocus: false });
-                    });
-
-                    crimeMarkers.push(marker);
-                });
-
-                heatmapLayer = new google.maps.visualization.HeatmapLayer({
-                    data: heatmapData,
-                    map: null,
-                    radius: 30
-                });
-            })
-            .catch(error => console.error("Error loading crime data:", error));
-    }
-
-    function calculateAndDisplayRoute(start = null, end = null) {
-        start = start || document.getElementById("start-location")?.value;
-        end = end || document.getElementById("destination-location")?.value;
-
-        if (!start || !end) {
-            showToast("Please enter both start and end locations.", "warning");
-            return;
-        }
-
-        if (selectedMarker) selectedMarker.setMap(null);
-
-        new google.maps.Marker({ position: start, map: map, icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png" });
-        new google.maps.Marker({ position: end, map: map, icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png" });
-
-        directionsService.route(
-            {
-                origin: start,
-                destination: end,
-                travelMode: google.maps.TravelMode.DRIVING,
-            },
-            (response, status) => {
-                if (status === "OK") {
-                    directionsRenderer.setDirections(response);
-                } else {
-                    showToast("Directions request failed: " + status, "error");
-                }
-            }
-        );
-    }
-
-    document.getElementById("toggle-crime-markers").addEventListener("click", () => {
-        if (crimeInfoWindow) crimeInfoWindow.close();
-        crimeMarkers.forEach(marker => {
-            const visible = marker.getMap();
-            marker.setMap(visible ? null : map);
-        });
-    });
-
-    document.getElementById("toggle-heatmap").addEventListener("click", () => {
-        if (heatmapLayer) {
-            const visible = heatmapLayer.getMap();
-            heatmapLayer.setMap(visible ? null : map);
-        }
-    });
-
-    document.getElementById("start-current-btn").addEventListener("click", () => setCurrentLocation("start"));
-    document.getElementById("end-current-btn").addEventListener("click", () => setCurrentLocation("end"));
-
-    document.getElementById("route-start-button").addEventListener("click", async () => {
-        if (!startMarker || !selectedMarker) {
-            openMissingPointsModal(
-              "Select Start & Destination",
-              "You need both a <b>Start</b> and <b>Destination</b> inside Chicago."
-            );
-
-            const pickStartBtn = document.getElementById("modal-pick-start");
-            const useCurrentBtn = document.getElementById("modal-use-current");
-
-            if (pickStartBtn) {
-                pickStartBtn.onclick = () => {
-                    activeInputField = "start";
-                    const routeCard = document.getElementById("route-card");
-                    if (routeCard) routeCard.classList.remove("hidden");
-                    showToast("Now click on the map to choose your Start.", "info", 2500);
-                };
-            }
-            if (useCurrentBtn) {
-                useCurrentBtn.onclick = () => setCurrentLocation("start");
-            }
-            return;
-        }
-
-        // Toggle to loading state
-        const btnText = document.getElementById("start-button-text");
-        const btnSpinner = document.getElementById("start-button-spinner");
-        btnText.textContent = "Loading...";
-        btnSpinner.classList.remove("hidden");
-        document.getElementById("route-start-button").disabled = true;
-
-        const origin = {
-            lat: startMarker.getPosition().lat(),
-            lng: startMarker.getPosition().lng()
+        document.getElementById("card-directions").onclick = () => {
+          const routeCard = document.getElementById("route-card");
+          const routeStart = document.getElementById("route-start");
+          const routeEnd = document.getElementById("route-end");
+          routeStart.value = "";
+          activeInputField = "start";
+          routeEnd.value = lastSelectedAddress;
+          routeCard.classList.remove("hidden");
+          openMissingPointsModal(
+            "Pick your Start Location",
+            "Click anywhere on the map to choose your <b>Start</b>, or use one of the options below."
+          );
+          // Wire up modal buttons
+        const useCurrentBtn = document.getElementById("modal-use-current");
+        if (useCurrentBtn) useCurrentBtn.onclick = () => setCurrentLocation("start");
         };
+      }
+    }
+  }
 
-        const destination = {
-            lat: selectedMarker.getPosition().lat(),
-            lng: selectedMarker.getPosition().lng()
-        };
+  // ===== Load crime data and prepare markers + heatmap layers =====
+  async function loadCrimeData() {
+    if (crimeDataLoaded) return;
 
-        const response = await fetch("/api/custom-route/", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ origin, destination }),
-        });
+    try {
+      const response = await fetch("/static/crime_data.json");
+      if (!response.ok) throw new Error(`Failed to load crime data: ${response.status}`);
+      const data = await response.json();
 
-        const data = await response.json();
+      const markers = [];
+      const heatPoints = [];
 
-        // Reset loading state
-        btnText.textContent = "Start";
-        btnSpinner.classList.add("hidden");
-        document.getElementById("route-start-button").disabled = false;
+      data.forEach((crime) => {
+        const lat = parseFloat(crime.Latitude);
+        const lon = parseFloat(crime.Longitude);
+        const type = crime["Primary Type"];
+        if (isNaN(lat) || isNaN(lon)) return;
 
-        if (response.ok && data.route) {
-            const path = data.route.map(coord => ({
-                lat: coord[0],
-                lng: coord[1],
-            }));
+        // Color by crime category
+        let color = "#22c55e"; // green default
+        if (["ASSAULT", "ROBBERY", "HOMICIDE", "CRIM SEXUAL ASSAULT"].includes(type)) {
+          color = "#ef4444"; // red for violent
+        } else if (["BURGLARY", "BATTERY", "THEFT", "MOTOR VEHICLE THEFT"].includes(type)) {
+          color = "#f97316"; // orange for property
+        }
 
-            new google.maps.Polyline({
-                path: path,
-                geodesic: true,
-                strokeColor: "#FF0000",
-                strokeOpacity: 1.0,
-                strokeWeight: 4,
-                map: map
-            });
+        // Use circleMarker for performance (lighter than full markers)
+        const marker = L.circleMarker([lat, lon], {
+          radius: 5,
+          fillColor: color,
+          color: "#ffffff",
+          weight: 1,
+          opacity: 1,
+          fillOpacity: 0.8
+        }).bindPopup(`<strong>${type}</strong>`);
 
-            // Show route safety info from backend
-            document.getElementById("crime-count").textContent = data.safety_info.nearby_crimes;
-            document.getElementById("risk-level").textContent = data.safety_info.risk_level;
-            document.getElementById("route-safety-info")?.classList?.remove("hidden");
+        markers.push(marker);
+        heatPoints.push([lat, lon, 0.5]); // lat, lon, intensity
+      });
 
+      // Create layer group (not yet added to map — toggled by button)
+      crimeLayer = L.layerGroup(markers);
+
+      // Create heatmap layer (not yet added to map — toggled by button)
+      heatmapLayer = L.heatLayer(heatPoints, {
+        radius: 25,
+        blur: 15,
+        maxZoom: 17
+      });
+
+      crimeDataLoaded = true;
+      showToast(`Loaded ${markers.length} crime records`, "success", 2000);
+    } catch (err) {
+      console.error("Error loading crime data:", err);
+      showToast("Failed to load crime data. Check console for details.", "error");
+    }
+  }
+
+  // ===== Toggle crime markers =====
+  document.getElementById("toggle-crime-markers").addEventListener("click", () => {
+    if (!crimeDataLoaded || !crimeLayer) {
+      showToast("Crime data still loading...", "info");
+      return;
+    }
+    if (map.hasLayer(crimeLayer)) {
+      map.removeLayer(crimeLayer);
+      showToast("Crime markers hidden", "info", 1500);
+    } else {
+      map.addLayer(crimeLayer);
+      showToast("Crime markers shown", "success", 1500);
+    }
+  });
+
+  // ===== Toggle heatmap =====
+  document.getElementById("toggle-heatmap").addEventListener("click", () => {
+    if (!crimeDataLoaded || !heatmapLayer) {
+      showToast("Crime data still loading...", "info");
+      return;
+    }
+    if (map.hasLayer(heatmapLayer)) {
+      map.removeLayer(heatmapLayer);
+      showToast("Heatmap hidden", "info", 1500);
+    } else {
+      map.addLayer(heatmapLayer);
+      showToast("Heatmap shown", "success", 1500);
+    }
+  });
+
+  // ===== Use Current Location (Geolocation API) =====
+  function setCurrentLocation(target) {
+    if (!navigator.geolocation) {
+      showToast("Geolocation is not supported by your browser.", "warning");
+      return;
+    }
+
+    showToast("Detecting your location...", "info", 2000);
+
+    navigator.geolocation.getCurrentPosition(
+      async (position) => {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+
+        // Warn if outside Chicago (approximate bounding box)
+        const inChicago = (lat >= 41.6 && lat <= 42.1 && lon >= -87.95 && lon <= -87.5);
+        if (!inChicago) {
+          showToast("Your location is outside Chicago. Route generation may not work.", "warning", 4000);
+        }
+
+        const address = await reverseGeocode(lat, lon);
+
+        if (target === "start") {
+          if (startMarker) map.removeLayer(startMarker);
+          startMarker = L.marker([lat, lon], { icon: greenIcon }).addTo(map);
+          document.getElementById("route-start").value = address;
+        } else if (target === "end") {
+          if (destinationMarker) map.removeLayer(destinationMarker);
+          destinationMarker = L.marker([lat, lon], { icon: blueIcon }).addTo(map);
+          document.getElementById("route-end").value = address;
+        }
+
+        map.setView([lat, lon], 15);
+      },
+      (error) => {
+        console.error("Geolocation error:", error);
+        let msg;
+        if (error.code === error.PERMISSION_DENIED) {
+          msg = "Location permission denied. Click on the map or use search instead.";
+        } else if (error.code === error.POSITION_UNAVAILABLE) {
+          msg = "Your location could not be determined. Please try again.";
+        } else if (error.code === error.TIMEOUT) {
+          msg = "Location request timed out. Please try again.";
         } else {
-            let userMessage = "An error occurred while generating your route.";
-            let action = "";
-
-            switch (data.code) {
-                case "MISSING_POINTS":
-                    userMessage = "You must select both a start and destination.";
-                    action = "Pick both points and try again.";
-                    break;
-                case "OUT_OF_BOUNDS":
-                    userMessage = "Selected points are outside the Chicago map area.";
-                    action = "Select a location inside Chicago.";
-                    break;
-                case "NO_PATH":
-                    userMessage = "No safe path could be found between your points.";
-                    action = "Adjust your start or destination.";
-                    break;
-                case "SERVER_ERROR":
-                    userMessage = "A server error occurred.";
-                    action = "Please retry in a moment.";
-                    break;
-                default:
-                    userMessage = "Unknown error: " + (data.error || "Please retry.");
-                    action = "Try again.";
-            }
-
-            showToast(`${userMessage} ${action ? " — " + action : ""}`, "error", 4000);
-            console.error("Route error:", data);
+          msg = "Unable to get your location. Please try another method.";
         }
-    });
+        showToast(msg, "warning", 4000);
+      },
+      {
+        enableHighAccuracy: true,
+        timeout: 10000,
+        maximumAge: 0
+      }
+    );
+  }
 
-    window.initMap = initMap;
+  document.getElementById("start-current-btn").addEventListener("click", () => setCurrentLocation("start"));
+  document.getElementById("end-current-btn").addEventListener("click", () => setCurrentLocation("end"));
+  // ===== Generate route via backend A* engine =====
+  document.getElementById("route-start-button").addEventListener("click", async () => {
+    // Validate: need both markers
+    if (!startMarker || !destinationMarker) {
+      openMissingPointsModal(
+        "Select Start & Destination",
+        "You need both a <b>Start</b> and <b>Destination</b> inside Chicago."
+      );
+      const pickStartBtn = document.getElementById("modal-pick-start");
+      const useCurrentBtn = document.getElementById("modal-use-current");
+      if (pickStartBtn) {
+        pickStartBtn.onclick = () => {
+          activeInputField = "start";
+          showToast("Now click on the map to choose your Start.", "info", 2500);
+        };
+      }
+      if (useCurrentBtn) {
+        useCurrentBtn.onclick = () => setCurrentLocation("start");
+      }
+      return;
+    }
+
+    // UI: show loading state
+    const btn = document.getElementById("route-start-button");
+    const btnText = document.getElementById("start-button-text");
+    const btnSpinner = document.getElementById("start-button-spinner");
+    btnText.textContent = "Loading...";
+    btnSpinner.classList.remove("hidden");
+    btn.disabled = true;
+
+    // Prepare request payload
+    const origin = {
+      lat: startMarker.getLatLng().lat,
+      lng: startMarker.getLatLng().lng
+    };
+    const destination = {
+      lat: destinationMarker.getLatLng().lat,
+      lng: destinationMarker.getLatLng().lng
+    };
+
+    try {
+      const response = await fetch("/api/custom-route/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ origin, destination })
+      });
+      const data = await response.json();
+
+      if (response.ok && data.route) {
+        // Remove previous route if any
+        if (currentRoute) map.removeLayer(currentRoute);
+
+        // Draw new route as blue polyline
+        currentRoute = L.polyline(data.route, {
+          color: "#3b82f6",
+          weight: 5,
+          opacity: 0.85
+        }).addTo(map);
+
+        // Auto-fit map to route bounds
+        map.fitBounds(currentRoute.getBounds(), { padding: [40, 40] });
+
+        // Update safety info in route card
+        document.getElementById("crime-count").textContent = data.safety_info.nearby_crimes;
+        document.getElementById("risk-level").textContent = data.safety_info.risk_level;
+
+        showToast("Route generated successfully!", "success", 2000);
+      } else {
+        // Map error codes to friendly messages
+        let userMessage, action;
+        switch (data.code) {
+          case "MISSING_POINTS":
+            userMessage = "Missing start or destination."; action = "Pick both points.";
+            break;
+          case "OUT_OF_BOUNDS":
+            userMessage = "Point outside Chicago."; action = "Select a location inside Chicago.";
+            break;
+          case "NO_PATH":
+            userMessage = "No safe path found between those points."; action = "Adjust your start or destination.";
+            break;
+          case "SERVER_ERROR":
+            userMessage = "A server error occurred."; action = "Please retry in a moment.";
+            break;
+          default:
+            userMessage = data.error || "Unknown error generating route."; action = "Try again.";
+        }
+        showToast(`${userMessage} — ${action}`, "error", 4000);
+        console.error("Route error:", data);
+      }
+    } catch (err) {
+      console.error("Network error:", err);
+      showToast("Could not reach the routing service.", "error", 4000);
+    } finally {
+      // Reset button state
+      btnText.textContent = "Start";
+      btnSpinner.classList.add("hidden");
+      btn.disabled = false;
+    }
+  });
+
+  // Kick off
+  initMap();
 </script>
-
-<script src="https://maps.googleapis.com/maps/api/js?key={{ google_api_key }}&libraries=places,visualization&callback=initMap" async defer></script>
 {% endblock %}

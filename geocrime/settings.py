@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-7eeua^ec=szazhi)xpdo_mj5dw6dyxqr%*e^(mc8=1+6!=0p$0'
+SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "django-insecure-fallback-only-for-emergencies")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv("DJANGO_DEBUG", "False").lower() == "true"
 
 ALLOWED_HOSTS = [
     "127.0.0.1",
@@ -48,8 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crimeapp',
-    'tailwind',
-    # 'theme',
+
 ]
 
 MIDDLEWARE = [
@@ -133,9 +136,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-TAILWIND_APP_NAME = 'theme'
-
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
