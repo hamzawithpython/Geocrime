@@ -34,3 +34,4 @@ map.html
 .DS_Store
 Thumbs.db
 desktop.ini
+*.backup
