@@ -3,11 +3,7 @@ from django.contrib import messages
 import pandas as pd
 import os
 from django.conf import settings
-import folium
-from folium.plugins import HeatMap, MarkerCluster
 from django.views.decorators.csrf import csrf_exempt
-import openrouteservice
-from openrouteservice import convert
 from geopy.distance import geodesic
 from django.http import JsonResponse
 import json

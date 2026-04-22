@@ -1,20 +1,15 @@
 # Django framework
 Django==5.2.1
-django-tailwind==4.0.1
 
 # Data processing
 pandas==2.2.3
 numpy==1.26.4
 
 # Mapping and geospatial
-folium==0.19.6
 geopy==2.4.1
 osmnx==1.9.4
 networkx==3.3
 scipy==1.14.1
-
-# Routing API client
-openrouteservice==2.3.3
 
 # HTTP and utilities
 requests==2.32.3
