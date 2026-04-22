@@ -21,23 +21,12 @@
 
 <!-- Quick start cards -->
 <section class="bg-gray-50 dark:bg-gray-800/50">
-  <div class="max-w-6xl mx-auto px-4 py-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-    <a href="{% url 'google_route' %}" class="block p-5 bg-white border rounded-2xl hover:shadow-md transition dark:bg-gray-900 dark:border-gray-700">
-      <h3 class="font-semibold text-gray-900 dark:text-white">Safer Routes (Google)</h3>
+  <div class="max-w-6xl mx-auto px-4 py-10">
+    <a href="{% url 'route' %}" class="block p-5 bg-white border rounded-2xl hover:shadow-md transition dark:bg-gray-900 dark:border-gray-700">
+      <h3 class="font-semibold text-gray-900 dark:text-white">Safer Routes</h3>
       <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Pick origin/destination and get a crime-aware route.</p>
     </a>
-    <a href="{% url 'route_view' %}" class="block p-5 bg-white border rounded-2xl hover:shadow-md transition dark:bg-gray-900 dark:border-gray-700">
-      <h3 class="font-semibold text-gray-900 dark:text-white">Route Analyzer</h3>
-      <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Analyze risk along a path and view safety labels.</p>
-    </a>
-    <a href="{% url 'map_with_input' %}" class="block p-5 bg-white border rounded-2xl hover:shadow-md transition dark:bg-gray-900 dark:border-gray-700">
-      <h3 class="font-semibold text-gray-900 dark:text-white">Heatmap / Markers</h3>
-      <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Search an area, filter by crime type, choose view.</p>
-    </a>
-    <a href="{% url 'crime_map' %}" class="block p-5 bg-white border rounded-2xl hover:shadow-md transition dark:bg-gray-900 dark:border-gray-700">
-      <h3 class="font-semibold text-gray-900 dark:text-white">City Overview</h3>
-      <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Explore aggregated incidents across the city.</p>
-    </a>
+    
   </div>
 </section>
 
