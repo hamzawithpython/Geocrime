@@ -56,3 +56,7 @@ desktop.ini
 
 # Data files (downloaded crime CSVs, large processed files)
 agent/data/
+
+
+# Trained models (regenerable)
+agent/models/
