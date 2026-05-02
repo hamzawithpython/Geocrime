@@ -9,9 +9,11 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "mapbox-gl": "^3.23.0",
     "next": "16.2.4",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "react-map-gl": "^7.1.7"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

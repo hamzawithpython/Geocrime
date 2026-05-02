@@ -15,6 +15,7 @@ load_dotenv(Path(__file__).parent / ".env")
 
 from agents.forecasting import forecast_crime
 from agents.geospatial import crimes_by_area, crimes_by_radius
+from datetime import date
 
 tools = [forecast_crime, crimes_by_area, crimes_by_radius]
 
@@ -24,11 +25,13 @@ llm = ChatGroq(
     temperature=0,
 )
 
+
+
 agent = create_react_agent(
     model=llm,
     tools=tools,
     prompt=(
-        "You are a crime analysis assistant for the Chicago Police Department. "
+        f"Today's date is {date.today().isoformat()}. You are a crime analysis assistant for the Chicago Police Department. "
         "You have access to tools that query a PostGIS crime database and a "
         "forecasting model trained on 1.5M historical crime records.\n\n"
         "When answering questions:\n"
