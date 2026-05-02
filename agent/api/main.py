@@ -1,61 +1,43 @@
-"""
-agent.api.main
-==============
-FastAPI application exposing the agent system's tool endpoints.
-
-Currently provides only a health check (Phase 3.1). Phase 3.2+ will
-add forecasting, geospatial, and routing endpoints.
-
-Run locally:
-    uvicorn agent.api.main:app --reload --port 8000
-
-Then visit:
-    http://localhost:8000/health      # health check
-    http://localhost:8000/docs        # auto-generated interactive docs
-    http://localhost:8000/openapi.json  # OpenAPI schema
-"""
-
-from datetime import datetime, timezone
-
-from fastapi import FastAPI
+﻿from datetime import datetime, timezone
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
+import sys
+from pathlib import Path
 
-app = FastAPI(
-    title="GeoCrime Agent Tools API",
-    description=(
-        "HTTP tools layer for the GeoCrime multi-agent decision-support "
-        "system. Each endpoint exposes one capability used by the supervisor "
-        "agent in Phase 4."
-    ),
-    version="0.1.0",
-)
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from forecast import predict
 
-
-# =============================================================
-# Response models — Pydantic gives us validation + OpenAPI schema for free
-# =============================================================
+app = FastAPI(title="GeoCrime Agent Tools API", version="0.2.0")
 
 class HealthResponse(BaseModel):
-    """Health check response."""
-    status: str = Field(..., description="Service status, 'ok' if healthy.")
-    service: str = Field(..., description="Service name.")
-    timestamp: str = Field(..., description="ISO 8601 UTC timestamp of the response.")
+    status: str
+    service: str
+    timestamp: str
 
+class ForecastResponse(BaseModel):
+    area: int
+    date: str
+    mean: float
+    lower: float
+    upper: float
+    interval_width: float
 
-# =============================================================
-# Endpoints
-# =============================================================
-
-@app.get(
-    "/health",
-    response_model=HealthResponse,
-    summary="Service health check",
-    tags=["meta"],
-)
-async def health() -> HealthResponse:
-    """Return service status. Used for liveness probes and integration tests."""
+@app.get("/health", response_model=HealthResponse, tags=["meta"])
+async def health():
     return HealthResponse(
         status="ok",
         service="geocrime-agent-tools",
         timestamp=datetime.now(timezone.utc).isoformat(),
     )
+
+@app.get("/forecast/{community_area}/{date}", response_model=ForecastResponse, tags=["forecasting"])
+async def forecast(community_area: int, date: str):
+    try:
+        result = predict(community_area=community_area, target_date=date)
+    except ValueError as e:
+        raise HTTPException(status_code=422, detail=str(e))
+    except FileNotFoundError as e:
+        raise HTTPException(status_code=503, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Forecast failed: {e}")
+    return ForecastResponse(**result)
