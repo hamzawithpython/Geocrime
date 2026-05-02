@@ -8,6 +8,8 @@ import os
 import psycopg
 from dotenv import load_dotenv
 
+from graph import run as agent_run
+
 load_dotenv(Path(__file__).resolve().parents[1] / ".env")
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -161,3 +163,24 @@ async def crimes_by_radius(
         for r in rows
     ]
     return RadiusResponse(lat=lat, lng=lng, radius_m=radius_m, count=len(crimes), crimes=crimes)
+
+class ChatRequest(BaseModel):
+    question: str = Field(..., description="Natural language question for the agent")
+
+
+class ChatResponse(BaseModel):
+    answer: str = Field(..., description="Agent's natural language answer")
+
+
+@app.post("/chat", response_model=ChatResponse, tags=["agent"],
+          summary="Ask the multi-agent system a natural language question")
+async def chat(request: ChatRequest):
+    """
+    Runs the LangGraph agent with the given question.
+    The agent decides which tools to call and returns a synthesized answer.
+    """
+    try:
+        answer = agent_run(request.question)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Agent error: {e}")
+    return ChatResponse(answer=answer)

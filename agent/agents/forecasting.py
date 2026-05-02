@@ -5,8 +5,8 @@ Calls the /forecast endpoint and returns calibrated prediction intervals.
 
 import httpx
 from langchain_core.tools import tool
-
-API_BASE = "http://localhost:8000"
+import os
+API_BASE = os.getenv("API_BASE", "http://localhost:8000")
 
 
 @tool
